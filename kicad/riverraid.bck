@@ -12,6 +12,12 @@ K TTL not inv OpenCol
 F http://www.ti.com/lit/gpn/sn74HC05
 $ENDCMP
 #
+$CMP 74HC08
+D Quad And2
+K TTL and2
+F http://www.ti.com/lit/gpn/sn74hc08
+$ENDCMP
+#
 $CMP 74HC138
 D 3-Line To 8-Line Decoder/Demultiplexer
 F http://www.ti.com/lit/gpn/sn54hc138-sp
@@ -75,6 +81,12 @@ $CMP 74LS06N
 D Inverter Open Collect
 K TTL not inv OpenCol
 F http://www.ti.com/lit/gpn/sn74LS06N
+$ENDCMP
+#
+$CMP 74LS09
+D Quad 2-input AND Open Collect
+K TTL and2 OpenCol
+F http://www.ti.com/lit/gpn/sn74LS09
 $ENDCMP
 #
 $CMP 74LS14
