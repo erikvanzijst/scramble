@@ -1,0 +1,302 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 74HC04
+D hex inverter
+K HCMOS not inverter
+F https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf
+$ENDCMP
+#
+$CMP 74HC05
+D Inverter Open Collect
+K TTL not inv OpenCol
+F http://www.ti.com/lit/gpn/sn74HC05
+$ENDCMP
+#
+$CMP 74HC138
+D 3-Line To 8-Line Decoder/Demultiplexer
+F http://www.ti.com/lit/gpn/sn54hc138-sp
+$ENDCMP
+#
+$CMP 74HC14
+D Hex inverter schmitt trigger
+K HCMOS not inverter
+F http://www.ti.com/lit/gpn/sn74HC14
+$ENDCMP
+#
+$CMP 74HC148
+D Priority Encoder 3 to 8 cascadable
+K TTL ENCOD
+F https://www.ti.com/lit/gpn/SN74HC148
+$ENDCMP
+#
+$CMP 74HC191
+D 4-bit Synchronous Up/Down BCD Counter
+K TTL CNT CNT4
+F http://www.ti.com/lit/ds/symlink/sn54hc191.pdf
+$ENDCMP
+#
+$CMP 74HC32
+D Quad 2-input OR
+K CMOS Or2
+F http://www.ti.com/lit/gpn/sn74HC32
+$ENDCMP
+#
+$CMP 74HC393
+D Dual BCD 4-bit counter
+K TTL CNT CNT4
+F https://assets.nexperia.com/documents/data-sheet/74HC_HCT393.pdf
+$ENDCMP
+#
+$CMP 74HC688
+D 8-bit Comparator
+K TTL DECOD Arith
+F https://assets.nexperia.com/documents/data-sheet/74HC_HCT688_CNV.pdf
+$ENDCMP
+#
+$CMP 74HC74
+D Dual D Flip-flop, Set & Reset
+K TTL DFF
+F https://assets.nexperia.com/documents/data-sheet/74HC_HCT74.pdf
+$ENDCMP
+#
+$CMP 74HCT04
+D hex inverter
+K HCTMOS not inverter
+F https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf
+$ENDCMP
+#
+$CMP 74LS06
+D Inverter Open Collect
+K TTL not inv OpenCol
+F http://www.ti.com/lit/gpn/sn74LS06
+$ENDCMP
+#
+$CMP 74LS06N
+D Inverter Open Collect
+K TTL not inv OpenCol
+F http://www.ti.com/lit/gpn/sn74LS06N
+$ENDCMP
+#
+$CMP 74LS14
+D Hex inverter schmitt trigger
+K TTL not inverter
+F http://www.ti.com/lit/gpn/sn74LS14
+$ENDCMP
+#
+$CMP 74LS191
+D 4-bit Synchronous Up/Down binary Counter
+K TTL CNT CNT4
+F http://www.ti.com/lit/gpn/sn74LS191
+$ENDCMP
+#
+$CMP ADA4807-4
+D Quad Rail-to-Rail Input/Output Amplifiers, TSSOP-14
+K quad opamp
+F https://www.analog.com/media/en/technical-documentation/data-sheets/ADA4807-1_4807-2_4807-4.pdf
+$ENDCMP
+#
+$CMP ICM7555
+D CMOS General Purpose Timer, DIP-8/SOIC-8
+K single timer 555
+F http://www.intersil.com/content/dam/Intersil/documents/icm7/icm7555-56.pdf
+$ENDCMP
+#
+$CMP LM324
+D Low-Power, Quad-Operational Amplifiers, DIP-14/SOIC-14/SSOP-14
+K quad opamp
+F http://www.ti.com/lit/ds/symlink/lm2902-n.pdf
+$ENDCMP
+#
+$CMP LM324A
+D Low-Power, Quad-Operational Amplifiers, DIP-14/SOIC-14/SSOP-14
+K quad opamp
+F http://www.ti.com/lit/gpn/LM2902-N
+$ENDCMP
+#
+$CMP LM555
+D Timer, DIP-8/SOIC-8/SSOP-8
+K single timer
+F http://www.ti.com/lit/ds/symlink/lm555.pdf
+$ENDCMP
+#
+$CMP LMC555xM
+D CMOS Timer, SOIC-8
+K single timer
+F http://www.ti.com/lit/ds/symlink/lmc555.pdf
+$ENDCMP
+#
+$CMP LMC555xMM
+D CMOS Timer, VSSOP-8
+K single timer
+F http://www.ti.com/lit/ds/symlink/lmc555.pdf
+$ENDCMP
+#
+$CMP LMC555xN
+D CMOS Timer, DIP-8
+K single timer
+F http://www.ti.com/lit/ds/symlink/lmc555.pdf
+$ENDCMP
+#
+$CMP LMC6484
+D Quad CMOS Rail-to-Rail Input and Output Operational Amplifier, DIP-14/SOIC-14
+K quad opamp
+F http://www.ti.com/lit/ds/symlink/lmc6484.pdf
+$ENDCMP
+#
+$CMP LMV324
+D Quad Low-Voltage Rail-to-Rail Output Operational Amplifier, SOIC-14/SSOP-14
+K quad opamp
+F http://www.ti.com/lit/ds/symlink/lmv324.pdf
+$ENDCMP
+#
+$CMP MC1455
+D Timers, DIP-8/SOIC-8
+K timer
+F https://www.onsemi.com/pub/Collateral/MC1455-D.PDF
+$ENDCMP
+#
+$CMP MC33079
+D Low Noise, Quad Operational Amplifiers, DIP-14/SOIC-14
+K quad opamp
+F https://www.onsemi.com/pub/Collateral/MC33078-D.PDF
+$ENDCMP
+#
+$CMP MC33174
+D Quad Single Supply 3.0V to 44V, Low Power Operational Amplifiers, DIP-14/SOIC-14/TSSOP-14
+K quad opamp
+F http://www.onsemi.com/pub/Collateral/MC33171-D.PDF
+$ENDCMP
+#
+$CMP MC33179
+D Quad Low Power, Low Noise Operational Amplifiers, DIP-14/SOIC-14/SSOP-14
+K quad opamp
+F https://www.onsemi.com/pub/Collateral/MC33178-D.PDF
+$ENDCMP
+#
+$CMP MCP6004
+D 1MHz, Low-Power Op Amp, DIP-14/SOIC-14/TSSOP-14
+K quad opamp
+F http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf
+$ENDCMP
+#
+$CMP MCP604
+D Quad 2.7V to 6.0V Single Supply CMOS Op Amps, DIP-14/SOIC-14/TSSOP-14
+K quad opamp
+F http://ww1.microchip.com/downloads/en/DeviceDoc/21314g.pdf
+$ENDCMP
+#
+$CMP MCP6L94
+D 10 MHz, 850 µA Op Amps, SOIC-14/TSSOP-14
+K quad opamp
+F http://ww1.microchip.com/downloads/en/DeviceDoc/22141b.pdf
+$ENDCMP
+#
+$CMP NA555
+D Precision Timers, DIP-8/SOIC-8/SSOP-8
+K timer
+F http://www.ti.com/lit/ds/symlink/ne555.pdf
+$ENDCMP
+#
+$CMP NE555
+D Precision Timers, DIP-8/SOIC-8
+K timer
+F http://www.ti.com/lit/ds/symlink/ne555.pdf
+$ENDCMP
+#
+$CMP OPA1604
+D Quad SoundPlus High Performance, Bipolar-Input Audio Operational Amplifiers, SOIC-14/TSSOP-14
+K quad opamp
+F http://www.ti.com/lit/ds/symlink/opa1604.pdf
+$ENDCMP
+#
+$CMP OPA4134
+D Quad SoundPlus High Performance Audio Operational Amplifiers, SOIC-14
+K quad opamp
+F http://www.ti.com/lit/ds/symlink/opa134.pdf
+$ENDCMP
+#
+$CMP OPA4340UA
+D Quad Single-Supply, Rail-to-Rail Operational Amplifier, MicroAmplifier Series, SOIC-14
+K quad opamp
+F http://www.ti.com/lit/ds/symlink/opa340.pdf
+$ENDCMP
+#
+$CMP OPA4376
+D Quad Low-Noise, Low Quiescent Current, Precision Operational Amplifier e-trim Series, SC-70-5
+K quad opamp
+F http://www.ti.com/lit/ds/symlink/opa376.pdf
+$ENDCMP
+#
+$CMP SA555
+D Precision Timers, DIP-8/SOIC-8
+K timer
+F http://www.ti.com/lit/ds/symlink/ne555.pdf
+$ENDCMP
+#
+$CMP SE555
+D Precision Timers, DIP-8/SOIC-8
+K timer
+F http://www.ti.com/lit/ds/symlink/ne555.pdf
+$ENDCMP
+#
+$CMP TL064
+D Quad Low-Power JFET-Input Operational Amplifiers, DIP-14/SOIC-14/SSOP-14
+K quad opamp
+F http://www.ti.com/lit/ds/symlink/tl061.pdf
+$ENDCMP
+#
+$CMP TL074
+D Quad Low-Noise JFET-Input Operational Amplifiers, DIP-14/SOIC-14
+K quad opamp
+F http://www.ti.com/lit/ds/symlink/tl071.pdf
+$ENDCMP
+#
+$CMP TL084
+D Quad JFET-Input Operational Amplifiers, DIP-14/SOIC-14/SSOP-14
+K quad opamp
+F http://www.ti.com/lit/ds/symlink/tl081.pdf
+$ENDCMP
+#
+$CMP TLC274
+D Quad LinCMOS Precision Quad Operational Amplifiers, DIP-14/SOIC-14/SSOP-14
+K quad opamp
+F http://www.ti.com/lit/ds/symlink/tlc274.pdf
+$ENDCMP
+#
+$CMP TLC279
+D Quad LinCMOS Precision Quad Operational Amplifiers, DIP-14/SOIC-14/SSOP-14
+K quad opamp
+F http://www.ti.com/lit/ds/symlink/tlc274.pdf
+$ENDCMP
+#
+$CMP TLC555CD
+D Single LinCMOS Timer, SOIC-8
+K single timer
+F http://www.ti.com/lit/ds/symlink/tlc555.pdf
+$ENDCMP
+#
+$CMP TLC555CP
+D Single LinCMOS Timer, DIP-8
+K single timer
+F http://www.ti.com/lit/ds/symlink/tlc555.pdf
+$ENDCMP
+#
+$CMP TLC555CPS
+D Single LinCMOS Timer, SSOP-8
+K single timer
+F http://www.ti.com/lit/ds/symlink/tlc555.pdf
+$ENDCMP
+#
+$CMP TSV914
+D Quad rail-to-rail input/output 8 MHz operational amplifiers, SOIC-14/TSSOP-14
+K quad opamp
+F www.st.com/resource/en/datasheet/tsv911.pdf
+$ENDCMP
+#
+$CMP TSV994
+D Quad Rail-to-rail, 20 MHz GBP, operational amplifiers, SOIC-14/TSSOP-14
+K quad opamp
+F https://www.st.com/resource/en/datasheet/tsv994.pdf
+$ENDCMP
+#
+#End Doc Library

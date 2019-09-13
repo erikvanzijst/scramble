@@ -1,0 +1,332 @@
+EESchema Schematic File Version 4
+LIBS:riverraid-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 4
+Title "Power on Reset Circuit"
+Date "2019-09-12"
+Rev "v01"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 "License: http://creativecommons.org/licenses/by/4.0/"
+Comment4 "Author: Erik van Zijst -- erik.van.zijst@gmail.com"
+$EndDescr
+Wire Wire Line
+	4550 2975 5550 2975
+$Comp
+L Device:R R?
+U 1 1 5E32EF8D
+P 6400 3325
+F 0 "R?" H 6470 3371 50  0000 L CNN
+F 1 "100K" H 6470 3280 50  0000 L CNN
+F 2 "" V 6330 3325 50  0001 C CNN
+F 3 "~" H 6400 3325 50  0001 C CNN
+	1    6400 3325
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5E32FF59
+P 6400 3825
+F 0 "C?" H 6515 3871 50  0000 L CNN
+F 1 "100nF" H 6515 3780 50  0000 L CNN
+F 2 "" H 6438 3675 50  0001 C CNN
+F 3 "~" H 6400 3825 50  0001 C CNN
+	1    6400 3825
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 2975 6400 2975
+Wire Wire Line
+	6400 2975 6400 3175
+Wire Wire Line
+	6400 3475 6400 3575
+Wire Wire Line
+	6400 3575 6875 3575
+Wire Wire Line
+	6875 3575 6875 2975
+Wire Wire Line
+	6875 2975 7150 2975
+Connection ~ 6400 3575
+Wire Wire Line
+	6400 3575 6400 3675
+$Comp
+L Device:R R?
+U 1 1 5E3316E5
+P 3200 3325
+F 0 "R?" H 3270 3371 50  0000 L CNN
+F 1 "100K" H 3270 3280 50  0000 L CNN
+F 2 "" V 3130 3325 50  0001 C CNN
+F 3 "~" H 3200 3325 50  0001 C CNN
+	1    3200 3325
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5E3316EF
+P 3200 3825
+F 0 "C?" H 3315 3871 50  0000 L CNN
+F 1 "100nF" H 3315 3780 50  0000 L CNN
+F 2 "" H 3238 3675 50  0001 C CNN
+F 3 "~" H 3200 3825 50  0001 C CNN
+	1    3200 3825
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 2975 3200 3175
+Wire Wire Line
+	3200 3475 3200 3575
+Wire Wire Line
+	3200 3575 3675 3575
+Wire Wire Line
+	3675 3575 3675 2975
+Wire Wire Line
+	3675 2975 3950 2975
+Connection ~ 3200 3575
+Wire Wire Line
+	3200 3575 3200 3675
+Wire Wire Line
+	2225 2975 2500 2975
+$Comp
+L power:VCC #PWR?
+U 1 1 5E3377D4
+P 2225 2975
+F 0 "#PWR?" H 2225 2825 50  0001 C CNN
+F 1 "VCC" H 2242 3148 50  0000 C CNN
+F 2 "" H 2225 2975 50  0001 C CNN
+F 3 "" H 2225 2975 50  0001 C CNN
+	1    2225 2975
+	1    0    0    -1  
+$EndComp
+Connection ~ 2225 2975
+$Comp
+L Device:C C?
+U 1 1 5E337F5C
+P 1875 2975
+F 0 "C?" V 2127 2975 50  0000 C CNN
+F 1 "100nF" V 2036 2975 50  0000 C CNN
+F 2 "" H 1913 2825 50  0001 C CNN
+F 3 "~" H 1875 2975 50  0001 C CNN
+	1    1875 2975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E339564
+P 4025 4325
+F 0 "#PWR?" H 4025 4075 50  0001 C CNN
+F 1 "GND" H 4030 4152 50  0000 C CNN
+F 2 "" H 4025 4325 50  0001 C CNN
+F 3 "" H 4025 4325 50  0001 C CNN
+	1    4025 4325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2225 4175 2225 4325
+Wire Wire Line
+	2225 4325 3200 4325
+Wire Wire Line
+	3200 4325 3200 3975
+Wire Wire Line
+	3200 4325 4025 4325
+Wire Wire Line
+	6400 4325 6400 3975
+Connection ~ 3200 4325
+Wire Wire Line
+	1625 4325 2225 4325
+Connection ~ 2225 4325
+Connection ~ 4025 4325
+Wire Wire Line
+	4025 4325 6400 4325
+Wire Wire Line
+	7750 2975 8750 2975
+Text HLabel 3675 3575 2    50   Output ~ 0
+POR_1
+Text HLabel 5050 2975 3    50   Output ~ 0
+POR_2
+Text HLabel 6875 3575 2    50   Output ~ 0
+POR_3
+Text HLabel 8250 2975 3    50   Output ~ 0
+POR_4
+Text HLabel 9825 2975 2    50   Output ~ 0
+POR_5
+Wire Wire Line
+	9350 2975 9825 2975
+$Comp
+L Switch:SW_Push SW?
+U 1 1 5E354331
+P 2950 1550
+F 0 "SW?" H 2950 1835 50  0000 C CNN
+F 1 "RESET/RESTART" H 2950 1744 50  0000 C CNN
+F 2 "" H 2950 1750 50  0001 C CNN
+F 3 "~" H 2950 1750 50  0001 C CNN
+	1    2950 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 1550 2500 1550
+Wire Wire Line
+	2500 1550 2500 2975
+Connection ~ 2500 2975
+Wire Wire Line
+	2500 2975 3200 2975
+$Comp
+L Transistor_BJT:PN2222A Q?
+U 1 1 5E3565A7
+P 3775 2425
+F 0 "Q?" H 3966 2379 50  0000 L CNN
+F 1 "PN2222A" H 3966 2470 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3975 2350 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/PN/PN2222A.pdf" H 3775 2425 50  0001 L CNN
+	1    3775 2425
+	-1   0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:PN2222A Q?
+U 1 1 5E358341
+P 6975 2400
+F 0 "Q?" H 7166 2354 50  0000 L CNN
+F 1 "PN2222A" H 7166 2445 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7175 2325 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/PN/PN2222A.pdf" H 6975 2400 50  0001 L CNN
+	1    6975 2400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3675 2625 3675 2975
+Connection ~ 3675 2975
+Wire Wire Line
+	6875 2600 6875 2975
+Connection ~ 6875 2975
+$Comp
+L power:GND #PWR?
+U 1 1 5E361C8A
+P 6175 2000
+F 0 "#PWR?" H 6175 1750 50  0001 C CNN
+F 1 "GND" H 6180 1827 50  0000 C CNN
+F 2 "" H 6175 2000 50  0001 C CNN
+F 3 "" H 6175 2000 50  0001 C CNN
+	1    6175 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E368EE7
+P 3675 1775
+F 0 "R?" H 3745 1821 50  0000 L CNN
+F 1 "100K" H 3745 1730 50  0000 L CNN
+F 2 "" V 3605 1775 50  0001 C CNN
+F 3 "~" H 3675 1775 50  0001 C CNN
+	1    3675 1775
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3675 2225 3675 2000
+Wire Wire Line
+	6875 2000 6875 2200
+Wire Wire Line
+	3675 2000 3675 1925
+Wire Wire Line
+	3675 2000 6175 2000
+$Comp
+L Device:R R?
+U 1 1 5E371EB3
+P 4700 1550
+F 0 "R?" V 4493 1550 50  0000 C CNN
+F 1 "1K" V 4584 1550 50  0000 C CNN
+F 2 "" V 4630 1550 50  0001 C CNN
+F 3 "~" H 4700 1550 50  0001 C CNN
+	1    4700 1550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7375 1550 7375 2400
+Wire Wire Line
+	7375 2400 7175 2400
+Wire Wire Line
+	4850 1550 5175 1550
+Connection ~ 6175 2000
+Wire Wire Line
+	6175 2000 6875 2000
+Wire Wire Line
+	3150 1550 3675 1550
+Wire Wire Line
+	3675 1625 3675 1550
+Connection ~ 3675 1550
+Wire Wire Line
+	3675 1550 4550 1550
+Connection ~ 3675 2000
+Wire Wire Line
+	5175 2425 5175 1550
+Wire Wire Line
+	3975 2425 5175 2425
+Connection ~ 5175 1550
+Wire Wire Line
+	5175 1550 7375 1550
+Wire Wire Line
+	2225 2975 2225 3175
+Wire Wire Line
+	1625 2975 1725 2975
+Wire Wire Line
+	1625 2975 1625 4325
+Wire Wire Line
+	2025 2975 2225 2975
+$Comp
+L Local:74HC14 U?
+U 1 1 5F057356
+P 4250 2975
+F 0 "U?" H 4250 3292 50  0000 C CNN
+F 1 "74HC14" H 4250 3201 50  0000 C CNN
+F 2 "" H 4250 2975 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74HC14" H 4250 2975 50  0001 C CNN
+	1    4250 2975
+	1    0    0    -1  
+$EndComp
+$Comp
+L Local:74HC14 U?
+U 2 1 5F05BC8E
+P 5850 2975
+F 0 "U?" H 5850 3292 50  0000 C CNN
+F 1 "74HC14" H 5850 3201 50  0000 C CNN
+F 2 "" H 5850 2975 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74HC14" H 5850 2975 50  0001 C CNN
+	2    5850 2975
+	1    0    0    -1  
+$EndComp
+$Comp
+L Local:74HC14 U?
+U 3 1 5F05CC54
+P 7450 2975
+F 0 "U?" H 7450 3292 50  0000 C CNN
+F 1 "74HC14" H 7450 3201 50  0000 C CNN
+F 2 "" H 7450 2975 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74HC14" H 7450 2975 50  0001 C CNN
+	3    7450 2975
+	1    0    0    -1  
+$EndComp
+$Comp
+L Local:74HC14 U?
+U 4 1 5F05DA22
+P 9050 2975
+F 0 "U?" H 9050 3292 50  0000 C CNN
+F 1 "74HC14" H 9050 3201 50  0000 C CNN
+F 2 "" H 9050 2975 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74HC14" H 9050 2975 50  0001 C CNN
+	4    9050 2975
+	1    0    0    -1  
+$EndComp
+$Comp
+L Local:74HC14 U?
+U 7 1 5F05EEBF
+P 2225 3675
+F 0 "U?" H 2455 3721 50  0000 L CNN
+F 1 "74HC14" H 2455 3630 50  0000 L CNN
+F 2 "" H 2225 3675 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74HC14" H 2225 3675 50  0001 C CNN
+	7    2225 3675
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
