@@ -19,10 +19,7 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx primitives in this code.
@@ -53,8 +50,9 @@ architecture Behavioral of invert_top is
    constant NINE    : STD_LOGIC_VECTOR (6 downto 0) := "1110011";
    constant ZERO    : STD_LOGIC_VECTOR (6 downto 0) := "1111110";
 
-   signal MS_SEG    : STD_LOGIC_VECTOR (6 downto 0);
-   signal LS_SEG    : STD_LOGIC_VECTOR (6 downto 0);
+    signal CLK_DIV  : STD_LOGIC_VECTOR (3 downto 0);
+    signal MS_SEG   : STD_LOGIC_VECTOR (6 downto 0);
+    signal LS_SEG   : STD_LOGIC_VECTOR (6 downto 0);
 
 begin
 
@@ -62,10 +60,34 @@ begin
    begin
       LED <= not SW;
    end process;
+ 
+    -- clock divider
+    process (SEL)
+    begin
+        if (SEL'Event and SEL = '1') then
+            CLK_DIV <= CLK_DIV + '1';
+        end if;
+    end process;
    
-   process (BCD, SEL)
+    process (CLK_DIV, MS_SEG, LS_SEG)
+    begin
+        if (CLK_DIV(0) = '0' and CLK_DIV(1) = '0' and CLK_DIV(2) = '0') then
+            case CLK_DIV(3) is
+                when '0' =>
+                    SEVEN_SEG <= MS_SEG;
+                    CATHODES <= "10";   -- activate first/left display
+                when '1' =>
+                    SEVEN_SEG <= LS_SEG;
+                    CATHODES <= "01";   -- activate second/right display
+                when others =>
+                    SEVEN_SEG <= E;
+                    CATHODES <= "01";
+            end case;
+        end if;
+    end process;
+   
+   process (BCD)
    begin
-         
       case BCD is
          when "000000" =>
              MS_SEG <= BLANK;
@@ -264,17 +286,5 @@ begin
                         LS_SEG <= R;
       end case;
    
-      case SEL is
-         when '0' =>
-            SEVEN_SEG <= MS_SEG;
-            CATHODES <= "10";   -- activate first/left display
-         when '1' =>
-            SEVEN_SEG <= LS_SEG;
-            CATHODES <= "01";   -- activate second/right display
-         when others =>
-            SEVEN_SEG <= E;
-            CATHODES <= "01";
-      end case;
-
    end process;
 end Behavioral;
