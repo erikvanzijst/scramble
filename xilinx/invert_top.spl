@@ -1,0 +1,9 @@
+[Inputs]
+SW
+SEL
+=BCD[5:0]=
+[Outputs]
+LED
+=SEVEN_SEG[6:0]=
+=CATHODES[1:0]=
+[BiDir]

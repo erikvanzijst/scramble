@@ -1,0 +1,148 @@
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9536xl-VQ44-5 invert_top.ngc invert_top.ngd  
+cpldfit -intstyle ise -p xc9536xl-5-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper invert_top.ngd 
+XSLTProcess invert_top_build.xml 
+tsim -intstyle ise invert_top invert_top.nga 
+taengine -intstyle ise -f invert_top -w --format html1 -l invert_top_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -n invert_top -i invert_top 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-VQ44-5 invert_top.ngc invert_top.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper invert_top.ngd 
+XSLTProcess invert_top_build.xml 
+tsim -intstyle ise invert_top invert_top.nga 
+hprep6 -s IEEE1149 -n invert_top -i invert_top 
+cpldfit -intstyle ise -p xc9572xl-5-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper invert_top.ngd 
+XSLTProcess invert_top_build.xml 
+tsim -intstyle ise invert_top invert_top.nga 
+hprep6 -s IEEE1149 -n invert_top -i invert_top 
+ngdbuild -intstyle ise -dd _ngo -uc invert_top.ucf -p xc9572xl-VQ44-5 invert_top.ngc invert_top.ngd  
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc invert_top.ucf -p xc9572xl-VQ44-10 invert_top.ngc invert_top.ngd  
+ngdbuild -intstyle ise -dd _ngo -uc invert_top_constr.ucf -p xc9572xl-VQ44-10 invert_top.ngc invert_top.ngd  
+ngdbuild -intstyle ise -dd _ngo -uc invert_top_constr.ucf -p xc9572xl-VQ44-10 invert_top.ngc invert_top.ngd  
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc invert_top_constr.ucf -p xc9572xl-VQ44-10 invert_top.ngc invert_top.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper invert_top.ngd 
+XSLTProcess invert_top_build.xml 
+tsim -intstyle ise invert_top invert_top.nga 
+taengine -intstyle ise -f invert_top -w --format html1 -l invert_top_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -n invert_top -i invert_top 
+ngdbuild -intstyle ise -dd _ngo -uc invert_top_constr.ucf -p xc9572xl-VQ44-10 invert_top.ngc invert_top.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper invert_top.ngd 
+XSLTProcess invert_top_build.xml 
+tsim -intstyle ise invert_top invert_top.nga 
+taengine -intstyle ise -f invert_top -w --format html1 -l invert_top_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -n invert_top -i invert_top 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc invert_top_constr.ucf -p xc9572xl-VQ44-10 invert_top.ngc invert_top.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper invert_top.ngd 
+XSLTProcess invert_top_build.xml 
+tsim -intstyle ise invert_top invert_top.nga 
+hprep6 -s IEEE1149 -n invert_top -i invert_top 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc invert_top_constr.ucf -p xc9572xl-VQ44-10 invert_top.ngc invert_top.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper invert_top.ngd 
+XSLTProcess invert_top_build.xml 
+tsim -intstyle ise invert_top invert_top.nga 
+hprep6 -s IEEE1149 -n invert_top -i invert_top 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc invert_top_constr.ucf -p xc9572xl-VQ44-10 invert_top.ngc invert_top.ngd  
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc invert_top_constr.ucf -p xc9572xl-VQ44-10 invert_top.ngc invert_top.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper invert_top.ngd 
+XSLTProcess invert_top_build.xml 
+tsim -intstyle ise invert_top invert_top.nga 
+taengine -intstyle ise -f invert_top -w --format html1 -l invert_top_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -n invert_top -i invert_top 
+ngdbuild -intstyle ise -dd _ngo -uc invert_top_constr.ucf -p xc9572xl-VQ44-10 invert_top.ngc invert_top.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper invert_top.ngd 
+XSLTProcess invert_top_build.xml 
+tsim -intstyle ise invert_top invert_top.nga 
+hprep6 -s IEEE1149 -n invert_top -i invert_top 
+vhdtdtfi -lib work invert_top.vhd -prj test -o invert_top.spl -module invert_top -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500xl invert_top.spl /home/erik/work/test/invert_top.sym 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc invert_top_constr.ucf -p xc9572xl-VQ44-10 invert_top.ngc invert_top.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper invert_top.ngd 
+XSLTProcess invert_top_build.xml 
+tsim -intstyle ise invert_top invert_top.nga 
+hprep6 -s IEEE1149 -n invert_top -i invert_top 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc invert_top_constr.ucf -p xc9572xl-VQ44-10 invert_top.ngc invert_top.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper invert_top.ngd 
+XSLTProcess invert_top_build.xml 
+tsim -intstyle ise invert_top invert_top.nga 
+hprep6 -s IEEE1149 -n invert_top -i invert_top 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc invert_top_constr.ucf -p xc9572xl-VQ44-10 invert_top.ngc invert_top.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper invert_top.ngd 
+XSLTProcess invert_top_build.xml 
+tsim -intstyle ise invert_top invert_top.nga 
+hprep6 -s IEEE1149 -n invert_top -i invert_top 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc invert_top_constr.ucf -p xc9572xl-VQ44-10 invert_top.ngc invert_top.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper invert_top.ngd 
+XSLTProcess invert_top_build.xml 
+tsim -intstyle ise invert_top invert_top.nga 
+hprep6 -s IEEE1149 -n invert_top -i invert_top 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc invert_top_constr.ucf -p xc9572xl-VQ44-10 invert_top.ngc invert_top.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper invert_top.ngd 
+XSLTProcess invert_top_build.xml 
+tsim -intstyle ise invert_top invert_top.nga 
+hprep6 -s IEEE1149 -n invert_top -i invert_top 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc invert_top_constr.ucf -p xc9572xl-VQ44-10 invert_top.ngc invert_top.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper invert_top.ngd 
+XSLTProcess invert_top_build.xml 
+tsim -intstyle ise invert_top invert_top.nga 
+hprep6 -s IEEE1149 -n invert_top -i invert_top 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc invert_top_constr.ucf -p xc9572xl-VQ44-10 invert_top.ngc invert_top.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper invert_top.ngd 
+XSLTProcess invert_top_build.xml 
+tsim -intstyle ise invert_top invert_top.nga 
+hprep6 -s IEEE1149 -n invert_top -i invert_top 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc invert_top_constr.ucf -p xc9572xl-VQ44-10 invert_top.ngc invert_top.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper invert_top.ngd 
+XSLTProcess invert_top_build.xml 
+tsim -intstyle ise invert_top invert_top.nga 
+hprep6 -s IEEE1149 -n invert_top -i invert_top 
+xst -intstyle ise -ifn "/home/erik/work/test/invert_top.xst" -ofn "/home/erik/work/test/invert_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc invert_top_constr.ucf -p xc9572xl-VQ44-10 invert_top.ngc invert_top.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper invert_top.ngd 
+XSLTProcess invert_top_build.xml 
+tsim -intstyle ise invert_top invert_top.nga 
+hprep6 -s IEEE1149 -n invert_top -i invert_top 
+vhdtdtfi -lib work invert_top.vhd -prj test -o invert_top.spl -module invert_top -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500xl invert_top.spl /home/erik/work/test/invert_top.sym 
+xst -intstyle ise -ifn "/home/erik/work/scramble/xilinx/invert_top.xst" -ofn "/home/erik/work/scramble/xilinx/invert_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc invert_top_constr.ucf -p xc9572xl-VQ44-10 invert_top.ngc invert_top.ngd  
+cpldfit -intstyle ise -p xc9572xl-10-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper invert_top.ngd 
+XSLTProcess invert_top_build.xml 
+tsim -intstyle ise invert_top invert_top.nga 
+hprep6 -s IEEE1149 -n invert_top -i invert_top 

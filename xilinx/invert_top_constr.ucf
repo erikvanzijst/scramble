@@ -1,0 +1,21 @@
+NET "SW"   				LOC = "P13";
+NET "LED"  				LOC = "P14";
+
+NET "BCD<0>" 			LOC = "P19";
+NET "BCD<1>" 			LOC = "P20";
+NET "BCD<2>" 			LOC = "P21";
+NET "BCD<3>" 			LOC = "P22";
+NET "BCD<4>" 			LOC = "P23";
+NET "BCD<5>" 			LOC = "P27";
+
+NET "SEVEN_SEG<0>"  	LOC = "P44"; 
+NET "SEVEN_SEG<1>"  	LOC = "P43";
+NET "SEVEN_SEG<2>"  	LOC = "P42";
+NET "SEVEN_SEG<3>"  	LOC = "P41";
+NET "SEVEN_SEG<4>"  	LOC = "P40";
+NET "SEVEN_SEG<5>"	LOC = "P39";
+NET "SEVEN_SEG<6>"	LOC = "P38";
+
+NET "SEL"  				LOC = "P28";
+NET "CATHODES<0>"		LOC = "P16";
+NET "CATHODES<1>"		LOC = "P18";

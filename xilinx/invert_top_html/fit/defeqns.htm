@@ -1,0 +1,258 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$DEC_SEVEN_SEG_2_OBUF$0 <= ((BCD(1) AND BCD(4) AND BCD(3) AND NOT BCD(2) AND BCD(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(3) AND BCD(5) AND BCD(0) AND SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(3) AND NOT BCD(5) AND BCD(0) AND SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(2) AND BCD(5) AND BCD(0) AND SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND NOT BCD(2) AND NOT BCD(5) AND NOT BCD(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND NOT BCD(2) AND BCD(0) AND SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND NOT BCD(3) AND NOT BCD(5) AND NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(3) AND BCD(2) AND NOT BCD(5) AND NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(3) AND BCD(5) AND BCD(0) AND SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND BCD(3) AND BCD(2) AND NOT BCD(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(3) AND NOT BCD(5) AND BCD(0) AND SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(3) AND NOT BCD(5) AND BCD(0) AND NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND BCD(3) AND NOT BCD(5) AND BCD(0) AND SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND NOT BCD(3) AND BCD(2) AND BCD(0) AND SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND BCD(0) AND SEL));
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$DEC_SEVEN_SEG_2_OBUF$6 <= (($OpTx$DEC_SEVEN_SEG_2_OBUF$0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND BCD(3) AND BCD(2) AND BCD(5) AND NOT SEL));
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$DEC_SEVEN_SEG_4_OBUF$1 <= ((BCD(1) AND BCD(4) AND BCD(3) AND BCD(2) AND NOT BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BCD(0) AND SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BCD(0) AND SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND BCD(3) AND BCD(2) AND BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BCD(0) AND SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND BCD(3) AND NOT BCD(2) AND BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BCD(0) AND SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND NOT BCD(3) AND BCD(2) AND NOT BCD(5) AND NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(4) AND NOT BCD(2) AND NOT BCD(5) AND BCD(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(3) AND BCD(2) AND NOT BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BCD(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND BCD(2) AND NOT BCD(5) AND NOT BCD(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEL));
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$DEC_SEVEN_SEG_4_OBUF$7 <= (($OpTx$DEC_SEVEN_SEG_4_OBUF$1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BCD(0) AND SEL));
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$DEC_SEVEN_SEG_5_OBUF$5 <= ((BCD(1) AND NOT BCD(4) AND BCD(3) AND BCD(2) AND NOT BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND BCD(3) AND BCD(2) AND BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SEL));
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$DEC_SEVEN_SEG_5_OBUF$8 <= (($OpTx$DEC_SEVEN_SEG_5_OBUF$5)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(4) AND NOT BCD(3) AND BCD(2) AND BCD(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(4) AND BCD(5) AND NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND BCD(3) AND BCD(5) AND NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND BCD(2) AND BCD(5) AND NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND BCD(5) AND BCD(0) AND NOT SEL));
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$DEC_SEVEN_SEG_5_OBUF$9 <= (($OpTx$DEC_SEVEN_SEG_5_OBUF$8)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND BCD(2) AND NOT BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SEL));
+</td></tr><tr><td>
+</td></tr><tr><td>
+CATHODES(0) <= SEL;
+</td></tr><tr><td>
+</td></tr><tr><td>
+CATHODES(1) <= NOT SEL;
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+LED <= NOT SW;
+</td></tr><tr><td>
+</td></tr><tr><td>
+SEVEN_SEG(0) <= NOT (((_7_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND NOT BCD(0) AND NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(4) AND BCD(3) AND NOT BCD(5) AND NOT BCD(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND BCD(2) AND NOT BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT BCD(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND BCD(3) AND BCD(5) AND NOT BCD(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BCD(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP10_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(3) AND NOT BCD(5) AND NOT BCD(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(4) AND BCD(3) AND NOT BCD(2) AND BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BCD(0) AND SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT BCD(0) AND SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND BCD(2) AND BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BCD(0) AND SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BCD(0) AND SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND NOT BCD(5) AND NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND NOT BCD(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND NOT BCD(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(3) AND NOT BCD(2) AND BCD(5) AND NOT BCD(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SEL)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+SEVEN_SEG(1) <= SEVEN_SEG(1)_BUFR;
+</td></tr><tr><td>
+</td></tr><tr><td>
+SEVEN_SEG(1)_BUFR <= ((EXP19_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(3) AND BCD(5) AND BCD(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(4) AND NOT BCD(3) AND BCD(2) AND BCD(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(3) AND BCD(5) AND BCD(0) AND SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND NOT BCD(2) AND NOT BCD(5) AND BCD(0) AND SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP22_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND BCD(5) AND NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(3) AND BCD(5) AND NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND NOT BCD(3) AND NOT BCD(5) AND NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(4) AND BCD(3) AND NOT BCD(2) AND BCD(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND BCD(5) AND SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(2) AND BCD(5) AND BCD(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(2) AND BCD(0) AND SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(3) AND NOT BCD(5) AND BCD(0) AND SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(2) AND BCD(5) AND BCD(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND NOT BCD(2) AND NOT BCD(5) AND NOT BCD(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEL));
+</td></tr><tr><td>
+</td></tr><tr><td>
+SEVEN_SEG(2) <= (($OpTx$DEC_SEVEN_SEG_2_OBUF$6)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND NOT SEL));
+</td></tr><tr><td>
+</td></tr><tr><td>
+SEVEN_SEG(3) <= SEVEN_SEG(3)_BUFR;
+</td></tr><tr><td>
+</td></tr><tr><td>
+SEVEN_SEG(3)_BUFR <= NOT (((EXP11_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(3) AND BCD(2) AND NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND NOT BCD(2) AND BCD(5) AND NOT BCD(0) AND SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(4) AND BCD(3) AND NOT BCD(5) AND NOT BCD(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND BCD(3) AND BCD(5) AND NOT BCD(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP14_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(3) AND BCD(0) AND NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND NOT BCD(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND NOT BCD(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND BCD(3) AND NOT BCD(2) AND BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BCD(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(3) AND BCD(5) AND NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT BCD(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND BCD(2) AND BCD(5) AND NOT BCD(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND BCD(2) AND NOT BCD(5) AND NOT BCD(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND NOT BCD(2) AND NOT BCD(5) AND NOT BCD(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SEL)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+SEVEN_SEG(4) <= NOT ((($OpTx$DEC_SEVEN_SEG_4_OBUF$7)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BCD(0) AND SEL)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+SEVEN_SEG(5) <= NOT ((($OpTx$DEC_SEVEN_SEG_5_OBUF$9)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SEL)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+SEVEN_SEG(6) <= NOT (((EXP16_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND BCD(3) AND NOT BCD(2) AND BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BCD(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT BCD(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND BCD(3) AND NOT BCD(2) AND BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT BCD(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP15_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND NOT BCD(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(4) AND BCD(3) AND BCD(2) AND BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BCD(0) AND SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(4) AND BCD(3) AND BCD(2) AND NOT BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT BCD(0) AND SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND BCD(3) AND BCD(2) AND BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT BCD(0) AND SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(3) AND BCD(2) AND BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BCD(0) AND SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(3) AND BCD(2) AND NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(3) AND BCD(5) AND NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(3) AND BCD(0) AND NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND BCD(2) AND BCD(5) AND BCD(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEL)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND BCD(3) AND BCD(2) AND NOT BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BCD(0))));
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>
