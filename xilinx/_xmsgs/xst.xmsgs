@@ -5,16 +5,10 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/invert_top</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">/home/erik/work/test/invert_top.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/erik/work/scramble/xilinx/invert_top.vhd</arg>&quot;.
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">/home/erik/work/scramble/xilinx/invert_top.vhd</arg>&quot; line <arg fmt="%d" index="2">261</arg>: Mux is complete : default of case is discarded
 </msg>
 
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/invert_top/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">/home/erik/work/test/invert_top.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/erik/work/scramble/xilinx/invert_top.vhd</arg>&quot;.
-</msg>
-
-<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">/home/erik/work/scramble/xilinx/invert_top.vhd</arg>&quot; line <arg fmt="%d" index="2">266</arg>: Mux is complete : default of case is discarded
-</msg>
-
-<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">/home/erik/work/scramble/xilinx/invert_top.vhd</arg>&quot; line <arg fmt="%d" index="2">278</arg>: Mux is complete : default of case is discarded
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">/home/erik/work/scramble/xilinx/invert_top.vhd</arg>&quot; line <arg fmt="%d" index="2">273</arg>: Mux is complete : default of case is discarded
 </msg>
 
 </messages>

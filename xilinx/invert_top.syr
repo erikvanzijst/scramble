@@ -78,8 +78,6 @@ wysiwyg                            : NO
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-WARNING:HDLParsers:3607 - Unit work/invert_top is now defined in a different file.  It was defined in "/home/erik/work/test/invert_top.vhd", and is now defined in "/home/erik/work/scramble/xilinx/invert_top.vhd".
-WARNING:HDLParsers:3607 - Unit work/invert_top/Behavioral is now defined in a different file.  It was defined in "/home/erik/work/test/invert_top.vhd", and is now defined in "/home/erik/work/scramble/xilinx/invert_top.vhd".
 Compiling vhdl file "/home/erik/work/scramble/xilinx/invert_top.vhd" in Library work.
 Entity <invert_top> compiled.
 Entity <invert_top> (Architecture <behavioral>) compiled.
@@ -94,8 +92,8 @@ Analyzing hierarchy for entity <invert_top> in library <work> (architecture <beh
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <invert_top> in library <work> (Architecture <behavioral>).
-INFO:Xst:1561 - "/home/erik/work/scramble/xilinx/invert_top.vhd" line 266: Mux is complete : default of case is discarded
-INFO:Xst:1561 - "/home/erik/work/scramble/xilinx/invert_top.vhd" line 278: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "/home/erik/work/scramble/xilinx/invert_top.vhd" line 261: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "/home/erik/work/scramble/xilinx/invert_top.vhd" line 273: Mux is complete : default of case is discarded
 Entity <invert_top> analyzed. Unit <invert_top> generated.
 
 
@@ -172,13 +170,15 @@ Design Statistics
 # IOs                              : 18
 
 Cell Usage :
-# BELS                             : 488
-#      AND2                        : 141
-#      AND3                        : 26
-#      AND4                        : 2
-#      INV                         : 189
-#      OR2                         : 107
-#      OR3                         : 23
+# BELS                             : 440
+#      AND2                        : 125
+#      AND3                        : 23
+#      AND4                        : 1
+#      INV                         : 167
+#      OR2                         : 103
+#      OR3                         : 19
+#      OR4                         : 1
+#      XOR2                        : 1
 # IO Buffers                       : 18
 #      IBUF                        : 8
 #      OBUF                        : 10
@@ -186,14 +186,14 @@ Cell Usage :
 
 
 Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 2.61 secs
+Total CPU time to Xst completion: 2.57 secs
  
 --> 
 
 
-Total memory usage is 613244 kilobytes
+Total memory usage is 613184 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    2 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
 Number of infos    :    2 (   0 filtered)
 
