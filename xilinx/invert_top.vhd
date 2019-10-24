@@ -6,7 +6,7 @@
 -- Design Name: 
 -- Module Name:    invert_top - Behavioral 
 -- Project Name: 
--- Target Devices: 
+-- Target Devices: XC9572XL
 -- Tool versions: 
 -- Description: 
 --
@@ -21,68 +21,69 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
--- Uncomment the following library declaration if instantiating
--- any Xilinx primitives in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
 entity invert_top is
-    Port ( SW           : in STD_LOGIC;
-           LED          : out STD_LOGIC;
-           SEL          : in STD_LOGIC;
+    Port ( CLK          : in STD_LOGIC;
            BCD          : in STD_LOGIC_VECTOR (5 downto 0);
            SEVEN_SEG    : out STD_LOGIC_VECTOR (6 downto 0);
            CATHODES     : out STD_LOGIC_VECTOR (1 downto 0));
 end invert_top;
 
 architecture Behavioral of invert_top is
-   constant E       : STD_LOGIC_VECTOR (6 downto 0) := "1001111";
-   constant R       : STD_LOGIC_VECTOR (6 downto 0) := "1000110";
-   constant BLANK   : STD_LOGIC_VECTOR (6 downto 0) := "0000000";
-   constant ONE     : STD_LOGIC_VECTOR (6 downto 0) := "0110000";
-   constant TWO     : STD_LOGIC_VECTOR (6 downto 0) := "1101101";
-   constant THREE   : STD_LOGIC_VECTOR (6 downto 0) := "1111001";
-   constant FOUR    : STD_LOGIC_VECTOR (6 downto 0) := "0110011";
-   constant FIVE    : STD_LOGIC_VECTOR (6 downto 0) := "1011011";
-   constant SIX     : STD_LOGIC_VECTOR (6 downto 0) := "1011111";
-   constant SEVEN   : STD_LOGIC_VECTOR (6 downto 0) := "1110000";
-   constant EIGHT   : STD_LOGIC_VECTOR (6 downto 0) := "1111111";
-   constant NINE    : STD_LOGIC_VECTOR (6 downto 0) := "1110011";
-   constant ZERO    : STD_LOGIC_VECTOR (6 downto 0) := "1111110";
+    constant E      : STD_LOGIC_VECTOR (6 downto 0) := "1001111";
+    constant R      : STD_LOGIC_VECTOR (6 downto 0) := "1000110";
+    constant BLANK  : STD_LOGIC_VECTOR (6 downto 0) := "0000000";
+    constant ONE    : STD_LOGIC_VECTOR (6 downto 0) := "0110000";
+    constant TWO    : STD_LOGIC_VECTOR (6 downto 0) := "1101101";
+    constant THREE  : STD_LOGIC_VECTOR (6 downto 0) := "1111001";
+    constant FOUR   : STD_LOGIC_VECTOR (6 downto 0) := "0110011";
+    constant FIVE   : STD_LOGIC_VECTOR (6 downto 0) := "1011011";
+    constant SIX    : STD_LOGIC_VECTOR (6 downto 0) := "1011111";
+    constant SEVEN  : STD_LOGIC_VECTOR (6 downto 0) := "1110000";
+    constant EIGHT  : STD_LOGIC_VECTOR (6 downto 0) := "1111111";
+    constant NINE   : STD_LOGIC_VECTOR (6 downto 0) := "1110011";
+    constant ZERO   : STD_LOGIC_VECTOR (6 downto 0) := "1111110";
 
-    signal CLK_DIV  : STD_LOGIC_VECTOR (3 downto 0);
     signal MS_SEG   : STD_LOGIC_VECTOR (6 downto 0);
     signal LS_SEG   : STD_LOGIC_VECTOR (6 downto 0);
+    signal CNTR     : STD_LOGIC_VECTOR (3 downto 0) := "0000";
+    signal CATHS    : STD_LOGIC_VECTOR (1 downto 0) := "01";
 
 begin
 
-   process (SW)
-   begin
-      LED <= not SW;
-   end process;
- 
-    -- clock divider
-    process (SEL)
+    process (CLK)
     begin
-        if (SEL'Event and SEL = '1') then
-            CLK_DIV <= CLK_DIV + '1';
+        if rising_edge(CLK) then
+            CNTR <= CNTR + '1';
         end if;
     end process;
-   
-    process (CLK_DIV, MS_SEG, LS_SEG)
+
+    process (CLK)
     begin
-        if (CLK_DIV(0) = '0' and CLK_DIV(1) = '0' and CLK_DIV(2) = '0') then
-            case CLK_DIV(3) is
-                when '0' =>
-                    SEVEN_SEG <= MS_SEG;
-                    CATHODES <= "10";   -- activate first/left display
-                when '1' =>
-                    SEVEN_SEG <= LS_SEG;
-                    CATHODES <= "01";   -- activate second/right display
-                when others =>
-                    SEVEN_SEG <= E;
-                    CATHODES <= "01";
-            end case;
+        if falling_edge(CLK) then
+            if CNTR = "0000" then
+                -- Prepare to switch between segments on the next clock
+                -- cycle.
+                CATHS <= "11" xor CATHS;     -- internal signal, not actual output
+                
+            elsif CNTR = "0001" then
+                -- Assign the previously switched signals to the cathodes:
+                CATHODES <= CATHS;
+                -- Because the BJT's driving the cathodes are slow to respond,
+                -- blank out the display for a brief interval following the switch:
+                SEVEN_SEG <= BLANK;
+
+            else
+                -- By now the BJT's have had time to catch up, so put the signal
+                -- back on the 7-segment input lines:
+                case CATHS(0) is
+                    when '0' =>
+                        SEVEN_SEG <= MS_SEG;
+                    when '1' =>
+                        SEVEN_SEG <= LS_SEG;
+                    when others =>
+                        SEVEN_SEG <= E;
+                end case;
+            end if;
         end if;
     end process;
    

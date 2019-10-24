@@ -6,405 +6,396 @@
 ********** Mapped Logic **********
 </td></tr><tr><td>
 </td></tr><tr><td>
-$OpTx$$OpTx$FX_DC$12_INV$820 <= (BCD(4) AND NOT BCD(2));
+$OpTx$$OpTx$FX_DC$428_INV$791 <= BCD(3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	 XOR 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$OpTx$$OpTx$FX_DC$428_INV$791 <= BCD(5);
 </td></tr><tr><td>
 </td></tr><tr><td>
-$OpTx$FX_SC$30 <= (NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2));
+$OpTx$$OpTx$FX_DC$429_INV$792 <= (BCD(4) AND NOT BCD(2));
 </td></tr><tr><td>
 </td></tr><tr><td>
-$OpTx$FX_SC$31 <= (NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(2));
+$OpTx$$OpTx$FX_DC$430_INV$793 <= (BCD(3) AND NOT BCD(5));
 </td></tr><tr><td>
-FDCPE_CATHODES0: FDCPE port map (CATHODES(0),'0','0',CATHODES_CLR(0),CATHODES_PRE(0));
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CATHODES_CLR(0) <= (NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(2));
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CATHODES_PRE(0) <= (CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(2));
 </td></tr><tr><td>
-FDCPE_CATHODES1: FDCPE port map (CATHODES(1),'0','0',CATHODES_CLR(1),CATHODES_PRE(1));
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CATHODES_CLR(1) <= (CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(2));
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CATHODES_PRE(1) <= (NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(2));
+$OpTx$$OpTx$FX_DC$432_INV$794 <= (NOT BCD(1) AND NOT BCD(0));
 </td></tr><tr><td>
-FTCPE_CLK_DIV0: FTCPE port map (CLK_DIV(0),'1',SEL,'0','0');
 </td></tr><tr><td>
-FTCPE_CLK_DIV1: FTCPE port map (CLK_DIV(1),CLK_DIV(0),SEL,'0','0');
+$OpTx$$OpTx$FX_DC$433_INV$795 <= (NOT BCD(3) AND BCD(5));
 </td></tr><tr><td>
-FTCPE_CLK_DIV2: FTCPE port map (CLK_DIV(2),CLK_DIV_T(2),SEL,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_DIV_T(2) <= (CLK_DIV(0) AND CLK_DIV(1));
 </td></tr><tr><td>
-FTCPE_CLK_DIV3: FTCPE port map (CLK_DIV(3),CLK_DIV_T(3),SEL,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_DIV_T(3) <= (CLK_DIV(0) AND CLK_DIV(1) AND CLK_DIV(2));
+$OpTx$$OpTx$FX_DC$434_INV$796 <= (NOT BCD(4) AND BCD(2));
 </td></tr><tr><td>
 </td></tr><tr><td>
+$OpTx$$OpTx$FX_DC$435_INV$797 <= (NOT BCD(1) AND BCD(0));
 </td></tr><tr><td>
 </td></tr><tr><td>
+$OpTx$$OpTx$FX_DC$436_INV$798 <= ((NOT BCD(1) AND NOT BCD(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(2) AND NOT BCD(0)));
 </td></tr><tr><td>
 </td></tr><tr><td>
+$OpTx$$OpTx$FX_DC$438_INV$799 <= (BCD(1) AND NOT BCD(0));
 </td></tr><tr><td>
 </td></tr><tr><td>
+$OpTx$$OpTx$FX_DC$439_INV$800 <= (BCD(1) AND BCD(0));
 </td></tr><tr><td>
 </td></tr><tr><td>
+$OpTx$$OpTx$FX_DC$459_INV$801 <= ((NOT CATHS(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3)));
 </td></tr><tr><td>
 </td></tr><tr><td>
+$OpTx$$OpTx$FX_DC$460_INV$802 <= (NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3));
 </td></tr><tr><td>
 </td></tr><tr><td>
+$OpTx$$OpTx$FX_DC$461_INV$803 <= ((NOT BCD(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3)));
 </td></tr><tr><td>
 </td></tr><tr><td>
+$OpTx$$OpTx$FX_DC$463_INV$804 <= ((CATHS(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3)));
 </td></tr><tr><td>
 </td></tr><tr><td>
+$OpTx$$OpTx$FX_DC$466_INV$805 <= ((BCD(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3)));
 </td></tr><tr><td>
 </td></tr><tr><td>
+$OpTx$$OpTx$FX_DC$468_INV$806 <= ((NOT BCD(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3)));
 </td></tr><tr><td>
 </td></tr><tr><td>
+$OpTx$$OpTx$FX_DC$469_INV$807 <= ((NOT BCD(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3)));
 </td></tr><tr><td>
 </td></tr><tr><td>
+$OpTx$$OpTx$FX_DC$479_INV$808 <= (NOT BCD(1) AND NOT BCD(3) AND NOT BCD(2) AND NOT BCD(0));
 </td></tr><tr><td>
 </td></tr><tr><td>
+$OpTx$$OpTx$FX_DC$482_INV$809 <= ((NOT BCD(4) AND BCD(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND NOT CATHS(0)));
 </td></tr><tr><td>
 </td></tr><tr><td>
+$OpTx$DEC_SEVEN_SEG_2$1 <= ((EXP12_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(3) AND BCD(0) AND NOT BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$459_INV$801)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(3) AND BCD(0) AND BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$459_INV$801)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(3) AND BCD(0) AND BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$459_INV$801)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(3) AND BCD(0) AND NOT BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$459_INV$801)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (SEVEN_SEG(2) AND NOT CNTR(0) AND NOT CNTR(1) AND NOT CNTR(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CNTR(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND BCD(3) AND BCD(2) AND NOT CATHS(0) AND BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$460_INV$802)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND BCD(3) AND NOT BCD(2) AND NOT CATHS(0) AND NOT BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CNTR(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND BCD(3) AND NOT BCD(2) AND NOT CATHS(0) AND NOT BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CNTR(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND BCD(3) AND NOT BCD(2) AND NOT CATHS(0) AND NOT BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CNTR(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND NOT BCD(3) AND BCD(2) AND NOT CATHS(0) AND NOT BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$460_INV$802)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND NOT BCD(2) AND $OpTx$FX_DC$462)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND BCD(3) AND NOT BCD(5) AND $OpTx$FX_DC$462)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND NOT BCD(3) AND BCD(2) AND $OpTx$FX_DC$462)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(2) AND BCD(5) AND $OpTx$FX_DC$462)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND $OpTx$FX_DC$462));
 </td></tr><tr><td>
 </td></tr><tr><td>
+$OpTx$DEC_SEVEN_SEG_2$4 <= (($OpTx$DEC_SEVEN_SEG_2$1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(4) AND NOT BCD(3) AND NOT CATHS(0) AND BCD(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT BCD(5) AND NOT $OpTx$$OpTx$FX_DC$460_INV$802));
 </td></tr><tr><td>
 </td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
-LED <= NOT SW;
-</td></tr><tr><td>
-FDCPE_SEVEN_SEG0: FDCPE port map (SEVEN_SEG(0),'0','0',SEVEN_SEG_0/SEVEN_SEG_0_RSTF,SEVEN_SEG_PRE(0));
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEVEN_SEG_PRE(0) <= (NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEVEN_SEG_0/SEVEN_SEG_0_RSTF);
-</td></tr><tr><td>
-FDCPE_SEVEN_SEG1: FDCPE port map (SEVEN_SEG(1),'0','0',SEVEN_SEG_CLR(1),SEVEN_SEG_1/SEVEN_SEG_1_SETF);
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEVEN_SEG_CLR(1) <= (NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEVEN_SEG_1/SEVEN_SEG_1_SETF);
-</td></tr><tr><td>
-FDCPE_SEVEN_SEG2: FDCPE port map (SEVEN_SEG(2),'0','0',SEVEN_SEG_2/SEVEN_SEG_2_RSTF,SEVEN_SEG_PRE(2));
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEVEN_SEG_PRE(2) <= (NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEVEN_SEG_2/SEVEN_SEG_2_RSTF);
-</td></tr><tr><td>
-FDCPE_SEVEN_SEG3: FDCPE port map (SEVEN_SEG(3),'0','0',SEVEN_SEG_3/SEVEN_SEG_3_RSTF,NOT SEVEN_SEG_3/SEVEN_SEG_3_SETF__$INT);
-</td></tr><tr><td>
-FDCPE_SEVEN_SEG4: FDCPE port map (SEVEN_SEG(4),'0','0',SEVEN_SEG_CLR(4),SEVEN_SEG_4/SEVEN_SEG_4_SETF);
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEVEN_SEG_CLR(4) <= (NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEVEN_SEG_4/SEVEN_SEG_4_SETF);
-</td></tr><tr><td>
-FDCPE_SEVEN_SEG5: FDCPE port map (SEVEN_SEG(5),'0','0',SEVEN_SEG_5/SEVEN_SEG_5_RSTF,SEVEN_SEG_PRE(5));
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEVEN_SEG_PRE(5) <= (NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF);
-</td></tr><tr><td>
-FDCPE_SEVEN_SEG6: FDCPE port map (SEVEN_SEG(6),'0','0',SEVEN_SEG_6/SEVEN_SEG_6_RSTF,SEVEN_SEG_6/SEVEN_SEG_6_SETF);
-</td></tr><tr><td>
-</td></tr><tr><td>
-SEVEN_SEG_0/SEVEN_SEG_0_RSTF <= ((EXP17_.EXP)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(4) AND BCD(3) AND NOT BCD(0) AND NOT BCD(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND BCD(2) AND NOT BCD(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT BCD(5) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND BCD(3) AND NOT BCD(0) AND BCD(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(3) AND NOT BCD(0) AND NOT BCD(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND BCD(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND NOT BCD(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(4) AND BCD(3) AND NOT BCD(2) AND BCD(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BCD(5) AND CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND BCD(2) AND BCD(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BCD(5) AND CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND BCD(3) AND BCD(2) AND BCD(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT BCD(5) AND CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND BCD(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BCD(5) AND CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND NOT BCD(5) AND NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND NOT BCD(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND NOT CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND NOT BCD(5) AND NOT CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND BCD(3) AND NOT BCD(2) AND BCD(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT BCD(5) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2)));
-</td></tr><tr><td>
-</td></tr><tr><td>
-SEVEN_SEG_1/SEVEN_SEG_1_SETF <= ((EXP8_.EXP)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(3) AND BCD(5) AND NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(3) AND BCD(0) AND NOT BCD(5) AND CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(2) AND BCD(0) AND CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(3) AND BCD(0) AND BCD(5) AND CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND BCD(5) AND NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(3) AND BCD(0) AND BCD(5) AND NOT CLK_DIV(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND BCD(3) AND NOT BCD(5) AND CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND BCD(3) AND BCD(2) AND BCD(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND BCD(3) AND NOT BCD(2) AND BCD(0) AND CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(2) AND BCD(0) AND BCD(5) AND NOT CLK_DIV(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(2) AND BCD(0) AND CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(4) AND BCD(3) AND NOT BCD(2) AND BCD(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(3) AND BCD(2) AND BCD(5) AND CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND BCD(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2)));
-</td></tr><tr><td>
-</td></tr><tr><td>
-SEVEN_SEG_2/SEVEN_SEG_2_RSTF <= ((EXP11_.EXP)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(3) AND BCD(5) AND NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(2) AND NOT BCD(0) AND BCD(5) AND NOT CLK_DIV(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(3) AND NOT BCD(2) AND NOT CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(2) AND BCD(5) AND NOT CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND BCD(3) AND NOT BCD(2) AND BCD(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND BCD(3) AND BCD(2) AND NOT BCD(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND BCD(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(3) AND BCD(2) AND BCD(0) AND NOT BCD(5) AND NOT CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(4) AND BCD(3) AND BCD(2) AND BCD(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(0) AND CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND NOT CLK_DIV(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(3) AND BCD(2) AND NOT BCD(5) AND NOT CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(3) AND BCD(2) AND BCD(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2)));
-</td></tr><tr><td>
-</td></tr><tr><td>
-SEVEN_SEG_3/SEVEN_SEG_3_RSTF <= ((EXP23_.EXP)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(4) AND BCD(3) AND NOT BCD(0) AND NOT BCD(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND BCD(3) AND NOT BCD(2) AND BCD(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BCD(5) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND BCD(2) AND NOT BCD(0) AND BCD(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND BCD(2) AND NOT BCD(0) AND NOT BCD(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (SEVEN_SEG_5/SEVEN_SEG_5_RSTF.EXP)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND NOT BCD(5) AND NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(4) AND NOT BCD(2) AND NOT BCD(0) AND CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND NOT BCD(2) AND NOT BCD(0) AND NOT BCD(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND NOT BCD(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND BCD(3) AND NOT BCD(0) AND BCD(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(3) AND NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND NOT BCD(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND BCD(2) AND NOT BCD(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT BCD(5) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND BCD(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT BCD(5) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND BCD(3) AND BCD(2) AND BCD(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT BCD(5) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2)));
-</td></tr><tr><td>
-</td></tr><tr><td>
-SEVEN_SEG_3/SEVEN_SEG_3_SETF__$INT <= ((EXP28_.EXP)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND NOT BCD(2) AND NOT BCD(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF AND NOT $OpTx$FX_SC$31)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(3) AND NOT CLK_DIV(3) AND $OpTx$FX_SC$30 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND NOT BCD(0) AND NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$FX_SC$31 AND NOT SEVEN_SEG_4/SEVEN_SEG_4_SETF)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND NOT $OpTx$FX_SC$30 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF AND NOT $OpTx$FX_SC$31 AND NOT SEVEN_SEG_4/SEVEN_SEG_4_SETF)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND NOT $OpTx$FX_SC$30 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF AND NOT $OpTx$FX_SC$31)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP31_.EXP)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND BCD(3) AND NOT BCD(0) AND NOT BCD(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF AND NOT $OpTx$FX_SC$31)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND BCD(3) AND NOT BCD(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEVEN_SEG_2/SEVEN_SEG_2_RSTF AND NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF AND NOT $OpTx$FX_SC$31)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND NOT BCD(3) AND NOT CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SEVEN_SEG_2/SEVEN_SEG_2_RSTF AND $OpTx$FX_SC$30 AND NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(2) AND BCD(5) AND NOT $OpTx$FX_SC$30 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF AND NOT $OpTx$FX_SC$31)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND NOT BCD(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF AND NOT $OpTx$FX_SC$31)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(0) AND CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SEVEN_SEG_2/SEVEN_SEG_2_RSTF)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND NOT BCD(5) AND NOT CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SEVEN_SEG_2/SEVEN_SEG_2_RSTF)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND NOT BCD(2) AND NOT $OpTx$FX_SC$30 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF AND NOT $OpTx$FX_SC$31)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND NOT BCD(5) AND NOT $OpTx$FX_SC$30 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF AND NOT $OpTx$FX_SC$31)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND NOT SEVEN_SEG_2/SEVEN_SEG_2_RSTF AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$FX_SC$30 AND NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF AND NOT $OpTx$FX_SC$31));
-</td></tr><tr><td>
-</td></tr><tr><td>
-SEVEN_SEG_4/SEVEN_SEG_4_SETF <= ((BCD(1) AND BCD(3) AND BCD(5) AND NOT CLK_DIV(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(2) AND CLK_DIV(3) AND NOT CLK_DIV(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND NOT CLK_DIV(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND BCD(3) AND NOT BCD(2) AND CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND NOT CLK_DIV(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP16_.EXP)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND BCD(3) AND NOT CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(3) AND NOT BCD(5) AND CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(3) AND NOT BCD(5) AND CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(3) AND BCD(0) AND NOT CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(3) AND BCD(2) AND BCD(0) AND NOT CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(0) AND CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(5) AND NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(3) AND BCD(2) AND NOT CLK_DIV(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND NOT BCD(3) AND BCD(5) AND NOT CLK_DIV(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(3) AND BCD(2) AND BCD(5) AND NOT CLK_DIV(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(1) AND NOT CLK_DIV(2)));
-</td></tr><tr><td>
-</td></tr><tr><td>
-SEVEN_SEG_5/SEVEN_SEG_5_RSTF <= (($OpTx$$OpTx$FX_DC$12_INV$820.EXP)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND BCD(3) AND BCD(5) AND NOT CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND BCD(0) AND BCD(5) AND NOT CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND NOT BCD(3) AND NOT BCD(5) AND NOT CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
+$OpTx$DEC_SEVEN_SEG_4$0 <= ((EXP22_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CATHS(0) AND BCD(5) AND CNTR(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CATHS(0) AND BCD(5) AND CNTR(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(3) AND BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$460_INV$802)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(3) AND NOT $OpTx$$OpTx$FX_DC$460_INV$802 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$$OpTx$FX_DC$429_INV$792)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(3) AND NOT BCD(0) AND NOT $OpTx$$OpTx$FX_DC$460_INV$802 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$$OpTx$FX_DC$429_INV$792)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR ($OpTx$$OpTx$FX_DC$436_INV$798.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(3) AND BCD(2) AND CNTR(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(3) AND BCD(2) AND CNTR(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(2) AND CATHS(0) AND CNTR(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(2) AND CATHS(0) AND CNTR(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(2) AND CATHS(0) AND CNTR(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(0) AND NOT $OpTx$$OpTx$FX_DC$459_INV$801)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(3) AND NOT $OpTx$$OpTx$FX_DC$459_INV$801 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$$OpTx$FX_DC$429_INV$792)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CATHS(0) AND BCD(5) AND CNTR(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(3) AND BCD(5) AND NOT $OpTx$$OpTx$FX_DC$460_INV$802 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$429_INV$792)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(3) AND CATHS(0) AND NOT BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$460_INV$802));
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$DEC_SEVEN_SEG_4$3 <= (($OpTx$DEC_SEVEN_SEG_4$0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(3) AND NOT CATHS(0) AND CNTR(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$432_INV$794 AND NOT $OpTx$$OpTx$FX_DC$429_INV$792));
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$DEC_SEVEN_SEG_5$2 <= (($OpTx$$OpTx$FX_DC$469_INV$807.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND NOT CATHS(0) AND BCD(5) AND CNTR(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$479_INV$808)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(4) AND NOT BCD(3) AND BCD(2) AND BCD(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CNTR(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(4) AND NOT BCD(3) AND BCD(2) AND BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CNTR(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(4) AND NOT BCD(3) AND BCD(2) AND BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CNTR(3))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND BCD(2) AND NOT BCD(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(4) AND BCD(5) AND NOT CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND BCD(2) AND BCD(5) AND NOT CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CNTR(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR ($OpTx$DEC_SEVEN_SEG_4$3.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND BCD(2) AND NOT BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CNTR(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND BCD(2) AND NOT BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CNTR(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND NOT BCD(2) AND NOT BCD(0) AND NOT BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$463_INV$804)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND BCD(3) AND BCD(2) AND CATHS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT BCD(5) AND CNTR(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND CATHS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BCD(5) AND CNTR(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND NOT BCD(3) AND NOT BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$463_INV$804)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT SEVEN_SEG(5) AND NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (CNTR(0) AND NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND NOT CATHS(0) AND BCD(5) AND CNTR(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$479_INV$808)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND NOT CATHS(0) AND BCD(5) AND CNTR(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$479_INV$808));
 </td></tr><tr><td>
 </td></tr><tr><td>
-SEVEN_SEG_6/SEVEN_SEG_6_RSTF <= ((EXP20_.EXP)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND BCD(3) AND NOT BCD(2) AND BCD(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BCD(5) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT BCD(5) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND BCD(3) AND BCD(2) AND BCD(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT BCD(5) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BCD(5) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND BCD(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT BCD(5) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT BCD(5) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(4) AND BCD(3) AND BCD(2) AND BCD(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BCD(5) AND CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND BCD(3) AND BCD(2) AND NOT BCD(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BCD(5) AND CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(3) AND BCD(2) AND BCD(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BCD(5) AND CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(3) AND NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND NOT BCD(5) AND NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND BCD(2) AND BCD(0) AND NOT CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND NOT CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND NOT BCD(5) AND NOT CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2)));
+$OpTx$DEC_SEVEN_SEG_5$5 <= (($OpTx$DEC_SEVEN_SEG_5$2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND BCD(3) AND BCD(2) AND CATHS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BCD(5) AND CNTR(3)));
 </td></tr><tr><td>
 </td></tr><tr><td>
-SEVEN_SEG_6/SEVEN_SEG_6_SETF <= ((EXP27_.EXP)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(2) AND NOT BCD(0) AND CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(3) AND BCD(0) AND NOT BCD(5) AND CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(3) AND NOT BCD(2) AND BCD(0) AND BCD(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(3) AND NOT BCD(0) AND NOT BCD(5) AND CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(3) AND BCD(0) AND BCD(5) AND NOT CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND BCD(3) AND BCD(0) AND NOT CLK_DIV(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(2) AND CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND NOT BCD(3) AND NOT BCD(0) AND BCD(5) AND NOT CLK_DIV(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(3) AND NOT BCD(0) AND NOT BCD(5) AND CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(3) AND BCD(0) AND NOT BCD(5) AND CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(4) AND BCD(5) AND NOT CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(2) AND BCD(5) AND CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(3) AND NOT BCD(0) AND BCD(5) AND CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(3) AND BCD(2) AND BCD(5) AND CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(3) AND NOT BCD(2) AND BCD(0) AND CLK_DIV(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2)));
+$OpTx$FX_DC$431 <= ((BCD(3) AND BCD(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(3) AND CATHS(0) AND NOT BCD(5)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$FX_DC$462 <= ((CATHS(0) AND BCD(0) AND CNTR(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (CATHS(0) AND BCD(0) AND CNTR(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (CATHS(0) AND BCD(0) AND CNTR(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$FX_DC$465 <= ((BCD(1) AND CATHS(0) AND CNTR(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND CATHS(0) AND CNTR(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND CATHS(0) AND CNTR(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$FX_DC$467 <= ((BCD(4) AND BCD(2) AND CNTR(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND BCD(2) AND CNTR(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND BCD(2) AND CNTR(3)));
+</td></tr><tr><td>
+FDCPE_CATHODES0: FDCPE port map (CATHODES(0),CATHS(0),NOT CLK,'0','0',CATHODES_CE(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CATHODES_CE(0) <= (CNTR(0) AND NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3));
+</td></tr><tr><td>
+FDCPE_CATHODES1: FDCPE port map (CATHODES(1),CATHS(1),NOT CLK,'0','0',CATHODES_CE(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CATHODES_CE(1) <= (CNTR(0) AND NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3));
+</td></tr><tr><td>
+FTCPE_CATHS0: FTCPE port map (CATHS(0),'1',NOT CLK,'0','0',CATHS_CE(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CATHS_CE(0) <= (NOT CNTR(0) AND NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3));
+</td></tr><tr><td>
+FTCPE_CATHS1: FTCPE port map (CATHS(1),'1',NOT CLK,'0','0',CATHS_CE(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CATHS_CE(1) <= (NOT CNTR(0) AND NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3));
+</td></tr><tr><td>
+FTCPE_CNTR0: FTCPE port map (CNTR(0),'1',CLK,'0','0');
+</td></tr><tr><td>
+FTCPE_CNTR1: FTCPE port map (CNTR(1),CNTR(0),CLK,'0','0');
+</td></tr><tr><td>
+FTCPE_CNTR2: FTCPE port map (CNTR(2),CNTR_T(2),CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CNTR_T(2) <= (CNTR(0) AND CNTR(1));
+</td></tr><tr><td>
+FTCPE_CNTR3: FTCPE port map (CNTR(3),CNTR_T(3),CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CNTR_T(3) <= (CNTR(0) AND CNTR(1) AND CNTR(2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+FDCPE_SEVEN_SEG0: FDCPE port map (SEVEN_SEG(0),SEVEN_SEG_D(0),NOT CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEVEN_SEG_D(0) <= ((_7_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(0) AND $OpTx$$OpTx$FX_DC$433_INV$795 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$468_INV$806)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND BCD(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$461_INV$803)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(0) AND NOT $OpTx$$OpTx$FX_DC$460_INV$802 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_DC$431)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND BCD(2) AND NOT $OpTx$$OpTx$FX_DC$461_INV$803 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$432_INV$794)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(3) AND BCD(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$461_INV$803)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP10_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(0) AND $OpTx$FX_DC$431 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$468_INV$806)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND NOT CATHS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$460_INV$802 AND NOT $OpTx$$OpTx$FX_DC$436_INV$798)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND $OpTx$FX_DC$465)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(3) AND NOT BCD(5) AND NOT $OpTx$$OpTx$FX_DC$459_INV$801 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$$OpTx$FX_DC$432_INV$794)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND NOT BCD(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$460_INV$802 AND $OpTx$$OpTx$FX_DC$433_INV$795)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CATHS(0) AND NOT $OpTx$$OpTx$FX_DC$461_INV$803)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND NOT CATHS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$469_INV$807)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR ($OpTx$$OpTx$FX_DC$433_INV$795 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$468_INV$806 AND $OpTx$$OpTx$FX_DC$432_INV$794)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND NOT BCD(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$461_INV$803));
+</td></tr><tr><td>
+FDCPE_SEVEN_SEG1_BUFR: FDCPE port map (SEVEN_SEG(1)_BUFR,SEVEN_SEG_D(1)_BUFR,NOT CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEVEN_SEG_D(1)_BUFR <= (($OpTx$FX_DC$431.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(3) AND NOT CATHS(0) AND BCD(5) AND CNTR(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(3) AND NOT CATHS(0) AND BCD(5) AND CNTR(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(3) AND NOT CATHS(0) AND BCD(5) AND CNTR(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(3) AND BCD(5) AND NOT $OpTx$$OpTx$FX_DC$466_INV$805 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$$OpTx$FX_DC$434_INV$796)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(3) AND BCD(5) AND NOT $OpTx$$OpTx$FX_DC$466_INV$805 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$$OpTx$FX_DC$429_INV$792)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP21_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(2) AND BCD(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$461_INV$803)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(3) AND BCD(0) AND BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$460_INV$802)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(3) AND BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$460_INV$802 AND $OpTx$$OpTx$FX_DC$429_INV$792)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(3) AND CATHS(0) AND NOT BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$466_INV$805 AND $OpTx$$OpTx$FX_DC$434_INV$796)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (SEVEN_SEG(1)_BUFR AND NOT CNTR(0) AND NOT CNTR(1) AND NOT CNTR(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CNTR(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR ($OpTx$$OpTx$FX_DC$434_INV$796 AND $OpTx$FX_DC$462)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND NOT CATHS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$461_INV$803)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(3) AND $OpTx$FX_DC$462 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$$OpTx$FX_DC$429_INV$792)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(5) AND $OpTx$FX_DC$462 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$$OpTx$FX_DC$429_INV$792));
+</td></tr><tr><td>
+</td></tr><tr><td>
+SEVEN_SEG(1) <= SEVEN_SEG(1)_BUFR;
+</td></tr><tr><td>
+FDCPE_SEVEN_SEG2: FDCPE port map (SEVEN_SEG(2),SEVEN_SEG_D(2),NOT CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEVEN_SEG_D(2) <= (($OpTx$DEC_SEVEN_SEG_2$4)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND BCD(3) AND NOT CATHS(0) AND NOT BCD(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT BCD(5) AND NOT $OpTx$$OpTx$FX_DC$460_INV$802));
+</td></tr><tr><td>
+</td></tr><tr><td>
+SEVEN_SEG(3) <= SEVEN_SEG(3)_BUFR;
+</td></tr><tr><td>
+FDCPE_SEVEN_SEG3_BUFR: FDCPE port map (SEVEN_SEG(3)_BUFR,SEVEN_SEG_D(3)_BUFR,NOT CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEVEN_SEG_D(3)_BUFR <= ((EXP28_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND BCD(4) AND NOT CATHS(0) AND BCD(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$460_INV$802)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(2) AND CNTR(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$$OpTx$FX_DC$430_INV$793)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(2) AND CNTR(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$$OpTx$FX_DC$430_INV$793)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(2) AND CNTR(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$$OpTx$FX_DC$430_INV$793)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND NOT CATHS(0) AND BCD(5) AND CNTR(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$432_INV$794)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR ($OpTx$$OpTx$FX_DC$482_INV$809.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(0) AND NOT $OpTx$$OpTx$FX_DC$430_INV$793 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_DC$467)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND BCD(2) AND NOT CATHS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$460_INV$802)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(2) AND $OpTx$FX_DC$462 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$430_INV$793)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(3) AND BCD(5) AND NOT $OpTx$$OpTx$FX_DC$435_INV$797 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_DC$467)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (SEVEN_SEG(3)_BUFR AND NOT CNTR(0) AND NOT CNTR(1) AND NOT CNTR(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CNTR(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND NOT BCD(2) AND $OpTx$FX_DC$462)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND NOT CATHS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$469_INV$807)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(0) AND $OpTx$$OpTx$FX_DC$430_INV$793 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$482_INV$809)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT $OpTx$$OpTx$FX_DC$459_INV$801 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$$OpTx$FX_DC$435_INV$797 AND NOT $OpTx$$OpTx$FX_DC$428_INV$791));
+</td></tr><tr><td>
+FDCPE_SEVEN_SEG4: FDCPE port map (SEVEN_SEG(4),SEVEN_SEG_D(4),NOT CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEVEN_SEG_D(4) <= (($OpTx$DEC_SEVEN_SEG_4$3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(3) AND NOT CATHS(0) AND CNTR(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$432_INV$794 AND NOT $OpTx$$OpTx$FX_DC$429_INV$792));
+</td></tr><tr><td>
+FDCPE_SEVEN_SEG5: FDCPE port map (SEVEN_SEG(5),SEVEN_SEG_D(5),NOT CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEVEN_SEG_D(5) <= (($OpTx$DEC_SEVEN_SEG_5$5)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND BCD(4) AND BCD(3) AND NOT BCD(2) AND CATHS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT BCD(5) AND CNTR(3)));
+</td></tr><tr><td>
+FDCPE_SEVEN_SEG6: FDCPE port map (SEVEN_SEG(6),SEVEN_SEG_D(6),NOT CLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEVEN_SEG_D(6) <= ((EXP16_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(1) AND NOT BCD(4) AND BCD(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$459_INV$801)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(2) AND BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$459_INV$801)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(3) AND BCD(5) AND NOT $OpTx$$OpTx$FX_DC$459_INV$801 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$$OpTx$FX_DC$438_INV$799)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(3) AND NOT BCD(5) AND NOT $OpTx$$OpTx$FX_DC$482_INV$809 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$438_INV$799)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(3) AND NOT BCD(5) AND NOT $OpTx$$OpTx$FX_DC$459_INV$801 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$$OpTx$FX_DC$438_INV$799)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR ($OpTx$$OpTx$FX_DC$428_INV$791.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(4) AND BCD(2) AND NOT CATHS(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$460_INV$802)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND BCD(2) AND NOT BCD(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$459_INV$801)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$463_INV$804)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND BCD(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT $OpTx$$OpTx$FX_DC$463_INV$804)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (SEVEN_SEG(6) AND NOT CNTR(0) AND NOT CNTR(1) AND NOT CNTR(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CNTR(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(3) AND CNTR(1) AND $OpTx$$OpTx$FX_DC$429_INV$792)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(3) AND CNTR(2) AND $OpTx$$OpTx$FX_DC$429_INV$792)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BCD(3) AND CNTR(3) AND $OpTx$$OpTx$FX_DC$429_INV$792)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT $OpTx$$OpTx$FX_DC$459_INV$801 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$$OpTx$FX_DC$429_INV$792 AND NOT $OpTx$$OpTx$FX_DC$438_INV$799));
 </td></tr><tr><td>
 Register Legend:
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 

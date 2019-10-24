@@ -3,7 +3,7 @@
  
 cpldfit:  version P.20131013                        Xilinx Inc.
                                   Fitter Report
-Design Name: invert_top                          Date: 10-17-2019,  4:33PM
+Design Name: invert_top                          Date: 10-23-2019,  8:37PM
 Device Used: XC9572XL-10-VQ44
 Fitting Status: Successful
 
@@ -11,18 +11,18 @@ Fitting Status: Successful
 
 Macrocells     Product Terms    Function Block   Registers      Pins           
 Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
-26 /72  ( 36%) 198 /360  ( 55%) 48 /216 ( 22%)   13 /72  ( 18%) 18 /34  ( 53%)
+46 /72  ( 64%) 237 /360  ( 66%) 105/216 ( 49%)   15 /72  ( 21%) 16 /34  ( 47%)
 
 ** Function Block Resources **
 
 Function    Mcells      FB Inps     Pterms      IO          
 Block       Used/Tot    Used/Tot    Used/Tot    Used/Tot    
-FB1          12/18       12/54       21/90       6/ 9
-FB2           5/18       12/54       72/90       1/ 9
-FB3           8/18       11/54       81/90       4/ 9
-FB4           1/18       13/54       24/90       7/ 7*
+FB1           7/18       32/54       53/90       6/ 9
+FB2          14/18       20/54       41/90       1/ 9
+FB3          10/18       27/54       86/90       2/ 9
+FB4          15/18       26/54       57/90       7/ 7*
              -----       -----       -----      -----    
-             26/72       48/216     198/360     18/34 
+             46/72      105/216     237/360     16/34 
 
 * - Resource is exhausted
 
@@ -36,74 +36,101 @@ Global set/reset net(s) unused.
 
 Signal Type    Required     Mapped  |  Pin Type            Used    Total 
 ------------------------------------|------------------------------------
-Input         :    8           8    |  I/O              :    16      28
-Output        :   10          10    |  GCK/IO           :     2       3
+Input         :    7           7    |  I/O              :    14      28
+Output        :    9           9    |  GCK/IO           :     2       3
 Bidirectional :    0           0    |  GTS/IO           :     0       2
 GCK           :    0           0    |  GSR/IO           :     0       1
 GTS           :    0           0    |
 GSR           :    0           0    |
                  ----        ----
-        Total     18          18
+        Total     16          16
 
 ** Power Data **
 
-There are 26 macrocells in high performance mode (MCHP).
+There are 46 macrocells in high performance mode (MCHP).
 There are 0 macrocells in low power mode (MCLP).
 End of Mapped Resource Summary
 **************************  Errors and Warnings  ***************************
 
 WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
    use the default filename of 'invert_top.ise'.
+WARNING:Cpld:896 - Unable to map all desired signals into function block, FB1,
+   because too many function block product terms are required. Buffering output
+   signal SEVEN_SEG<3> to allow all signals assigned to this function block to
+   be placed.
+WARNING:Cpld:896 - Unable to map all desired signals into function block, FB1,
+   because too many function block product terms are required. Buffering output
+   signal SEVEN_SEG<1> to allow all signals assigned to this function block to
+   be placed.
 *************************  Summary of Mapped Logic  ************************
 
-** 10 Outputs **
+** 9 Outputs **
 
-Signal                              Total Total Loc     Pin  Pin     Pin     Pwr  Slew Reg Init
-Name                                Pts   Inps          No.  Type    Use     Mode Rate State
-SEVEN_SEG<5>                        2     4     FB1_2   39   I/O     O       STD  FAST RESET
-SEVEN_SEG<4>                        2     4     FB1_5   40   I/O     O       STD  FAST RESET
-SEVEN_SEG<3>                        2     2     FB1_6   41   I/O     O       STD  FAST RESET
-SEVEN_SEG<2>                        2     4     FB1_8   42   I/O     O       STD  FAST RESET
-SEVEN_SEG<1>                        2     4     FB1_9   43   GCK/I/O O       STD  FAST RESET
-SEVEN_SEG<0>                        2     4     FB1_11  44   GCK/I/O O       STD  FAST RESET
-SEVEN_SEG<6>                        2     2     FB2_17  38   I/O     O       STD  FAST RESET
-LED                                 1     1     FB3_15  14   I/O     O       STD  FAST 
-CATHODES<1>                         2     4     FB3_16  18   I/O     O       STD  FAST RESET
-CATHODES<0>                         2     4     FB3_17  16   I/O     O       STD  FAST RESET
+Signal                         Total Total Loc     Pin  Pin     Pin     Pwr  Slew Reg Init
+Name                           Pts   Inps          No.  Type    Use     Mode Rate State
+SEVEN_SEG<5>                   3     9     FB1_2   39   I/O     O       STD  FAST RESET
+SEVEN_SEG<4>                   3     7     FB1_5   40   I/O     O       STD  FAST RESET
+SEVEN_SEG<3>                   1     1     FB1_6   41   I/O     O       STD  FAST 
+SEVEN_SEG<2>                   3     9     FB1_8   42   I/O     O       STD  FAST RESET
+SEVEN_SEG<1>                   1     1     FB1_9   43   GCK/I/O O       STD  FAST 
+SEVEN_SEG<0>                   26    24    FB1_11  44   GCK/I/O O       STD  FAST RESET
+SEVEN_SEG<6>                   25    20    FB2_17  38   I/O     O       STD  FAST RESET
+CATHODES<1>                    3     6     FB3_16  18   I/O     O       STD  FAST RESET
+CATHODES<0>                    3     6     FB3_17  16   I/O     O       STD  FAST RESET
 
-** 16 Buried Nodes **
+** 37 Buried Nodes **
 
-Signal                              Total Total Loc     Pwr  Reg Init
-Name                                Pts   Inps          Mode State
-CLK_DIV<0>                          1     1     FB1_13  STD  RESET
-$OpTx$FX_SC$31                      1     4     FB1_14  STD  
-$OpTx$FX_SC$30                      1     3     FB1_15  STD  
-CLK_DIV<3>                          2     4     FB1_16  STD  RESET
-CLK_DIV<2>                          2     3     FB1_17  STD  RESET
-CLK_DIV<1>                          2     2     FB1_18  STD  RESET
-SEVEN_SEG_0/SEVEN_SEG_0_RSTF        19    10    FB2_2   STD  
-SEVEN_SEG_1/SEVEN_SEG_1_SETF        19    10    FB2_6   STD  
-SEVEN_SEG_2/SEVEN_SEG_2_RSTF        16    10    FB2_10  STD  
-SEVEN_SEG_4/SEVEN_SEG_4_SETF        16    10    FB2_13  STD  
-SEVEN_SEG_6/SEVEN_SEG_6_SETF        20    10    FB3_2   STD  
-SEVEN_SEG_6/SEVEN_SEG_6_RSTF        20    10    FB3_6   STD  
-SEVEN_SEG_3/SEVEN_SEG_3_RSTF        23    10    FB3_10  STD  
-SEVEN_SEG_5/SEVEN_SEG_5_RSTF        12    10    FB3_12  STD  
-$OpTx$$OpTx$FX_DC$12_INV$820        1     2     FB3_14  STD  
-SEVEN_SEG_3/SEVEN_SEG_3_SETF__$INT  24    13    FB4_16  STD  
+Signal                         Total Total Loc     Pwr  Reg Init
+Name                           Pts   Inps          Mode State
+$OpTx$DEC_SEVEN_SEG_2$1        16    15    FB1_17  STD  
+$OpTx$$OpTx$FX_DC$428_INV$791  2     2     FB2_1   STD  
+CNTR<1>                        2     2     FB2_2   STD  RESET
+CNTR<2>                        2     3     FB2_3   STD  RESET
+$OpTx$$OpTx$FX_DC$429_INV$792  1     2     FB2_4   STD  
+$OpTx$$OpTx$FX_DC$430_INV$793  1     2     FB2_5   STD  
+$OpTx$$OpTx$FX_DC$432_INV$794  1     2     FB2_6   STD  
+$OpTx$$OpTx$FX_DC$433_INV$795  1     2     FB2_7   STD  
+$OpTx$$OpTx$FX_DC$434_INV$796  1     2     FB2_8   STD  
+$OpTx$$OpTx$FX_DC$435_INV$797  1     2     FB2_9   STD  
+$OpTx$$OpTx$FX_DC$438_INV$799  1     2     FB2_10  STD  
+$OpTx$$OpTx$FX_DC$439_INV$800  1     2     FB2_11  STD  
+$OpTx$$OpTx$FX_DC$460_INV$802  1     3     FB2_12  STD  
+CNTR<0>                        1     1     FB2_13  STD  RESET
+SEVEN_SEG<1>_BUFR              26    20    FB3_2   STD  RESET
+CNTR<3>                        2     4     FB3_5   STD  RESET
+$OpTx$DEC_SEVEN_SEG_4$0        21    16    FB3_8   STD  
+$OpTx$$OpTx$FX_DC$436_INV$798  2     3     FB3_10  STD  
+$OpTx$$OpTx$FX_DC$469_INV$807  2     4     FB3_11  STD  
+$OpTx$DEC_SEVEN_SEG_5$2        23    14    FB3_13  STD  
+$OpTx$DEC_SEVEN_SEG_4$3        2     6     FB3_15  STD  
+$OpTx$FX_DC$431                2     3     FB3_18  STD  
+SEVEN_SEG<3>_BUFR              26    24    FB4_1   STD  RESET
+$OpTx$$OpTx$FX_DC$479_INV$808  1     4     FB4_4   STD  
+CATHS<1>                       2     5     FB4_5   STD  RESET
+CATHS<0>                       2     5     FB4_6   STD  SET
+$OpTx$DEC_SEVEN_SEG_5$5        2     8     FB4_7   STD  
+$OpTx$DEC_SEVEN_SEG_2$4        2     8     FB4_8   STD  
+$OpTx$$OpTx$FX_DC$468_INV$806  2     4     FB4_9   STD  
+$OpTx$$OpTx$FX_DC$466_INV$805  2     4     FB4_10  STD  
+$OpTx$$OpTx$FX_DC$463_INV$804  2     4     FB4_11  STD  
+$OpTx$$OpTx$FX_DC$461_INV$803  2     4     FB4_12  STD  
+$OpTx$$OpTx$FX_DC$459_INV$801  2     4     FB4_13  STD  
+$OpTx$FX_DC$467                3     5     FB4_14  STD  
+$OpTx$FX_DC$465                3     5     FB4_15  STD  
+$OpTx$FX_DC$462                3     5     FB4_16  STD  
+$OpTx$$OpTx$FX_DC$482_INV$809  3     6     FB4_17  STD  
 
-** 8 Inputs **
+** 7 Inputs **
 
-Signal                              Loc     Pin  Pin     Pin     
-Name                                        No.  Type    Use     
-SW                                  FB3_14  13   I/O     I
-BCD<0>                              FB4_2   19   I/O     I
-BCD<1>                              FB4_5   20   I/O     I
-BCD<2>                              FB4_8   21   I/O     I
-BCD<3>                              FB4_11  22   I/O     I
-BCD<4>                              FB4_14  23   I/O     I
-BCD<5>                              FB4_15  27   I/O     I
-SEL                                 FB4_17  28   I/O     I
+Signal                         Loc     Pin  Pin     Pin     
+Name                                   No.  Type    Use     
+BCD<0>                         FB4_2   19   I/O     I
+BCD<1>                         FB4_5   20   I/O     I
+BCD<2>                         FB4_8   21   I/O     I
+BCD<3>                         FB4_11  22   I/O     I
+BCD<4>                         FB4_14  23   I/O     I
+BCD<5>                         FB4_15  27   I/O     I
+CLK                            FB4_17  28   I/O     I
 
 Legend:
 Pin No. - ~ - User Assigned
@@ -121,186 +148,255 @@ Pin Type/Use - I  - Input             GCK - Global Clock
 X            - Signal used as input to the macrocell logic.
 Pin No.      - ~  - User Assigned
 *********************************** FB1  ***********************************
-Number of function block inputs used/remaining:               12/42
-Number of signals used by logic mapping into function block:  12
+Number of function block inputs used/remaining:               32/22
+Number of signals used by logic mapping into function block:  32
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB1_1         (b)     
-SEVEN_SEG<5>          2       0     0   3     FB1_2   39    I/O     O
+SEVEN_SEG<5>          3       0     0   2     FB1_2   39    I/O     O
 (unused)              0       0     0   5     FB1_3         (b)     
 (unused)              0       0     0   5     FB1_4         (b)     
-SEVEN_SEG<4>          2       0     0   3     FB1_5   40    I/O     O
-SEVEN_SEG<3>          2       0     0   3     FB1_6   41    I/O     O
+SEVEN_SEG<4>          3       0     0   2     FB1_5   40    I/O     O
+SEVEN_SEG<3>          1       0     0   4     FB1_6   41    I/O     O
 (unused)              0       0     0   5     FB1_7         (b)     
-SEVEN_SEG<2>          2       0     0   3     FB1_8   42    I/O     O
-SEVEN_SEG<1>          2       0     0   3     FB1_9   43    GCK/I/O O
-(unused)              0       0     0   5     FB1_10        (b)     
-SEVEN_SEG<0>          2       0     0   3     FB1_11  44    GCK/I/O O
-(unused)              0       0     0   5     FB1_12        (b)     
-CLK_DIV<0>            1       0     0   4     FB1_13        (b)     (b)
-$OpTx$FX_SC$31        1       0     0   4     FB1_14  1     GCK/I/O (b)
-$OpTx$FX_SC$30        1       0     0   4     FB1_15  2     I/O     (b)
-CLK_DIV<3>            2       0     0   3     FB1_16        (b)     (b)
-CLK_DIV<2>            2       0     0   3     FB1_17  3     I/O     (b)
-CLK_DIV<1>            2       0     0   3     FB1_18        (b)     (b)
+SEVEN_SEG<2>          3       0   \/1   1     FB1_8   42    I/O     O
+SEVEN_SEG<1>          1       1<- \/5   0     FB1_9   43    GCK/I/O O
+(unused)              0       0   \/5   0     FB1_10        (b)     (b)
+SEVEN_SEG<0>         26      21<-   0   0     FB1_11  44    GCK/I/O O
+(unused)              0       0   /\5   0     FB1_12        (b)     (b)
+(unused)              0       0   /\5   0     FB1_13        (b)     (b)
+(unused)              0       0   /\1   4     FB1_14  1     GCK/I/O (b)
+(unused)              0       0   \/1   4     FB1_15  2     I/O     (b)
+(unused)              0       0   \/5   0     FB1_16        (b)     (b)
+$OpTx$DEC_SEVEN_SEG_2$1
+                     16      11<-   0   0     FB1_17  3     I/O     (b)
+(unused)              0       0   /\5   0     FB1_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: CLK_DIV<0>         5: SEL                            9: SEVEN_SEG_3/SEVEN_SEG_3_RSTF 
-  2: CLK_DIV<1>         6: SEVEN_SEG_0/SEVEN_SEG_0_RSTF  10: SEVEN_SEG_3/SEVEN_SEG_3_SETF__$INT 
-  3: CLK_DIV<2>         7: SEVEN_SEG_1/SEVEN_SEG_1_SETF  11: SEVEN_SEG_4/SEVEN_SEG_4_SETF 
-  4: CLK_DIV<3>         8: SEVEN_SEG_2/SEVEN_SEG_2_RSTF  12: SEVEN_SEG_5/SEVEN_SEG_5_RSTF 
+  1: $OpTx$$OpTx$FX_DC$429_INV$792  12: $OpTx$DEC_SEVEN_SEG_4$3  23: CATHS<0> 
+  2: $OpTx$$OpTx$FX_DC$432_INV$794  13: $OpTx$DEC_SEVEN_SEG_5$5  24: CLK 
+  3: $OpTx$$OpTx$FX_DC$433_INV$795  14: $OpTx$FX_DC$431          25: CNTR<0> 
+  4: $OpTx$$OpTx$FX_DC$436_INV$798  15: $OpTx$FX_DC$462          26: CNTR<1> 
+  5: $OpTx$$OpTx$FX_DC$459_INV$801  16: $OpTx$FX_DC$465          27: CNTR<2> 
+  6: $OpTx$$OpTx$FX_DC$460_INV$802  17: BCD<0>                   28: CNTR<3> 
+  7: $OpTx$$OpTx$FX_DC$461_INV$803  18: BCD<1>                   29: SEVEN_SEG<0> 
+  8: $OpTx$$OpTx$FX_DC$466_INV$805  19: BCD<2>                   30: SEVEN_SEG<1>_BUFR 
+  9: $OpTx$$OpTx$FX_DC$468_INV$806  20: BCD<3>                   31: SEVEN_SEG<2> 
+ 10: $OpTx$$OpTx$FX_DC$469_INV$807  21: BCD<4>                   32: SEVEN_SEG<3>_BUFR 
+ 11: $OpTx$DEC_SEVEN_SEG_2$4        22: BCD<5>                  
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-SEVEN_SEG<5>         XXX........X............................ 4
-SEVEN_SEG<4>         XXX.......X............................. 4
-SEVEN_SEG<3>         ........XX.............................. 2
-SEVEN_SEG<2>         XXX....X................................ 4
-SEVEN_SEG<1>         XXX...X................................. 4
-SEVEN_SEG<0>         XXX..X.................................. 4
-CLK_DIV<0>           ....X................................... 1
-$OpTx$FX_SC$31       XXXX.................................... 4
-$OpTx$FX_SC$30       XXX..................................... 3
-CLK_DIV<3>           XXX.X................................... 4
-CLK_DIV<2>           XX..X................................... 3
-CLK_DIV<1>           X...X................................... 2
+SEVEN_SEG<5>         ............X....XXXXXXX...X............ 9
+SEVEN_SEG<4>         XX.........X.......X..XX..X............. 7
+SEVEN_SEG<3>         ...............................X........ 1
+SEVEN_SEG<2>         .....X....X.....XX.XXXXX................ 9
+SEVEN_SEG<1>         .............................X.......... 1
+SEVEN_SEG<0>         .XXXXXXXXX...X.XXXXXXXXXXXXXX........... 24
+$OpTx$DEC_SEVEN_SEG_2$1 
+                     ....XX........X.XXXXXXX.XXXX..X......... 15
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB2  ***********************************
-Number of function block inputs used/remaining:               12/42
-Number of signals used by logic mapping into function block:  12
+Number of function block inputs used/remaining:               20/34
+Number of signals used by logic mapping into function block:  20
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
-(unused)              0       0   \/5   0     FB2_1         (b)     (b)
-SEVEN_SEG_0/SEVEN_SEG_0_RSTF
-                     19      14<-   0   0     FB2_2   29    I/O     (b)
-(unused)              0       0   /\5   0     FB2_3         (b)     (b)
-(unused)              0       0   \/4   1     FB2_4         (b)     (b)
-(unused)              0       0   \/5   0     FB2_5   30    I/O     (b)
-SEVEN_SEG_1/SEVEN_SEG_1_SETF
-                     19      14<-   0   0     FB2_6   31    I/O     (b)
-(unused)              0       0   /\5   0     FB2_7         (b)     (b)
-(unused)              0       0   \/1   4     FB2_8   32    I/O     (b)
-(unused)              0       0   \/5   0     FB2_9   33    GSR/I/O (b)
-SEVEN_SEG_2/SEVEN_SEG_2_RSTF
-                     16      11<-   0   0     FB2_10        (b)     (b)
-(unused)              0       0   /\5   0     FB2_11  34    GTS/I/O (b)
-(unused)              0       0   \/5   0     FB2_12        (b)     (b)
-SEVEN_SEG_4/SEVEN_SEG_4_SETF
-                     16      11<-   0   0     FB2_13        (b)     (b)
-(unused)              0       0   /\5   0     FB2_14  36    GTS/I/O (b)
-(unused)              0       0   /\1   4     FB2_15  37    I/O     (b)
-(unused)              0       0     0   5     FB2_16        (b)     
-SEVEN_SEG<6>          2       0     0   3     FB2_17  38    I/O     O
-(unused)              0       0   \/4   1     FB2_18        (b)     (b)
+$OpTx$$OpTx$FX_DC$428_INV$791
+                      2       0   /\3   0     FB2_1         (b)     (b)
+CNTR<1>               2       0     0   3     FB2_2   29    I/O     (b)
+CNTR<2>               2       0     0   3     FB2_3         (b)     (b)
+$OpTx$$OpTx$FX_DC$429_INV$792
+                      1       0     0   4     FB2_4         (b)     (b)
+$OpTx$$OpTx$FX_DC$430_INV$793
+                      1       0     0   4     FB2_5   30    I/O     (b)
+$OpTx$$OpTx$FX_DC$432_INV$794
+                      1       0     0   4     FB2_6   31    I/O     (b)
+$OpTx$$OpTx$FX_DC$433_INV$795
+                      1       0     0   4     FB2_7         (b)     (b)
+$OpTx$$OpTx$FX_DC$434_INV$796
+                      1       0     0   4     FB2_8   32    I/O     (b)
+$OpTx$$OpTx$FX_DC$435_INV$797
+                      1       0     0   4     FB2_9   33    GSR/I/O (b)
+$OpTx$$OpTx$FX_DC$438_INV$799
+                      1       0     0   4     FB2_10        (b)     (b)
+$OpTx$$OpTx$FX_DC$439_INV$800
+                      1       0     0   4     FB2_11  34    GTS/I/O (b)
+$OpTx$$OpTx$FX_DC$460_INV$802
+                      1       0     0   4     FB2_12        (b)     (b)
+CNTR<0>               1       0     0   4     FB2_13        (b)     (b)
+(unused)              0       0   \/2   3     FB2_14  36    GTS/I/O (b)
+(unused)              0       0   \/5   0     FB2_15  37    I/O     (b)
+(unused)              0       0   \/5   0     FB2_16        (b)     (b)
+SEVEN_SEG<6>         25      20<-   0   0     FB2_17  38    I/O     O
+(unused)              0       0   /\5   0     FB2_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: BCD<0>             5: BCD<4>             9: CLK_DIV<2> 
-  2: BCD<1>             6: BCD<5>            10: CLK_DIV<3> 
-  3: BCD<2>             7: CLK_DIV<0>        11: SEVEN_SEG_6/SEVEN_SEG_6_RSTF 
-  4: BCD<3>             8: CLK_DIV<1>        12: SEVEN_SEG_6/SEVEN_SEG_6_SETF 
+  1: $OpTx$$OpTx$FX_DC$429_INV$792   8: BCD<0>            15: CLK 
+  2: $OpTx$$OpTx$FX_DC$432_INV$794   9: BCD<1>            16: CNTR<0> 
+  3: $OpTx$$OpTx$FX_DC$438_INV$799  10: BCD<2>            17: CNTR<1> 
+  4: $OpTx$$OpTx$FX_DC$459_INV$801  11: BCD<3>            18: CNTR<2> 
+  5: $OpTx$$OpTx$FX_DC$460_INV$802  12: BCD<4>            19: CNTR<3> 
+  6: $OpTx$$OpTx$FX_DC$463_INV$804  13: BCD<5>            20: SEVEN_SEG<6> 
+  7: $OpTx$$OpTx$FX_DC$482_INV$809  14: CATHS<0>         
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-SEVEN_SEG_0/SEVEN_SEG_0_RSTF 
-                     XXXXXXXXXX.............................. 10
-SEVEN_SEG_1/SEVEN_SEG_1_SETF 
-                     XXXXXXXXXX.............................. 10
-SEVEN_SEG_2/SEVEN_SEG_2_RSTF 
-                     XXXXXXXXXX.............................. 10
-SEVEN_SEG_4/SEVEN_SEG_4_SETF 
-                     XXXXXXXXXX.............................. 10
-SEVEN_SEG<6>         ..........XX............................ 2
+$OpTx$$OpTx$FX_DC$428_INV$791 
+                     ..........X.X........................... 2
+CNTR<1>              ..............XX........................ 2
+CNTR<2>              ..............XXX....................... 3
+$OpTx$$OpTx$FX_DC$429_INV$792 
+                     .........X.X............................ 2
+$OpTx$$OpTx$FX_DC$430_INV$793 
+                     ..........X.X........................... 2
+$OpTx$$OpTx$FX_DC$432_INV$794 
+                     .......XX............................... 2
+$OpTx$$OpTx$FX_DC$433_INV$795 
+                     ..........X.X........................... 2
+$OpTx$$OpTx$FX_DC$434_INV$796 
+                     .........X.X............................ 2
+$OpTx$$OpTx$FX_DC$435_INV$797 
+                     .......XX............................... 2
+$OpTx$$OpTx$FX_DC$438_INV$799 
+                     .......XX............................... 2
+$OpTx$$OpTx$FX_DC$439_INV$800 
+                     .......XX............................... 2
+$OpTx$$OpTx$FX_DC$460_INV$802 
+                     ................XXX..................... 3
+CNTR<0>              ..............X......................... 1
+SEVEN_SEG<6>         XXXXXXXXXXXXXXXXXXXX.................... 20
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB3  ***********************************
-Number of function block inputs used/remaining:               11/43
-Number of signals used by logic mapping into function block:  11
+Number of function block inputs used/remaining:               27/27
+Number of signals used by logic mapping into function block:  27
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0   \/5   0     FB3_1         (b)     (b)
-SEVEN_SEG_6/SEVEN_SEG_6_SETF
-                     20      15<-   0   0     FB3_2   5     I/O     (b)
+SEVEN_SEG<1>_BUFR    26      21<-   0   0     FB3_2   5     I/O     (b)
 (unused)              0       0   /\5   0     FB3_3         (b)     (b)
-(unused)              0       0   \/5   0     FB3_4         (b)     (b)
-(unused)              0       0   \/5   0     FB3_5   6     I/O     (b)
-SEVEN_SEG_6/SEVEN_SEG_6_RSTF
-                     20      15<-   0   0     FB3_6         (b)     (b)
-(unused)              0       0   /\5   0     FB3_7         (b)     (b)
-(unused)              0       0   \/5   0     FB3_8   7     I/O     (b)
-(unused)              0       0   \/5   0     FB3_9   8     I/O     (b)
-SEVEN_SEG_3/SEVEN_SEG_3_RSTF
-                     23      18<-   0   0     FB3_10        (b)     (b)
-(unused)              0       0   /\5   0     FB3_11  12    I/O     (b)
-SEVEN_SEG_5/SEVEN_SEG_5_RSTF
-                     12      10<- /\3   0     FB3_12        (b)     (b)
-(unused)              0       0   /\5   0     FB3_13        (b)     (b)
-$OpTx$$OpTx$FX_DC$12_INV$820
-                      1       1<- /\5   0     FB3_14  13    I/O     I
-LED                   1       0   /\1   3     FB3_15  14    I/O     O
-CATHODES<1>           2       0     0   3     FB3_16  18    I/O     O
-CATHODES<0>           2       0     0   3     FB3_17  16    I/O     O
-(unused)              0       0   \/5   0     FB3_18        (b)     (b)
+(unused)              0       0   /\5   0     FB3_4         (b)     (b)
+CNTR<3>               2       0   /\1   2     FB3_5   6     I/O     (b)
+(unused)              0       0   \/3   2     FB3_6         (b)     (b)
+(unused)              0       0   \/5   0     FB3_7         (b)     (b)
+$OpTx$DEC_SEVEN_SEG_4$0
+                     21      16<-   0   0     FB3_8   7     I/O     (b)
+(unused)              0       0   /\5   0     FB3_9   8     I/O     (b)
+$OpTx$$OpTx$FX_DC$436_INV$798
+                      2       0   /\3   0     FB3_10        (b)     (b)
+$OpTx$$OpTx$FX_DC$469_INV$807
+                      2       0   \/3   0     FB3_11  12    I/O     (b)
+(unused)              0       0   \/5   0     FB3_12        (b)     (b)
+$OpTx$DEC_SEVEN_SEG_5$2
+                     23      18<-   0   0     FB3_13        (b)     (b)
+(unused)              0       0   /\5   0     FB3_14  13    I/O     (b)
+$OpTx$DEC_SEVEN_SEG_4$3
+                      2       2<- /\5   0     FB3_15  14    I/O     (b)
+CATHODES<1>           3       0   /\2   0     FB3_16  18    I/O     O
+CATHODES<0>           3       0   \/2   0     FB3_17  16    I/O     O
+$OpTx$FX_DC$431       2       2<- \/5   0     FB3_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: BCD<0>             5: BCD<4>             9: CLK_DIV<2> 
-  2: BCD<1>             6: BCD<5>            10: CLK_DIV<3> 
-  3: BCD<2>             7: CLK_DIV<0>        11: SW 
-  4: BCD<3>             8: CLK_DIV<1>       
+  1: $OpTx$$OpTx$FX_DC$429_INV$792  10: $OpTx$DEC_SEVEN_SEG_4$0  19: CATHS<1> 
+  2: $OpTx$$OpTx$FX_DC$432_INV$794  11: $OpTx$FX_DC$462          20: CLK 
+  3: $OpTx$$OpTx$FX_DC$434_INV$796  12: BCD<0>                   21: CNTR<0> 
+  4: $OpTx$$OpTx$FX_DC$459_INV$801  13: BCD<1>                   22: CNTR<1> 
+  5: $OpTx$$OpTx$FX_DC$460_INV$802  14: BCD<2>                   23: CNTR<2> 
+  6: $OpTx$$OpTx$FX_DC$461_INV$803  15: BCD<3>                   24: CNTR<3> 
+  7: $OpTx$$OpTx$FX_DC$463_INV$804  16: BCD<4>                   25: SEVEN_SEG<1>_BUFR 
+  8: $OpTx$$OpTx$FX_DC$466_INV$805  17: BCD<5>                   26: SEVEN_SEG<4> 
+  9: $OpTx$$OpTx$FX_DC$479_INV$808  18: CATHS<0>                 27: SEVEN_SEG<5> 
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-SEVEN_SEG_6/SEVEN_SEG_6_SETF 
-                     XXXXXXXXXX.............................. 10
-SEVEN_SEG_6/SEVEN_SEG_6_RSTF 
-                     XXXXXXXXXX.............................. 10
-SEVEN_SEG_3/SEVEN_SEG_3_RSTF 
-                     XXXXXXXXXX.............................. 10
-SEVEN_SEG_5/SEVEN_SEG_5_RSTF 
-                     XXXXXXXXXX.............................. 10
-$OpTx$$OpTx$FX_DC$12_INV$820 
-                     ..X.X................................... 2
-LED                  ..........X............................. 1
-CATHODES<1>          ......XXXX.............................. 4
-CATHODES<0>          ......XXXX.............................. 4
+SEVEN_SEG<1>_BUFR    XXX.XX.X..XXXXXXXX.XXXXXX............... 20
+CNTR<3>              ...................XXXX................. 4
+$OpTx$DEC_SEVEN_SEG_4$0 
+                     XX.XX......XXXXXXX..XXXX.X.............. 16
+$OpTx$$OpTx$FX_DC$436_INV$798 
+                     ...........XXX.......................... 3
+$OpTx$$OpTx$FX_DC$469_INV$807 
+                     ..............X......XXX................ 4
+$OpTx$DEC_SEVEN_SEG_5$2 
+                     ......X.X..XXXXXXX..XXXX..X............. 14
+$OpTx$DEC_SEVEN_SEG_4$3 
+                     XX.......X....X..X...X.................. 6
+CATHODES<1>          ..................XXXXXX................ 6
+CATHODES<0>          .................X.XXXXX................ 6
+$OpTx$FX_DC$431      ..............X.XX...................... 3
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB4  ***********************************
-Number of function block inputs used/remaining:               13/41
-Number of signals used by logic mapping into function block:  13
+Number of function block inputs used/remaining:               26/28
+Number of signals used by logic mapping into function block:  26
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
-(unused)              0       0     0   5     FB4_1         (b)     
-(unused)              0       0     0   5     FB4_2   19    I/O     I
-(unused)              0       0     0   5     FB4_3         (b)     
-(unused)              0       0     0   5     FB4_4         (b)     
-(unused)              0       0     0   5     FB4_5   20    I/O     I
-(unused)              0       0     0   5     FB4_6         (b)     
-(unused)              0       0     0   5     FB4_7         (b)     
-(unused)              0       0     0   5     FB4_8   21    I/O     I
-(unused)              0       0     0   5     FB4_9         (b)     
-(unused)              0       0     0   5     FB4_10        (b)     
-(unused)              0       0     0   5     FB4_11  22    I/O     I
-(unused)              0       0     0   5     FB4_12        (b)     
-(unused)              0       0     0   5     FB4_13        (b)     
-(unused)              0       0   \/4   1     FB4_14  23    I/O     I
-(unused)              0       0   \/5   0     FB4_15  27    I/O     I
-SEVEN_SEG_3/SEVEN_SEG_3_SETF__$INT
-                     24      19<-   0   0     FB4_16        (b)     (b)
-(unused)              0       0   /\5   0     FB4_17  28    I/O     I
-(unused)              0       0   /\5   0     FB4_18        (b)     (b)
+SEVEN_SEG<3>_BUFR    26      21<-   0   0     FB4_1         (b)     (b)
+(unused)              0       0   /\5   0     FB4_2   19    I/O     I
+(unused)              0       0   /\5   0     FB4_3         (b)     (b)
+$OpTx$$OpTx$FX_DC$479_INV$808
+                      1       0   /\2   2     FB4_4         (b)     (b)
+CATHS<1>              2       0     0   3     FB4_5   20    I/O     I
+CATHS<0>              2       0     0   3     FB4_6         (b)     (b)
+$OpTx$DEC_SEVEN_SEG_5$5
+                      2       0     0   3     FB4_7         (b)     (b)
+$OpTx$DEC_SEVEN_SEG_2$4
+                      2       0     0   3     FB4_8   21    I/O     I
+$OpTx$$OpTx$FX_DC$468_INV$806
+                      2       0     0   3     FB4_9         (b)     (b)
+$OpTx$$OpTx$FX_DC$466_INV$805
+                      2       0     0   3     FB4_10        (b)     (b)
+$OpTx$$OpTx$FX_DC$463_INV$804
+                      2       0     0   3     FB4_11  22    I/O     I
+$OpTx$$OpTx$FX_DC$461_INV$803
+                      2       0     0   3     FB4_12        (b)     (b)
+$OpTx$$OpTx$FX_DC$459_INV$801
+                      2       0     0   3     FB4_13        (b)     (b)
+$OpTx$FX_DC$467       3       0     0   2     FB4_14  23    I/O     I
+$OpTx$FX_DC$465       3       0     0   2     FB4_15  27    I/O     I
+$OpTx$FX_DC$462       3       0   \/2   0     FB4_16        (b)     (b)
+$OpTx$$OpTx$FX_DC$482_INV$809
+                      3       2<- \/4   0     FB4_17  28    I/O     I
+(unused)              0       0   \/5   0     FB4_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: $OpTx$$OpTx$FX_DC$12_INV$820   6: BCD<2>            10: CLK_DIV<3> 
-  2: $OpTx$FX_SC$30                 7: BCD<3>            11: SEVEN_SEG_2/SEVEN_SEG_2_RSTF 
-  3: $OpTx$FX_SC$31                 8: BCD<4>            12: SEVEN_SEG_4/SEVEN_SEG_4_SETF 
-  4: BCD<0>                         9: BCD<5>            13: SEVEN_SEG_5/SEVEN_SEG_5_RSTF 
-  5: BCD<1>                       
+  1: $OpTx$$OpTx$FX_DC$428_INV$791  10: $OpTx$DEC_SEVEN_SEG_2$1  19: BCD<5> 
+  2: $OpTx$$OpTx$FX_DC$430_INV$793  11: $OpTx$DEC_SEVEN_SEG_5$2  20: CATHS<0> 
+  3: $OpTx$$OpTx$FX_DC$432_INV$794  12: $OpTx$FX_DC$462          21: CLK 
+  4: $OpTx$$OpTx$FX_DC$435_INV$797  13: $OpTx$FX_DC$467          22: CNTR<0> 
+  5: $OpTx$$OpTx$FX_DC$439_INV$800  14: BCD<0>                   23: CNTR<1> 
+  6: $OpTx$$OpTx$FX_DC$459_INV$801  15: BCD<1>                   24: CNTR<2> 
+  7: $OpTx$$OpTx$FX_DC$460_INV$802  16: BCD<2>                   25: CNTR<3> 
+  8: $OpTx$$OpTx$FX_DC$469_INV$807  17: BCD<3>                   26: SEVEN_SEG<3>_BUFR 
+  9: $OpTx$$OpTx$FX_DC$482_INV$809  18: BCD<4>                  
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-SEVEN_SEG_3/SEVEN_SEG_3_SETF__$INT 
-                     XXXXXXXXXXXXX........................... 13
+SEVEN_SEG<3>_BUFR    XXXXXXXXX..XXXXXXXXXXXXXXX.............. 24
+$OpTx$$OpTx$FX_DC$479_INV$808 
+                     .............XXXX....................... 4
+CATHS<1>             ....................XXXXX............... 5
+CATHS<0>             ....................XXXXX............... 5
+$OpTx$DEC_SEVEN_SEG_5$5 
+                     ..........X...XXXXXX....X............... 8
+$OpTx$DEC_SEVEN_SEG_2$4 
+                     ......X..X...XX.XXXX.................... 8
+$OpTx$$OpTx$FX_DC$468_INV$806 
+                     .................X....XXX............... 4
+$OpTx$$OpTx$FX_DC$466_INV$805 
+                     ..............X.......XXX............... 4
+$OpTx$$OpTx$FX_DC$463_INV$804 
+                     ...................X..XXX............... 4
+$OpTx$$OpTx$FX_DC$461_INV$803 
+                     ..................X...XXX............... 4
+$OpTx$$OpTx$FX_DC$459_INV$801 
+                     ...................X..XXX............... 4
+$OpTx$FX_DC$467      ...............X.X....XXX............... 5
+$OpTx$FX_DC$465      ..............X....X..XXX............... 5
+$OpTx$FX_DC$462      .............X.....X..XXX............... 5
+$OpTx$$OpTx$FX_DC$482_INV$809 
+                     ...............X.X.X..XXX............... 6
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *******************************  Equations  ********************************
@@ -308,405 +404,396 @@ SEVEN_SEG_3/SEVEN_SEG_3_SETF__$INT
 ********** Mapped Logic **********
 
 
-$OpTx$$OpTx$FX_DC$12_INV$820 <= (BCD(4) AND NOT BCD(2));
+$OpTx$$OpTx$FX_DC$428_INV$791 <= BCD(3)
+	 XOR 
+$OpTx$$OpTx$FX_DC$428_INV$791 <= BCD(5);
 
 
-$OpTx$FX_SC$30 <= (NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2));
+$OpTx$$OpTx$FX_DC$429_INV$792 <= (BCD(4) AND NOT BCD(2));
 
 
-$OpTx$FX_SC$31 <= (NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-	NOT CLK_DIV(2));
+$OpTx$$OpTx$FX_DC$430_INV$793 <= (BCD(3) AND NOT BCD(5));
 
-FDCPE_CATHODES0: FDCPE port map (CATHODES(0),'0','0',CATHODES_CLR(0),CATHODES_PRE(0));
-CATHODES_CLR(0) <= (NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-	NOT CLK_DIV(2));
-CATHODES_PRE(0) <= (CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-	NOT CLK_DIV(2));
 
-FDCPE_CATHODES1: FDCPE port map (CATHODES(1),'0','0',CATHODES_CLR(1),CATHODES_PRE(1));
-CATHODES_CLR(1) <= (CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-	NOT CLK_DIV(2));
-CATHODES_PRE(1) <= (NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-	NOT CLK_DIV(2));
+$OpTx$$OpTx$FX_DC$432_INV$794 <= (NOT BCD(1) AND NOT BCD(0));
 
-FTCPE_CLK_DIV0: FTCPE port map (CLK_DIV(0),'1',SEL,'0','0');
 
-FTCPE_CLK_DIV1: FTCPE port map (CLK_DIV(1),CLK_DIV(0),SEL,'0','0');
+$OpTx$$OpTx$FX_DC$433_INV$795 <= (NOT BCD(3) AND BCD(5));
 
-FTCPE_CLK_DIV2: FTCPE port map (CLK_DIV(2),CLK_DIV_T(2),SEL,'0','0');
-CLK_DIV_T(2) <= (CLK_DIV(0) AND CLK_DIV(1));
 
-FTCPE_CLK_DIV3: FTCPE port map (CLK_DIV(3),CLK_DIV_T(3),SEL,'0','0');
-CLK_DIV_T(3) <= (CLK_DIV(0) AND CLK_DIV(1) AND CLK_DIV(2));
+$OpTx$$OpTx$FX_DC$434_INV$796 <= (NOT BCD(4) AND BCD(2));
 
 
+$OpTx$$OpTx$FX_DC$435_INV$797 <= (NOT BCD(1) AND BCD(0));
 
 
+$OpTx$$OpTx$FX_DC$436_INV$798 <= ((NOT BCD(1) AND NOT BCD(2))
+	OR (NOT BCD(2) AND NOT BCD(0)));
 
 
+$OpTx$$OpTx$FX_DC$438_INV$799 <= (BCD(1) AND NOT BCD(0));
 
 
+$OpTx$$OpTx$FX_DC$439_INV$800 <= (BCD(1) AND BCD(0));
 
 
+$OpTx$$OpTx$FX_DC$459_INV$801 <= ((NOT CATHS(0))
+	OR (NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3)));
 
 
+$OpTx$$OpTx$FX_DC$460_INV$802 <= (NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3));
 
 
+$OpTx$$OpTx$FX_DC$461_INV$803 <= ((NOT BCD(5))
+	OR (NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3)));
 
 
+$OpTx$$OpTx$FX_DC$463_INV$804 <= ((CATHS(0))
+	OR (NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3)));
 
 
+$OpTx$$OpTx$FX_DC$466_INV$805 <= ((BCD(1))
+	OR (NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3)));
 
 
+$OpTx$$OpTx$FX_DC$468_INV$806 <= ((NOT BCD(4))
+	OR (NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3)));
 
 
+$OpTx$$OpTx$FX_DC$469_INV$807 <= ((NOT BCD(3))
+	OR (NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3)));
 
 
+$OpTx$$OpTx$FX_DC$479_INV$808 <= (NOT BCD(1) AND NOT BCD(3) AND NOT BCD(2) AND NOT BCD(0));
 
 
+$OpTx$$OpTx$FX_DC$482_INV$809 <= ((NOT BCD(4) AND BCD(2))
+	OR (NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3))
+	OR (NOT BCD(4) AND NOT CATHS(0)));
 
 
+$OpTx$DEC_SEVEN_SEG_2$1 <= ((EXP12_.EXP)
+	OR (BCD(1) AND BCD(3) AND BCD(0) AND NOT BCD(5) AND 
+	NOT $OpTx$$OpTx$FX_DC$459_INV$801)
+	OR (BCD(1) AND NOT BCD(3) AND BCD(0) AND BCD(5) AND 
+	NOT $OpTx$$OpTx$FX_DC$459_INV$801)
+	OR (NOT BCD(1) AND BCD(3) AND BCD(0) AND BCD(5) AND 
+	NOT $OpTx$$OpTx$FX_DC$459_INV$801)
+	OR (NOT BCD(1) AND NOT BCD(3) AND BCD(0) AND NOT BCD(5) AND 
+	NOT $OpTx$$OpTx$FX_DC$459_INV$801)
+	OR (SEVEN_SEG(2) AND NOT CNTR(0) AND NOT CNTR(1) AND NOT CNTR(2) AND 
+	NOT CNTR(3))
+	OR (BCD(4) AND BCD(3) AND BCD(2) AND NOT CATHS(0) AND BCD(5) AND 
+	NOT $OpTx$$OpTx$FX_DC$460_INV$802)
+	OR (BCD(4) AND BCD(3) AND NOT BCD(2) AND NOT CATHS(0) AND NOT BCD(5) AND 
+	CNTR(1))
+	OR (BCD(4) AND BCD(3) AND NOT BCD(2) AND NOT CATHS(0) AND NOT BCD(5) AND 
+	CNTR(2))
+	OR (BCD(4) AND BCD(3) AND NOT BCD(2) AND NOT CATHS(0) AND NOT BCD(5) AND 
+	CNTR(3))
+	OR (BCD(4) AND NOT BCD(3) AND BCD(2) AND NOT CATHS(0) AND NOT BCD(5) AND 
+	NOT $OpTx$$OpTx$FX_DC$460_INV$802)
+	OR (BCD(4) AND NOT BCD(2) AND $OpTx$FX_DC$462)
+	OR (BCD(4) AND BCD(3) AND NOT BCD(5) AND $OpTx$FX_DC$462)
+	OR (NOT BCD(4) AND NOT BCD(3) AND BCD(2) AND $OpTx$FX_DC$462)
+	OR (NOT BCD(4) AND BCD(2) AND BCD(5) AND $OpTx$FX_DC$462)
+	OR (BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND $OpTx$FX_DC$462));
 
 
+$OpTx$DEC_SEVEN_SEG_2$4 <= (($OpTx$DEC_SEVEN_SEG_2$1)
+	OR (BCD(1) AND BCD(4) AND NOT BCD(3) AND NOT CATHS(0) AND BCD(0) AND 
+	NOT BCD(5) AND NOT $OpTx$$OpTx$FX_DC$460_INV$802));
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-LED <= NOT SW;
-
-FDCPE_SEVEN_SEG0: FDCPE port map (SEVEN_SEG(0),'0','0',SEVEN_SEG_0/SEVEN_SEG_0_RSTF,SEVEN_SEG_PRE(0));
-SEVEN_SEG_PRE(0) <= (NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2) AND 
-	NOT SEVEN_SEG_0/SEVEN_SEG_0_RSTF);
-
-FDCPE_SEVEN_SEG1: FDCPE port map (SEVEN_SEG(1),'0','0',SEVEN_SEG_CLR(1),SEVEN_SEG_1/SEVEN_SEG_1_SETF);
-SEVEN_SEG_CLR(1) <= (NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2) AND 
-	NOT SEVEN_SEG_1/SEVEN_SEG_1_SETF);
-
-FDCPE_SEVEN_SEG2: FDCPE port map (SEVEN_SEG(2),'0','0',SEVEN_SEG_2/SEVEN_SEG_2_RSTF,SEVEN_SEG_PRE(2));
-SEVEN_SEG_PRE(2) <= (NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2) AND 
-	NOT SEVEN_SEG_2/SEVEN_SEG_2_RSTF);
-
-FDCPE_SEVEN_SEG3: FDCPE port map (SEVEN_SEG(3),'0','0',SEVEN_SEG_3/SEVEN_SEG_3_RSTF,NOT SEVEN_SEG_3/SEVEN_SEG_3_SETF__$INT);
-
-FDCPE_SEVEN_SEG4: FDCPE port map (SEVEN_SEG(4),'0','0',SEVEN_SEG_CLR(4),SEVEN_SEG_4/SEVEN_SEG_4_SETF);
-SEVEN_SEG_CLR(4) <= (NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2) AND 
-	NOT SEVEN_SEG_4/SEVEN_SEG_4_SETF);
-
-FDCPE_SEVEN_SEG5: FDCPE port map (SEVEN_SEG(5),'0','0',SEVEN_SEG_5/SEVEN_SEG_5_RSTF,SEVEN_SEG_PRE(5));
-SEVEN_SEG_PRE(5) <= (NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2) AND 
-	NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF);
-
-FDCPE_SEVEN_SEG6: FDCPE port map (SEVEN_SEG(6),'0','0',SEVEN_SEG_6/SEVEN_SEG_6_RSTF,SEVEN_SEG_6/SEVEN_SEG_6_SETF);
-
-
-SEVEN_SEG_0/SEVEN_SEG_0_RSTF <= ((EXP17_.EXP)
-	OR (BCD(1) AND BCD(4) AND BCD(3) AND NOT BCD(0) AND NOT BCD(5) AND 
-	CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND BCD(2) AND NOT BCD(0) AND 
-	NOT BCD(5) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND BCD(4) AND BCD(3) AND NOT BCD(0) AND BCD(5) AND 
-	CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(3) AND NOT BCD(0) AND NOT BCD(5) AND 
-	CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND BCD(5) AND 
-	CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND NOT BCD(5) AND 
-	CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND BCD(4) AND BCD(3) AND NOT BCD(2) AND BCD(0) AND 
-	BCD(5) AND CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-	NOT CLK_DIV(2))
-	OR (BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND BCD(2) AND BCD(0) AND 
-	BCD(5) AND CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-	NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND BCD(4) AND BCD(3) AND BCD(2) AND BCD(0) AND 
-	NOT BCD(5) AND CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-	NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND BCD(0) AND 
-	BCD(5) AND CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-	NOT CLK_DIV(2))
-	OR (NOT BCD(4) AND NOT BCD(5) AND NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND 
-	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND NOT BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND NOT BCD(5) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND NOT BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND NOT CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND NOT BCD(5) AND NOT CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND NOT BCD(4) AND BCD(3) AND NOT BCD(2) AND BCD(0) AND 
-	NOT BCD(5) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2)));
-
-
-SEVEN_SEG_1/SEVEN_SEG_1_SETF <= ((EXP8_.EXP)
-	OR (BCD(3) AND BCD(5) AND NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND 
-	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND NOT BCD(3) AND BCD(0) AND NOT BCD(5) AND CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(2) AND BCD(0) AND CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND NOT BCD(3) AND BCD(0) AND BCD(5) AND CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(4) AND BCD(5) AND NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND 
-	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND BCD(3) AND BCD(0) AND BCD(5) AND NOT CLK_DIV(0) AND 
-	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND BCD(4) AND BCD(3) AND NOT BCD(5) AND CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND NOT BCD(4) AND BCD(3) AND BCD(2) AND BCD(5) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(4) AND BCD(3) AND NOT BCD(2) AND BCD(0) AND CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND BCD(2) AND BCD(0) AND BCD(5) AND NOT CLK_DIV(0) AND 
-	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(4) AND BCD(2) AND BCD(0) AND CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND BCD(4) AND BCD(3) AND NOT BCD(2) AND BCD(5) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND NOT BCD(3) AND BCD(2) AND BCD(5) AND CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND BCD(5) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2)));
-
-
-SEVEN_SEG_2/SEVEN_SEG_2_RSTF <= ((EXP11_.EXP)
-	OR (NOT BCD(3) AND BCD(5) AND NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND 
-	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(2) AND NOT BCD(0) AND BCD(5) AND NOT CLK_DIV(0) AND 
-	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND NOT BCD(3) AND NOT BCD(2) AND NOT CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND NOT BCD(2) AND BCD(5) AND NOT CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND NOT BCD(4) AND BCD(3) AND NOT BCD(2) AND BCD(5) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND NOT BCD(4) AND BCD(3) AND BCD(2) AND NOT BCD(5) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND BCD(5) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(3) AND BCD(2) AND BCD(0) AND NOT BCD(5) AND NOT CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND BCD(4) AND BCD(3) AND BCD(2) AND BCD(5) AND 
-	CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(4) AND NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-	NOT CLK_DIV(2))
-	OR (NOT BCD(0) AND CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-	NOT CLK_DIV(2))
-	OR (NOT BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND NOT CLK_DIV(0) AND 
-	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND BCD(3) AND BCD(2) AND NOT BCD(5) AND NOT CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(3) AND BCD(2) AND BCD(5) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2)));
-
-
-SEVEN_SEG_3/SEVEN_SEG_3_RSTF <= ((EXP23_.EXP)
-	OR (NOT BCD(1) AND NOT BCD(4) AND BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND BCD(4) AND BCD(3) AND NOT BCD(0) AND NOT BCD(5) AND 
-	CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND NOT BCD(4) AND BCD(3) AND NOT BCD(2) AND BCD(0) AND 
-	BCD(5) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND NOT BCD(4) AND BCD(2) AND NOT BCD(0) AND BCD(5) AND 
-	CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND BCD(4) AND BCD(2) AND NOT BCD(0) AND NOT BCD(5) AND 
-	CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (SEVEN_SEG_5/SEVEN_SEG_5_RSTF.EXP)
-	OR (NOT BCD(4) AND NOT BCD(5) AND NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND 
-	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND BCD(4) AND NOT BCD(2) AND NOT BCD(0) AND CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND NOT BCD(4) AND NOT BCD(2) AND NOT BCD(0) AND NOT BCD(5) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(4) AND BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND NOT BCD(5) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND BCD(4) AND BCD(3) AND NOT BCD(0) AND BCD(5) AND 
-	CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(4) AND BCD(3) AND NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND 
-	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND NOT BCD(5) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND BCD(2) AND NOT BCD(0) AND 
-	NOT BCD(5) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND BCD(0) AND 
-	NOT BCD(5) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND NOT BCD(4) AND BCD(3) AND BCD(2) AND BCD(0) AND 
-	NOT BCD(5) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2)));
-
-
-SEVEN_SEG_3/SEVEN_SEG_3_SETF__$INT <= ((EXP28_.EXP)
-	OR (BCD(4) AND NOT BCD(2) AND NOT BCD(0) AND 
-	NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF AND NOT $OpTx$FX_SC$31)
-	OR (NOT BCD(4) AND BCD(3) AND NOT CLK_DIV(3) AND $OpTx$FX_SC$30 AND 
-	NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF)
-	OR (NOT BCD(4) AND NOT BCD(0) AND NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF AND 
-	NOT $OpTx$FX_SC$31 AND NOT SEVEN_SEG_4/SEVEN_SEG_4_SETF)
-	OR (NOT BCD(4) AND NOT $OpTx$FX_SC$30 AND 
-	NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF AND NOT $OpTx$FX_SC$31 AND NOT SEVEN_SEG_4/SEVEN_SEG_4_SETF)
-	OR (BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND NOT $OpTx$FX_SC$30 AND 
-	NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF AND NOT $OpTx$FX_SC$31)
-	OR (EXP31_.EXP)
-	OR (BCD(4) AND BCD(3) AND NOT BCD(0) AND NOT BCD(5) AND 
-	NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF AND NOT $OpTx$FX_SC$31)
-	OR (BCD(4) AND BCD(3) AND NOT BCD(0) AND 
-	NOT SEVEN_SEG_2/SEVEN_SEG_2_RSTF AND NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF AND NOT $OpTx$FX_SC$31)
-	OR (BCD(4) AND NOT BCD(3) AND NOT CLK_DIV(3) AND 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF AND $OpTx$FX_SC$30 AND NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF)
-	OR (NOT BCD(4) AND BCD(2) AND BCD(5) AND NOT $OpTx$FX_SC$30 AND 
-	NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF AND NOT $OpTx$FX_SC$31)
-	OR (BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND NOT BCD(5) AND 
-	NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF AND NOT $OpTx$FX_SC$31)
-	OR (BCD(0) AND CLK_DIV(3) AND 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF)
-	OR (NOT BCD(4) AND NOT BCD(5) AND NOT CLK_DIV(3) AND 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF)
-	OR (BCD(4) AND NOT BCD(2) AND NOT $OpTx$FX_SC$30 AND 
-	NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF AND NOT $OpTx$FX_SC$31)
-	OR (BCD(4) AND NOT BCD(5) AND NOT $OpTx$FX_SC$30 AND 
-	NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF AND NOT $OpTx$FX_SC$31)
-	OR (BCD(4) AND NOT SEVEN_SEG_2/SEVEN_SEG_2_RSTF AND 
-	NOT $OpTx$FX_SC$30 AND NOT SEVEN_SEG_5/SEVEN_SEG_5_RSTF AND NOT $OpTx$FX_SC$31));
-
-
-SEVEN_SEG_4/SEVEN_SEG_4_SETF <= ((BCD(1) AND BCD(3) AND BCD(5) AND NOT CLK_DIV(0) AND 
-	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(4) AND BCD(2) AND CLK_DIV(3) AND NOT CLK_DIV(0) AND 
-	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND NOT CLK_DIV(0) AND 
-	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(4) AND BCD(3) AND NOT BCD(2) AND CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND NOT CLK_DIV(0) AND 
-	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (EXP16_.EXP)
-	OR (BCD(1) AND NOT BCD(4) AND BCD(3) AND NOT CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND NOT BCD(3) AND NOT BCD(5) AND CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND BCD(3) AND NOT BCD(5) AND CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(4) AND BCD(3) AND BCD(0) AND NOT CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(3) AND BCD(2) AND BCD(0) AND NOT CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(0) AND CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-	NOT CLK_DIV(2))
-	OR (BCD(5) AND NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-	NOT CLK_DIV(2))
-	OR (NOT BCD(4) AND BCD(3) AND BCD(2) AND NOT CLK_DIV(0) AND 
-	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(4) AND NOT BCD(3) AND BCD(5) AND NOT CLK_DIV(0) AND 
-	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(3) AND BCD(2) AND BCD(5) AND NOT CLK_DIV(0) AND 
-	NOT CLK_DIV(1) AND NOT CLK_DIV(2)));
-
-
-SEVEN_SEG_5/SEVEN_SEG_5_RSTF <= (($OpTx$$OpTx$FX_DC$12_INV$820.EXP)
-	OR (BCD(4) AND BCD(3) AND BCD(5) AND NOT CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(4) AND BCD(0) AND BCD(5) AND NOT CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(4) AND NOT BCD(3) AND NOT BCD(5) AND NOT CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
+$OpTx$DEC_SEVEN_SEG_4$0 <= ((EXP22_.EXP)
+	OR (NOT CATHS(0) AND BCD(5) AND CNTR(1))
+	OR (NOT CATHS(0) AND BCD(5) AND CNTR(2))
+	OR (BCD(1) AND BCD(3) AND BCD(5) AND 
+	NOT $OpTx$$OpTx$FX_DC$460_INV$802)
+	OR (NOT BCD(1) AND NOT BCD(3) AND NOT $OpTx$$OpTx$FX_DC$460_INV$802 AND 
+	$OpTx$$OpTx$FX_DC$429_INV$792)
+	OR (NOT BCD(3) AND NOT BCD(0) AND NOT $OpTx$$OpTx$FX_DC$460_INV$802 AND 
+	$OpTx$$OpTx$FX_DC$429_INV$792)
+	OR ($OpTx$$OpTx$FX_DC$436_INV$798.EXP)
+	OR (NOT BCD(4) AND BCD(3) AND BCD(2) AND CNTR(1))
+	OR (NOT BCD(4) AND BCD(3) AND BCD(2) AND CNTR(3))
+	OR (NOT BCD(4) AND BCD(2) AND CATHS(0) AND CNTR(1))
+	OR (NOT BCD(4) AND BCD(2) AND CATHS(0) AND CNTR(2))
+	OR (NOT BCD(4) AND BCD(2) AND CATHS(0) AND CNTR(3))
+	OR (NOT BCD(0) AND NOT $OpTx$$OpTx$FX_DC$459_INV$801)
+	OR (BCD(3) AND NOT $OpTx$$OpTx$FX_DC$459_INV$801 AND 
+	$OpTx$$OpTx$FX_DC$429_INV$792)
+	OR (NOT CATHS(0) AND BCD(5) AND CNTR(3))
+	OR (NOT BCD(3) AND BCD(5) AND NOT $OpTx$$OpTx$FX_DC$460_INV$802 AND 
+	NOT $OpTx$$OpTx$FX_DC$429_INV$792)
+	OR (BCD(1) AND NOT BCD(3) AND CATHS(0) AND NOT BCD(5) AND 
+	NOT $OpTx$$OpTx$FX_DC$460_INV$802));
+
+
+$OpTx$DEC_SEVEN_SEG_4$3 <= (($OpTx$DEC_SEVEN_SEG_4$0)
+	OR (BCD(3) AND NOT CATHS(0) AND CNTR(1) AND 
+	NOT $OpTx$$OpTx$FX_DC$432_INV$794 AND NOT $OpTx$$OpTx$FX_DC$429_INV$792));
+
+
+$OpTx$DEC_SEVEN_SEG_5$2 <= (($OpTx$$OpTx$FX_DC$469_INV$807.EXP)
+	OR (BCD(4) AND NOT CATHS(0) AND BCD(5) AND CNTR(3) AND 
+	NOT $OpTx$$OpTx$FX_DC$479_INV$808)
 	OR (BCD(1) AND BCD(4) AND NOT BCD(3) AND BCD(2) AND BCD(5) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
+	CNTR(1))
+	OR (BCD(1) AND BCD(4) AND NOT BCD(3) AND BCD(2) AND BCD(5) AND 
+	CNTR(2))
+	OR (BCD(1) AND BCD(4) AND NOT BCD(3) AND BCD(2) AND BCD(5) AND 
+	CNTR(3))
 	OR (NOT BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND BCD(2) AND NOT BCD(5) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND BCD(4) AND BCD(5) AND NOT CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(4) AND BCD(2) AND BCD(5) AND NOT CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2)));
+	CNTR(1))
+	OR ($OpTx$DEC_SEVEN_SEG_4$3.EXP)
+	OR (NOT BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND BCD(2) AND NOT BCD(5) AND 
+	CNTR(2))
+	OR (NOT BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND BCD(2) AND NOT BCD(5) AND 
+	CNTR(3))
+	OR (NOT BCD(1) AND NOT BCD(4) AND NOT BCD(2) AND NOT BCD(0) AND NOT BCD(5) AND 
+	NOT $OpTx$$OpTx$FX_DC$463_INV$804)
+	OR (BCD(1) AND NOT BCD(4) AND BCD(3) AND BCD(2) AND CATHS(0) AND 
+	NOT BCD(5) AND CNTR(1))
+	OR (BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND CATHS(0) AND 
+	BCD(5) AND CNTR(1))
+	OR (NOT BCD(4) AND NOT BCD(3) AND NOT BCD(5) AND 
+	NOT $OpTx$$OpTx$FX_DC$463_INV$804)
+	OR (NOT SEVEN_SEG(5) AND NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3))
+	OR (CNTR(0) AND NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3))
+	OR (BCD(4) AND NOT CATHS(0) AND BCD(5) AND CNTR(1) AND 
+	NOT $OpTx$$OpTx$FX_DC$479_INV$808)
+	OR (BCD(4) AND NOT CATHS(0) AND BCD(5) AND CNTR(2) AND 
+	NOT $OpTx$$OpTx$FX_DC$479_INV$808));
 
 
-SEVEN_SEG_6/SEVEN_SEG_6_RSTF <= ((EXP20_.EXP)
-	OR (BCD(1) AND NOT BCD(4) AND BCD(3) AND NOT BCD(2) AND BCD(0) AND 
-	BCD(5) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND NOT BCD(4) AND BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND 
-	NOT BCD(5) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND 
-	NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND NOT BCD(4) AND BCD(3) AND BCD(2) AND BCD(0) AND 
-	NOT BCD(5) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND NOT BCD(4) AND BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND 
-	BCD(5) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND BCD(0) AND 
-	NOT BCD(5) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND 
-	NOT BCD(5) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND BCD(4) AND BCD(3) AND BCD(2) AND BCD(0) AND 
-	BCD(5) AND CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-	NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND BCD(4) AND BCD(3) AND BCD(2) AND NOT BCD(0) AND 
-	BCD(5) AND CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-	NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(3) AND BCD(2) AND BCD(0) AND 
-	BCD(5) AND CLK_DIV(3) AND NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND 
-	NOT CLK_DIV(2))
-	OR (NOT BCD(4) AND BCD(3) AND NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND 
-	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(4) AND NOT BCD(5) AND NOT CLK_DIV(3) AND NOT CLK_DIV(0) AND 
-	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND NOT BCD(4) AND BCD(2) AND BCD(0) AND NOT CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND NOT BCD(3) AND NOT BCD(2) AND NOT BCD(5) AND NOT CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(3) AND NOT BCD(2) AND NOT BCD(0) AND NOT BCD(5) AND NOT CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2)));
+$OpTx$DEC_SEVEN_SEG_5$5 <= (($OpTx$DEC_SEVEN_SEG_5$2)
+	OR (NOT BCD(1) AND NOT BCD(4) AND BCD(3) AND BCD(2) AND CATHS(0) AND 
+	BCD(5) AND CNTR(3)));
 
 
-SEVEN_SEG_6/SEVEN_SEG_6_SETF <= ((EXP27_.EXP)
-	OR (NOT BCD(4) AND BCD(2) AND NOT BCD(0) AND CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND BCD(3) AND BCD(0) AND NOT BCD(5) AND CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND NOT BCD(3) AND NOT BCD(2) AND BCD(0) AND BCD(5) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND BCD(3) AND NOT BCD(0) AND NOT BCD(5) AND CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND NOT BCD(3) AND BCD(0) AND BCD(5) AND NOT CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND BCD(4) AND BCD(3) AND BCD(0) AND NOT CLK_DIV(0) AND 
-	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(2) AND CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(4) AND NOT BCD(3) AND NOT BCD(0) AND BCD(5) AND NOT CLK_DIV(0) AND 
-	NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND NOT BCD(3) AND NOT BCD(0) AND NOT BCD(5) AND CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND NOT BCD(3) AND BCD(0) AND NOT BCD(5) AND CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND BCD(4) AND BCD(5) AND NOT CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(4) AND BCD(2) AND BCD(5) AND CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND BCD(3) AND NOT BCD(0) AND BCD(5) AND CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (BCD(1) AND NOT BCD(3) AND BCD(2) AND BCD(5) AND CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2))
-	OR (NOT BCD(1) AND BCD(3) AND NOT BCD(2) AND BCD(0) AND CLK_DIV(3) AND 
-	NOT CLK_DIV(0) AND NOT CLK_DIV(1) AND NOT CLK_DIV(2)));
+$OpTx$FX_DC$431 <= ((BCD(3) AND BCD(5))
+	OR (NOT BCD(3) AND CATHS(0) AND NOT BCD(5)));
+
+
+$OpTx$FX_DC$462 <= ((CATHS(0) AND BCD(0) AND CNTR(1))
+	OR (CATHS(0) AND BCD(0) AND CNTR(2))
+	OR (CATHS(0) AND BCD(0) AND CNTR(3)));
+
+
+$OpTx$FX_DC$465 <= ((BCD(1) AND CATHS(0) AND CNTR(1))
+	OR (BCD(1) AND CATHS(0) AND CNTR(2))
+	OR (BCD(1) AND CATHS(0) AND CNTR(3)));
+
+
+$OpTx$FX_DC$467 <= ((BCD(4) AND BCD(2) AND CNTR(1))
+	OR (BCD(4) AND BCD(2) AND CNTR(2))
+	OR (BCD(4) AND BCD(2) AND CNTR(3)));
+
+FDCPE_CATHODES0: FDCPE port map (CATHODES(0),CATHS(0),NOT CLK,'0','0',CATHODES_CE(0));
+CATHODES_CE(0) <= (CNTR(0) AND NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3));
+
+FDCPE_CATHODES1: FDCPE port map (CATHODES(1),CATHS(1),NOT CLK,'0','0',CATHODES_CE(1));
+CATHODES_CE(1) <= (CNTR(0) AND NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3));
+
+FTCPE_CATHS0: FTCPE port map (CATHS(0),'1',NOT CLK,'0','0',CATHS_CE(0));
+CATHS_CE(0) <= (NOT CNTR(0) AND NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3));
+
+FTCPE_CATHS1: FTCPE port map (CATHS(1),'1',NOT CLK,'0','0',CATHS_CE(1));
+CATHS_CE(1) <= (NOT CNTR(0) AND NOT CNTR(1) AND NOT CNTR(2) AND NOT CNTR(3));
+
+FTCPE_CNTR0: FTCPE port map (CNTR(0),'1',CLK,'0','0');
+
+FTCPE_CNTR1: FTCPE port map (CNTR(1),CNTR(0),CLK,'0','0');
+
+FTCPE_CNTR2: FTCPE port map (CNTR(2),CNTR_T(2),CLK,'0','0');
+CNTR_T(2) <= (CNTR(0) AND CNTR(1));
+
+FTCPE_CNTR3: FTCPE port map (CNTR(3),CNTR_T(3),CLK,'0','0');
+CNTR_T(3) <= (CNTR(0) AND CNTR(1) AND CNTR(2));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FDCPE_SEVEN_SEG0: FDCPE port map (SEVEN_SEG(0),SEVEN_SEG_D(0),NOT CLK,'0','0');
+SEVEN_SEG_D(0) <= ((_7_.EXP)
+	OR (BCD(1) AND BCD(0) AND $OpTx$$OpTx$FX_DC$433_INV$795 AND 
+	NOT $OpTx$$OpTx$FX_DC$468_INV$806)
+	OR (NOT BCD(1) AND NOT BCD(4) AND BCD(0) AND 
+	NOT $OpTx$$OpTx$FX_DC$461_INV$803)
+	OR (NOT BCD(1) AND BCD(0) AND NOT $OpTx$$OpTx$FX_DC$460_INV$802 AND 
+	$OpTx$FX_DC$431)
+	OR (BCD(4) AND BCD(2) AND NOT $OpTx$$OpTx$FX_DC$461_INV$803 AND 
+	NOT $OpTx$$OpTx$FX_DC$432_INV$794)
+	OR (NOT BCD(4) AND BCD(3) AND BCD(0) AND 
+	NOT $OpTx$$OpTx$FX_DC$461_INV$803)
+	OR (EXP10_.EXP)
+	OR (BCD(1) AND NOT BCD(0) AND $OpTx$FX_DC$431 AND 
+	NOT $OpTx$$OpTx$FX_DC$468_INV$806)
+	OR (BCD(4) AND NOT CATHS(0) AND 
+	NOT $OpTx$$OpTx$FX_DC$460_INV$802 AND NOT $OpTx$$OpTx$FX_DC$436_INV$798)
+	OR (NOT BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND $OpTx$FX_DC$465)
+	OR (BCD(3) AND NOT BCD(5) AND NOT $OpTx$$OpTx$FX_DC$459_INV$801 AND 
+	$OpTx$$OpTx$FX_DC$432_INV$794)
+	OR (BCD(1) AND NOT BCD(4) AND NOT BCD(0) AND 
+	NOT $OpTx$$OpTx$FX_DC$460_INV$802 AND $OpTx$$OpTx$FX_DC$433_INV$795)
+	OR (NOT CATHS(0) AND NOT $OpTx$$OpTx$FX_DC$461_INV$803)
+	OR (BCD(4) AND NOT CATHS(0) AND 
+	NOT $OpTx$$OpTx$FX_DC$469_INV$807)
+	OR ($OpTx$$OpTx$FX_DC$433_INV$795 AND 
+	NOT $OpTx$$OpTx$FX_DC$468_INV$806 AND $OpTx$$OpTx$FX_DC$432_INV$794)
+	OR (BCD(1) AND NOT BCD(4) AND NOT BCD(2) AND 
+	NOT $OpTx$$OpTx$FX_DC$461_INV$803));
+
+FDCPE_SEVEN_SEG1_BUFR: FDCPE port map (SEVEN_SEG(1)_BUFR,SEVEN_SEG_D(1)_BUFR,NOT CLK,'0','0');
+SEVEN_SEG_D(1)_BUFR <= (($OpTx$FX_DC$431.EXP)
+	OR (BCD(3) AND NOT CATHS(0) AND BCD(5) AND CNTR(1))
+	OR (BCD(3) AND NOT CATHS(0) AND BCD(5) AND CNTR(2))
+	OR (BCD(3) AND NOT CATHS(0) AND BCD(5) AND CNTR(3))
+	OR (BCD(3) AND BCD(5) AND NOT $OpTx$$OpTx$FX_DC$466_INV$805 AND 
+	$OpTx$$OpTx$FX_DC$434_INV$796)
+	OR (NOT BCD(3) AND BCD(5) AND NOT $OpTx$$OpTx$FX_DC$466_INV$805 AND 
+	$OpTx$$OpTx$FX_DC$429_INV$792)
+	OR (EXP21_.EXP)
+	OR (BCD(1) AND BCD(2) AND BCD(0) AND 
+	NOT $OpTx$$OpTx$FX_DC$461_INV$803)
+	OR (BCD(1) AND BCD(3) AND BCD(0) AND BCD(5) AND 
+	NOT $OpTx$$OpTx$FX_DC$460_INV$802)
+	OR (BCD(1) AND BCD(3) AND BCD(5) AND 
+	NOT $OpTx$$OpTx$FX_DC$460_INV$802 AND $OpTx$$OpTx$FX_DC$429_INV$792)
+	OR (NOT BCD(3) AND CATHS(0) AND NOT BCD(5) AND 
+	NOT $OpTx$$OpTx$FX_DC$466_INV$805 AND $OpTx$$OpTx$FX_DC$434_INV$796)
+	OR (SEVEN_SEG(1)_BUFR AND NOT CNTR(0) AND NOT CNTR(1) AND NOT CNTR(2) AND 
+	NOT CNTR(3))
+	OR ($OpTx$$OpTx$FX_DC$434_INV$796 AND $OpTx$FX_DC$462)
+	OR (BCD(4) AND NOT CATHS(0) AND 
+	NOT $OpTx$$OpTx$FX_DC$461_INV$803)
+	OR (BCD(3) AND $OpTx$FX_DC$462 AND 
+	$OpTx$$OpTx$FX_DC$429_INV$792)
+	OR (NOT BCD(5) AND $OpTx$FX_DC$462 AND 
+	$OpTx$$OpTx$FX_DC$429_INV$792));
+
+
+SEVEN_SEG(1) <= SEVEN_SEG(1)_BUFR;
+
+FDCPE_SEVEN_SEG2: FDCPE port map (SEVEN_SEG(2),SEVEN_SEG_D(2),NOT CLK,'0','0');
+SEVEN_SEG_D(2) <= (($OpTx$DEC_SEVEN_SEG_2$4)
+	OR (NOT BCD(1) AND BCD(4) AND BCD(3) AND NOT CATHS(0) AND NOT BCD(0) AND 
+	NOT BCD(5) AND NOT $OpTx$$OpTx$FX_DC$460_INV$802));
+
+
+SEVEN_SEG(3) <= SEVEN_SEG(3)_BUFR;
+
+FDCPE_SEVEN_SEG3_BUFR: FDCPE port map (SEVEN_SEG(3)_BUFR,SEVEN_SEG_D(3)_BUFR,NOT CLK,'0','0');
+SEVEN_SEG_D(3)_BUFR <= ((EXP28_.EXP)
+	OR (BCD(1) AND BCD(4) AND NOT CATHS(0) AND BCD(0) AND 
+	NOT $OpTx$$OpTx$FX_DC$460_INV$802)
+	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(2) AND CNTR(1) AND 
+	$OpTx$$OpTx$FX_DC$430_INV$793)
+	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(2) AND CNTR(2) AND 
+	$OpTx$$OpTx$FX_DC$430_INV$793)
+	OR (NOT BCD(1) AND BCD(4) AND NOT BCD(2) AND CNTR(3) AND 
+	$OpTx$$OpTx$FX_DC$430_INV$793)
+	OR (BCD(4) AND NOT CATHS(0) AND BCD(5) AND CNTR(1) AND 
+	NOT $OpTx$$OpTx$FX_DC$432_INV$794)
+	OR ($OpTx$$OpTx$FX_DC$482_INV$809.EXP)
+	OR (BCD(1) AND NOT BCD(0) AND NOT $OpTx$$OpTx$FX_DC$430_INV$793 AND 
+	$OpTx$FX_DC$467)
+	OR (BCD(4) AND BCD(2) AND NOT CATHS(0) AND 
+	NOT $OpTx$$OpTx$FX_DC$460_INV$802)
+	OR (NOT BCD(4) AND BCD(2) AND $OpTx$FX_DC$462 AND 
+	NOT $OpTx$$OpTx$FX_DC$430_INV$793)
+	OR (NOT BCD(3) AND BCD(5) AND NOT $OpTx$$OpTx$FX_DC$435_INV$797 AND 
+	$OpTx$FX_DC$467)
+	OR (SEVEN_SEG(3)_BUFR AND NOT CNTR(0) AND NOT CNTR(1) AND NOT CNTR(2) AND 
+	NOT CNTR(3))
+	OR (BCD(4) AND NOT BCD(2) AND $OpTx$FX_DC$462)
+	OR (BCD(4) AND NOT CATHS(0) AND 
+	NOT $OpTx$$OpTx$FX_DC$469_INV$807)
+	OR (BCD(0) AND $OpTx$$OpTx$FX_DC$430_INV$793 AND 
+	NOT $OpTx$$OpTx$FX_DC$482_INV$809)
+	OR (NOT $OpTx$$OpTx$FX_DC$459_INV$801 AND 
+	$OpTx$$OpTx$FX_DC$435_INV$797 AND NOT $OpTx$$OpTx$FX_DC$428_INV$791));
+
+FDCPE_SEVEN_SEG4: FDCPE port map (SEVEN_SEG(4),SEVEN_SEG_D(4),NOT CLK,'0','0');
+SEVEN_SEG_D(4) <= (($OpTx$DEC_SEVEN_SEG_4$3)
+	OR (BCD(3) AND NOT CATHS(0) AND CNTR(2) AND 
+	NOT $OpTx$$OpTx$FX_DC$432_INV$794 AND NOT $OpTx$$OpTx$FX_DC$429_INV$792));
+
+FDCPE_SEVEN_SEG5: FDCPE port map (SEVEN_SEG(5),SEVEN_SEG_D(5),NOT CLK,'0','0');
+SEVEN_SEG_D(5) <= (($OpTx$DEC_SEVEN_SEG_5$5)
+	OR (NOT BCD(1) AND BCD(4) AND BCD(3) AND NOT BCD(2) AND CATHS(0) AND 
+	NOT BCD(5) AND CNTR(3)));
+
+FDCPE_SEVEN_SEG6: FDCPE port map (SEVEN_SEG(6),SEVEN_SEG_D(6),NOT CLK,'0','0');
+SEVEN_SEG_D(6) <= ((EXP16_.EXP)
+	OR (BCD(1) AND NOT BCD(4) AND BCD(2) AND 
+	NOT $OpTx$$OpTx$FX_DC$459_INV$801)
+	OR (NOT BCD(4) AND BCD(2) AND BCD(5) AND 
+	NOT $OpTx$$OpTx$FX_DC$459_INV$801)
+	OR (BCD(3) AND BCD(5) AND NOT $OpTx$$OpTx$FX_DC$459_INV$801 AND 
+	$OpTx$$OpTx$FX_DC$438_INV$799)
+	OR (BCD(3) AND NOT BCD(5) AND NOT $OpTx$$OpTx$FX_DC$482_INV$809 AND 
+	NOT $OpTx$$OpTx$FX_DC$438_INV$799)
+	OR (NOT BCD(3) AND NOT BCD(5) AND NOT $OpTx$$OpTx$FX_DC$459_INV$801 AND 
+	$OpTx$$OpTx$FX_DC$438_INV$799)
+	OR ($OpTx$$OpTx$FX_DC$428_INV$791.EXP)
+	OR (BCD(4) AND BCD(2) AND NOT CATHS(0) AND 
+	NOT $OpTx$$OpTx$FX_DC$460_INV$802)
+	OR (NOT BCD(4) AND BCD(2) AND NOT BCD(0) AND 
+	NOT $OpTx$$OpTx$FX_DC$459_INV$801)
+	OR (NOT BCD(1) AND NOT BCD(4) AND NOT BCD(3) AND BCD(5) AND 
+	NOT $OpTx$$OpTx$FX_DC$463_INV$804)
+	OR (NOT BCD(4) AND NOT BCD(3) AND NOT BCD(2) AND BCD(5) AND 
+	NOT $OpTx$$OpTx$FX_DC$463_INV$804)
+	OR (SEVEN_SEG(6) AND NOT CNTR(0) AND NOT CNTR(1) AND NOT CNTR(2) AND 
+	NOT CNTR(3))
+	OR (BCD(3) AND CNTR(1) AND $OpTx$$OpTx$FX_DC$429_INV$792)
+	OR (BCD(3) AND CNTR(2) AND $OpTx$$OpTx$FX_DC$429_INV$792)
+	OR (BCD(3) AND CNTR(3) AND $OpTx$$OpTx$FX_DC$429_INV$792)
+	OR (NOT $OpTx$$OpTx$FX_DC$459_INV$801 AND 
+	$OpTx$$OpTx$FX_DC$429_INV$792 AND NOT $OpTx$$OpTx$FX_DC$438_INV$799));
 
 Register Legend:
  FDCPE (Q,D,C,CLR,PRE,CE); 
@@ -742,15 +829,15 @@ No. Name                           No. Name
   3 KPR                              25 GND                           
   4 GND                              26 VCC                           
   5 KPR                              27 BCD<5>                        
-  6 KPR                              28 SEL                           
+  6 KPR                              28 CLK                           
   7 KPR                              29 KPR                           
   8 KPR                              30 KPR                           
   9 TDI                              31 KPR                           
  10 TMS                              32 KPR                           
  11 TCK                              33 KPR                           
  12 KPR                              34 KPR                           
- 13 SW                               35 VCC                           
- 14 LED                              36 KPR                           
+ 13 KPR                              35 VCC                           
+ 14 KPR                              36 KPR                           
  15 VCC                              37 KPR                           
  16 CATHODES<0>                      38 SEVEN_SEG<6>                  
  17 GND                              39 SEVEN_SEG<5>                  

@@ -1,1297 +1,1409 @@
 MDF Database:  version 1.0
 MDF_INFO | invert_top | XC9572XL-10-VQ44
-MACROCELL | 0 | 15 | CLK_DIV<3>
-ATTRIBUTES | 4326176 | 0
-OUTPUTMC | 38 | 2 | 16 | 2 | 15 | 1 | 1 | 1 | 5 | 1 | 9 | 3 | 15 | 2 | 11 | 0 | 13 | 1 | 12 | 2 | 9 | 2 | 1 | 2 | 5 | 1 | 0 | 1 | 2 | 1 | 3 | 1 | 4 | 1 | 6 | 1 | 7 | 1 | 8 | 1 | 10 | 1 | 11 | 1 | 13 | 1 | 14 | 1 | 17 | 2 | 0 | 2 | 2 | 2 | 3 | 2 | 4 | 2 | 6 | 2 | 7 | 2 | 8 | 2 | 10 | 2 | 12 | 2 | 13 | 2 | 17 | 3 | 14 | 3 | 16 | 3 | 17
-INPUTS | 4 | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | SEL
-INPUTMC | 3 | 0 | 12 | 0 | 17 | 0 | 16
+MACROCELL | 3 | 5 | CATHS<0>
+ATTRIBUTES | 4326244 | 0
+OUTPUTMC | 43 | 2 | 16 | 0 | 10 | 2 | 1 | 0 | 7 | 3 | 0 | 0 | 4 | 0 | 1 | 1 | 14 | 2 | 15 | 3 | 12 | 3 | 14 | 3 | 15 | 3 | 16 | 3 | 10 | 2 | 7 | 0 | 14 | 2 | 12 | 2 | 13 | 3 | 7 | 3 | 6 | 0 | 11 | 0 | 12 | 0 | 13 | 0 | 17 | 1 | 0 | 1 | 13 | 1 | 17 | 2 | 0 | 2 | 2 | 2 | 3 | 2 | 4 | 2 | 5 | 2 | 6 | 2 | 8 | 2 | 9 | 2 | 10 | 2 | 11 | 2 | 14 | 2 | 17 | 3 | 1 | 3 | 2 | 3 | 3 | 3 | 17
+INPUTS | 5 | CLK  | CNTR<0>  | CNTR<1>  | CNTR<2>  | CNTR<3>
+INPUTMC | 4 | 1 | 12 | 1 | 1 | 1 | 2 | 2 | 4
 INPUTP | 1 | 83
-EQ | 2 | 
-   CLK_DIV<3>.T = CLK_DIV<0> & CLK_DIV<1> & CLK_DIV<2>;
-   CLK_DIV<3>.CLK = SEL;
+EQ | 3 | 
+   CATHS<0>.T = Vcc;
+   CATHS<0>.CLK = !CLK;
+   CATHS<0>.CE = !CNTR<0> & !CNTR<1> & !CNTR<2> & !CNTR<3>;
 
-MACROCELL | 0 | 12 | CLK_DIV<0>
-ATTRIBUTES | 4326176 | 0
-OUTPUTMC | 43 | 0 | 15 | 0 | 17 | 0 | 16 | 2 | 16 | 2 | 15 | 0 | 10 | 0 | 8 | 0 | 7 | 0 | 4 | 0 | 1 | 1 | 1 | 1 | 5 | 1 | 9 | 0 | 14 | 2 | 11 | 0 | 13 | 1 | 12 | 2 | 9 | 2 | 1 | 2 | 5 | 1 | 0 | 1 | 2 | 1 | 3 | 1 | 4 | 1 | 6 | 1 | 7 | 1 | 8 | 1 | 10 | 1 | 11 | 1 | 13 | 1 | 14 | 1 | 17 | 2 | 0 | 2 | 2 | 2 | 3 | 2 | 4 | 2 | 6 | 2 | 7 | 2 | 8 | 2 | 10 | 2 | 12 | 2 | 13 | 2 | 17
-INPUTS | 1 | SEL
+MACROCELL | 3 | 4 | CATHS<1>
+ATTRIBUTES | 4326240 | 0
+OUTPUTMC | 1 | 2 | 15
+INPUTS | 5 | CLK  | CNTR<0>  | CNTR<1>  | CNTR<2>  | CNTR<3>
+INPUTMC | 4 | 1 | 12 | 1 | 1 | 1 | 2 | 2 | 4
 INPUTP | 1 | 83
-EQ | 2 | 
-   CLK_DIV<0>.T = Vcc;
-   CLK_DIV<0>.CLK = SEL;
-
-MACROCELL | 0 | 17 | CLK_DIV<1>
-ATTRIBUTES | 4326176 | 0
-OUTPUTMC | 42 | 0 | 15 | 0 | 16 | 2 | 16 | 2 | 15 | 0 | 10 | 0 | 8 | 0 | 7 | 0 | 4 | 0 | 1 | 1 | 1 | 1 | 5 | 1 | 9 | 0 | 14 | 2 | 11 | 0 | 13 | 1 | 12 | 2 | 9 | 2 | 1 | 2 | 5 | 1 | 0 | 1 | 2 | 1 | 3 | 1 | 4 | 1 | 6 | 1 | 7 | 1 | 8 | 1 | 10 | 1 | 11 | 1 | 13 | 1 | 14 | 1 | 17 | 2 | 0 | 2 | 2 | 2 | 3 | 2 | 4 | 2 | 6 | 2 | 7 | 2 | 8 | 2 | 10 | 2 | 12 | 2 | 13 | 2 | 17
-INPUTS | 2 | CLK_DIV<0>  | SEL
-INPUTMC | 1 | 0 | 12
-INPUTP | 1 | 83
-EQ | 2 | 
-   CLK_DIV<1>.T = CLK_DIV<0>;
-   CLK_DIV<1>.CLK = SEL;
-
-MACROCELL | 0 | 16 | CLK_DIV<2>
-ATTRIBUTES | 4326176 | 0
-OUTPUTMC | 41 | 0 | 15 | 2 | 16 | 2 | 15 | 0 | 10 | 0 | 8 | 0 | 7 | 0 | 4 | 0 | 1 | 1 | 1 | 1 | 5 | 1 | 9 | 0 | 14 | 2 | 11 | 0 | 13 | 1 | 12 | 2 | 9 | 2 | 1 | 2 | 5 | 1 | 0 | 1 | 2 | 1 | 3 | 1 | 4 | 1 | 6 | 1 | 7 | 1 | 8 | 1 | 10 | 1 | 11 | 1 | 13 | 1 | 14 | 1 | 17 | 2 | 0 | 2 | 2 | 2 | 3 | 2 | 4 | 2 | 6 | 2 | 7 | 2 | 8 | 2 | 10 | 2 | 12 | 2 | 13 | 2 | 17
-INPUTS | 3 | CLK_DIV<0>  | CLK_DIV<1>  | SEL
-INPUTMC | 2 | 0 | 12 | 0 | 17
-INPUTP | 1 | 83
-EQ | 2 | 
-   CLK_DIV<2>.T = CLK_DIV<0> & CLK_DIV<1>;
-   CLK_DIV<2>.CLK = SEL;
+EQ | 3 | 
+   CATHS<1>.T = Vcc;
+   CATHS<1>.CLK = !CLK;
+   CATHS<1>.CE = !CNTR<0> & !CNTR<1> & !CNTR<2> & !CNTR<3>;
 
 MACROCELL | 2 | 16 | CATHODES_0
-ATTRIBUTES | 8651698 | 0
-INPUTS | 4 | CLK_DIV<3>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>
-INPUTMC | 4 | 0 | 15 | 0 | 12 | 0 | 17 | 0 | 16
-EQ | 6 | 
-   CATHODES<0>.D = Gnd;
-   CATHODES<0>.CLK = Gnd;
-   CATHODES<0>.AP = CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>;
-   CATHODES<0>.AR = !CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>;
+ATTRIBUTES | 8651618 | 0
+OUTPUTMC | 1 | 2 | 17
+INPUTS | 8 | CATHS<0>  | CLK  | CNTR<0>  | CNTR<1>  | CNTR<2>  | CNTR<3>  | BCD<3>  | BCD<5>
+INPUTMC | 5 | 3 | 5 | 1 | 12 | 1 | 1 | 1 | 2 | 2 | 4
+INPUTP | 3 | 83 | 68 | 82
+EXPORTS | 1 | 2 | 17
+EQ | 5 | 
+   CATHODES<0>.D = CATHS<0>;
+   CATHODES<0>.CLK = !CLK;
+   CATHODES<0>.CE = CNTR<0> & !CNTR<1> & !CNTR<2> & !CNTR<3>;
+    CATHODES_0.EXP  =  BCD<3> & BCD<5>
+	# !BCD<3> & CATHS<0> & !BCD<5>
 
 MACROCELL | 2 | 15 | CATHODES_1
-ATTRIBUTES | 8651698 | 0
-INPUTS | 4 | CLK_DIV<3>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>
-INPUTMC | 4 | 0 | 15 | 0 | 12 | 0 | 17 | 0 | 16
+ATTRIBUTES | 8651618 | 0
+OUTPUTMC | 1 | 2 | 14
+INPUTS | 11 | CATHS<1>  | CLK  | CNTR<0>  | CNTR<1>  | CNTR<2>  | CNTR<3>  | $OpTx$DEC_SEVEN_SEG_4$0  | BCD<3>  | CATHS<0>  | $OpTx$$OpTx$FX_DC$432_INV$794  | $OpTx$$OpTx$FX_DC$429_INV$792
+INPUTMC | 9 | 3 | 4 | 1 | 12 | 1 | 1 | 1 | 2 | 2 | 4 | 2 | 7 | 3 | 5 | 1 | 5 | 1 | 3
+INPUTP | 2 | 83 | 68
+EXPORTS | 1 | 2 | 14
 EQ | 6 | 
-   CATHODES<1>.D = Gnd;
-   CATHODES<1>.CLK = Gnd;
-   CATHODES<1>.AP = !CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>;
-   CATHODES<1>.AR = CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>;
+   CATHODES<1>.D = CATHS<1>;
+   CATHODES<1>.CLK = !CLK;
+   CATHODES<1>.CE = CNTR<0> & !CNTR<1> & !CNTR<2> & !CNTR<3>;
+    CATHODES_1.EXP  =  $OpTx$DEC_SEVEN_SEG_4$0
+	# BCD<3> & !CATHS<0> & CNTR<1> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794 & !$OpTx$$OpTx$FX_DC$429_INV$792
 
 MACROCELL | 0 | 10 | SEVEN_SEG_0
-ATTRIBUTES | 8651698 | 0
-INPUTS | 4 | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | SEVEN_SEG_0/SEVEN_SEG_0_RSTF
-INPUTMC | 4 | 0 | 12 | 0 | 17 | 0 | 16 | 1 | 1
-EQ | 5 | 
-   SEVEN_SEG<0>.D = Gnd;
-   SEVEN_SEG<0>.CLK = Gnd;
-   SEVEN_SEG<0>.AP = !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2> & 
-	!SEVEN_SEG_0/SEVEN_SEG_0_RSTF;
-   SEVEN_SEG<0>.AR = SEVEN_SEG_0/SEVEN_SEG_0_RSTF;
+ATTRIBUTES | 8782626 | 0
+OUTPUTMC | 1 | 0 | 8
+INPUTS | 12 | CATHS<0>  | $OpTx$$OpTx$FX_DC$461_INV$803  | $OpTx$$OpTx$FX_DC$433_INV$795  | $OpTx$$OpTx$FX_DC$468_INV$806  | $OpTx$$OpTx$FX_DC$432_INV$794  | BCD<4>  | $OpTx$$OpTx$FX_DC$469_INV$807  | BCD<1>  | BCD<2>  | EXP8_.EXP  | EXP9_.EXP  | CLK
+INPUTMC | 8 | 3 | 5 | 3 | 11 | 1 | 6 | 3 | 8 | 1 | 5 | 2 | 10 | 0 | 9 | 0 | 11
+INPUTP | 4 | 72 | 63 | 65 | 83
+IMPORTS | 2 | 0 | 9 | 0 | 11
+EQ | 54 | 
+   SEVEN_SEG<0>.D = !CATHS<0> & !$OpTx$$OpTx$FX_DC$461_INV$803
+	# BCD<4> & !CATHS<0> & 
+	!$OpTx$$OpTx$FX_DC$469_INV$807
+	# $OpTx$$OpTx$FX_DC$433_INV$795 & 
+	!$OpTx$$OpTx$FX_DC$468_INV$806 & $OpTx$$OpTx$FX_DC$432_INV$794
+	# BCD<1> & !BCD<4> & !BCD<2> & 
+	!$OpTx$$OpTx$FX_DC$461_INV$803
+;Imported pterms FB1_10
+	# BCD<1> & BCD<0> & $OpTx$$OpTx$FX_DC$433_INV$795 & 
+	!$OpTx$$OpTx$FX_DC$468_INV$806
+	# !BCD<1> & !BCD<4> & BCD<0> & 
+	!$OpTx$$OpTx$FX_DC$461_INV$803
+	# !BCD<1> & BCD<0> & !$OpTx$$OpTx$FX_DC$460_INV$802 & 
+	$OpTx$FX_DC$431
+	# BCD<4> & BCD<2> & !$OpTx$$OpTx$FX_DC$461_INV$803 & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794
+	# !BCD<4> & BCD<3> & BCD<0> & 
+	!$OpTx$$OpTx$FX_DC$461_INV$803
+;Imported pterms FB1_9
+	# BCD<1> & BCD<3> & BCD<0> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801
+	# BCD<4> & BCD<3> & !BCD<2> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$466_INV$805
+	# !BCD<4> & BCD<3> & BCD<2> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801
+	# !BCD<4> & !BCD<3> & !BCD<2> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802
+	# SEVEN_SEG<0> & !CNTR<0> & !CNTR<1> & !CNTR<2> & 
+	!CNTR<3>
+;Imported pterms FB1_12
+	# BCD<1> & !BCD<0> & $OpTx$FX_DC$431 & 
+	!$OpTx$$OpTx$FX_DC$468_INV$806
+	# BCD<4> & !CATHS<0> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802 & !$OpTx$$OpTx$FX_DC$436_INV$798
+	# !BCD<4> & !BCD<3> & !BCD<2> & $OpTx$FX_DC$465
+	# BCD<3> & !BCD<5> & !$OpTx$$OpTx$FX_DC$459_INV$801 & 
+	$OpTx$$OpTx$FX_DC$432_INV$794
+	# BCD<1> & !BCD<4> & !BCD<0> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802 & $OpTx$$OpTx$FX_DC$433_INV$795
+;Imported pterms FB1_13
+	# !BCD<1> & !BCD<4> & BCD<2> & CATHS<0> & CNTR<1> & 
+	!$OpTx$$OpTx$FX_DC$433_INV$795
+	# !BCD<1> & !BCD<4> & BCD<2> & CATHS<0> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$433_INV$795
+	# !BCD<1> & !BCD<4> & BCD<2> & CATHS<0> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$433_INV$795
+	# !BCD<3> & BCD<2> & CATHS<0> & BCD<0> & !BCD<5> & 
+	CNTR<1>
+	# !BCD<3> & BCD<2> & CATHS<0> & BCD<0> & !BCD<5> & 
+	CNTR<2>
+;Imported pterms FB1_14
+	# !BCD<3> & BCD<2> & CATHS<0> & BCD<0> & !BCD<5> & 
+	CNTR<3>;
+   SEVEN_SEG<0>.CLK = !CLK;
 
-MACROCELL | 0 | 8 | SEVEN_SEG_1
-ATTRIBUTES | 8651698 | 0
-INPUTS | 4 | SEVEN_SEG_1/SEVEN_SEG_1_SETF  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>
-INPUTMC | 4 | 1 | 5 | 0 | 12 | 0 | 17 | 0 | 16
-EQ | 5 | 
-   SEVEN_SEG<1>.D = Gnd;
-   SEVEN_SEG<1>.CLK = Gnd;
-   SEVEN_SEG<1>.AP = SEVEN_SEG_1/SEVEN_SEG_1_SETF;
-   SEVEN_SEG<1>.AR = !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2> & 
-	!SEVEN_SEG_1/SEVEN_SEG_1_SETF;
+MACROCELL | 2 | 1 | SEVEN_SEG<1>_BUFR.MC
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 2 | 0 | 7 | 2 | 2
+INPUTS | 11 | $OpTx$$OpTx$FX_DC$434_INV$796  | $OpTx$FX_DC$462  | BCD<5>  | $OpTx$$OpTx$FX_DC$429_INV$792  | BCD<3>  | BCD<4>  | CATHS<0>  | $OpTx$$OpTx$FX_DC$461_INV$803  | EXP19_.EXP  | EXP20_.EXP  | CLK
+INPUTMC | 7 | 1 | 7 | 3 | 15 | 1 | 3 | 3 | 5 | 3 | 11 | 2 | 0 | 2 | 2
+INPUTP | 4 | 82 | 68 | 72 | 83
+IMPORTS | 2 | 2 | 0 | 2 | 2
+EQ | 52 | 
+   SEVEN_SEG<1>_BUFR.D = $OpTx$$OpTx$FX_DC$434_INV$796 & $OpTx$FX_DC$462
+	# BCD<4> & !CATHS<0> & 
+	!$OpTx$$OpTx$FX_DC$461_INV$803
+	# BCD<3> & $OpTx$FX_DC$462 & 
+	$OpTx$$OpTx$FX_DC$429_INV$792
+	# !BCD<5> & $OpTx$FX_DC$462 & 
+	$OpTx$$OpTx$FX_DC$429_INV$792
+;Imported pterms FB3_1
+	# BCD<3> & !CATHS<0> & BCD<5> & CNTR<1>
+	# BCD<3> & !CATHS<0> & BCD<5> & CNTR<2>
+	# BCD<3> & !CATHS<0> & BCD<5> & CNTR<3>
+	# BCD<3> & BCD<5> & !$OpTx$$OpTx$FX_DC$466_INV$805 & 
+	$OpTx$$OpTx$FX_DC$434_INV$796
+	# !BCD<3> & BCD<5> & !$OpTx$$OpTx$FX_DC$466_INV$805 & 
+	$OpTx$$OpTx$FX_DC$429_INV$792
+;Imported pterms FB3_18
+	# !BCD<1> & BCD<3> & CATHS<0> & !BCD<5> & CNTR<1> & 
+	!$OpTx$$OpTx$FX_DC$434_INV$796
+	# !BCD<1> & BCD<3> & CATHS<0> & !BCD<5> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$434_INV$796
+	# !BCD<1> & BCD<3> & CATHS<0> & !BCD<5> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$434_INV$796
+	# !BCD<3> & CATHS<0> & BCD<5> & CNTR<1> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794 & !$OpTx$$OpTx$FX_DC$429_INV$792
+	# !BCD<3> & CATHS<0> & BCD<5> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794 & !$OpTx$$OpTx$FX_DC$429_INV$792
+;Imported pterms FB3_3
+	# BCD<1> & BCD<2> & BCD<0> & 
+	!$OpTx$$OpTx$FX_DC$461_INV$803
+	# BCD<1> & BCD<3> & BCD<0> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802
+	# BCD<1> & BCD<3> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802 & $OpTx$$OpTx$FX_DC$429_INV$792
+	# !BCD<3> & CATHS<0> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$466_INV$805 & $OpTx$$OpTx$FX_DC$434_INV$796
+	# SEVEN_SEG<1>_BUFR & !CNTR<0> & !CNTR<1> & !CNTR<2> & 
+	!CNTR<3>
+;Imported pterms FB3_4
+	# BCD<1> & !BCD<3> & CATHS<0> & BCD<0> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802
+	# BCD<1> & !BCD<3> & CATHS<0> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802 & $OpTx$$OpTx$FX_DC$429_INV$792
+	# !BCD<3> & CATHS<0> & BCD<5> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794 & !$OpTx$$OpTx$FX_DC$429_INV$792
+	# BCD<1> & !BCD<4> & BCD<3> & BCD<2> & CATHS<0> & 
+	!BCD<5> & CNTR<1>
+	# BCD<1> & !BCD<4> & BCD<3> & BCD<2> & CATHS<0> & 
+	!BCD<5> & CNTR<3>
+;Imported pterms FB3_5
+	# BCD<1> & !BCD<4> & BCD<3> & BCD<2> & CATHS<0> & 
+	!BCD<5> & CNTR<2>;
+   SEVEN_SEG<1>_BUFR.CLK = !CLK;
 
 MACROCELL | 0 | 7 | SEVEN_SEG_2
-ATTRIBUTES | 8651698 | 0
-INPUTS | 4 | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | SEVEN_SEG_2/SEVEN_SEG_2_RSTF
-INPUTMC | 4 | 0 | 12 | 0 | 17 | 0 | 16 | 1 | 9
+ATTRIBUTES | 8782626 | 0
+OUTPUTMC | 2 | 0 | 15 | 0 | 8
+INPUTS | 10 | BCD<4>  | $OpTx$DEC_SEVEN_SEG_2$4  | SEVEN_SEG<1>_BUFR  | BCD<3>  | BCD<5>  | BCD<1>  | BCD<0>  | CATHS<0>  | $OpTx$$OpTx$FX_DC$460_INV$802  | CLK
+INPUTMC | 4 | 3 | 7 | 2 | 1 | 3 | 5 | 1 | 11
+INPUTP | 6 | 72 | 68 | 82 | 63 | 62 | 83
+EXPORTS | 1 | 0 | 8
 EQ | 5 | 
-   SEVEN_SEG<2>.D = Gnd;
-   SEVEN_SEG<2>.CLK = Gnd;
-   SEVEN_SEG<2>.AP = !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2> & 
-	!SEVEN_SEG_2/SEVEN_SEG_2_RSTF;
-   SEVEN_SEG<2>.AR = SEVEN_SEG_2/SEVEN_SEG_2_RSTF;
+   SEVEN_SEG<2>.D = $OpTx$DEC_SEVEN_SEG_2$4
+	# !BCD<1> & BCD<4> & BCD<3> & !CATHS<0> & !BCD<0> & 
+	!BCD<5> & !$OpTx$$OpTx$FX_DC$460_INV$802;
+   SEVEN_SEG<2>.CLK = !CLK;
+    SEVEN_SEG_2.EXP  =  SEVEN_SEG<1>_BUFR
 
-MACROCELL | 0 | 5 | SEVEN_SEG_3
-ATTRIBUTES | 8651698 | 0
-INPUTS | 2 | SEVEN_SEG_3/SEVEN_SEG_3_SETF__$INT  | SEVEN_SEG_3/SEVEN_SEG_3_RSTF
-INPUTMC | 2 | 3 | 15 | 2 | 9
-EQ | 4 | 
-   SEVEN_SEG<3>.D = Gnd;
-   SEVEN_SEG<3>.CLK = Gnd;
-   SEVEN_SEG<3>.AP = !SEVEN_SEG_3/SEVEN_SEG_3_SETF__$INT;
-   SEVEN_SEG<3>.AR = SEVEN_SEG_3/SEVEN_SEG_3_RSTF;
+MACROCELL | 3 | 0 | SEVEN_SEG<3>_BUFR.MC
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 2 | 0 | 5 | 3 | 17
+INPUTS | 14 | BCD<0>  | $OpTx$$OpTx$FX_DC$430_INV$793  | $OpTx$$OpTx$FX_DC$482_INV$809  | $OpTx$$OpTx$FX_DC$459_INV$801  | $OpTx$$OpTx$FX_DC$435_INV$797  | $OpTx$$OpTx$FX_DC$428_INV$791  | BCD<4>  | BCD<2>  | $OpTx$FX_DC$462  | CATHS<0>  | $OpTx$$OpTx$FX_DC$469_INV$807  | EXP27_.EXP  | EXP29_.EXP  | CLK
+INPUTMC | 10 | 1 | 4 | 3 | 16 | 3 | 12 | 1 | 8 | 1 | 0 | 3 | 15 | 3 | 5 | 2 | 10 | 3 | 1 | 3 | 17
+INPUTP | 4 | 62 | 72 | 65 | 83
+IMPORTS | 2 | 3 | 1 | 3 | 17
+EQ | 55 | 
+   SEVEN_SEG<3>_BUFR.D = BCD<4> & !BCD<2> & $OpTx$FX_DC$462
+	# BCD<4> & !CATHS<0> & 
+	!$OpTx$$OpTx$FX_DC$469_INV$807
+	# BCD<0> & $OpTx$$OpTx$FX_DC$430_INV$793 & 
+	!$OpTx$$OpTx$FX_DC$482_INV$809
+	# !$OpTx$$OpTx$FX_DC$459_INV$801 & 
+	$OpTx$$OpTx$FX_DC$435_INV$797 & !$OpTx$$OpTx$FX_DC$428_INV$791
+;Imported pterms FB4_2
+	# BCD<1> & BCD<4> & !CATHS<0> & BCD<0> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802
+	# !BCD<1> & BCD<4> & !BCD<2> & CNTR<1> & 
+	$OpTx$$OpTx$FX_DC$430_INV$793
+	# !BCD<1> & BCD<4> & !BCD<2> & CNTR<2> & 
+	$OpTx$$OpTx$FX_DC$430_INV$793
+	# !BCD<1> & BCD<4> & !BCD<2> & CNTR<3> & 
+	$OpTx$$OpTx$FX_DC$430_INV$793
+	# BCD<4> & !CATHS<0> & BCD<5> & CNTR<1> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794
+;Imported pterms FB4_3
+	# BCD<1> & !BCD<4> & !BCD<2> & !BCD<0> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801 & !$OpTx$$OpTx$FX_DC$430_INV$793
+	# !BCD<1> & !BCD<4> & BCD<2> & CATHS<0> & CNTR<1> & 
+	!$OpTx$$OpTx$FX_DC$428_INV$791
+	# !BCD<1> & !BCD<4> & BCD<2> & CATHS<0> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$428_INV$791
+	# !BCD<1> & !BCD<4> & BCD<2> & CATHS<0> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$428_INV$791
+	# !BCD<4> & !BCD<3> & !CATHS<0> & BCD<5> & CNTR<1> & 
+	!$OpTx$$OpTx$FX_DC$439_INV$800
+;Imported pterms FB4_4
+	# !BCD<4> & !BCD<3> & !CATHS<0> & BCD<5> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$439_INV$800
+	# !BCD<4> & !BCD<3> & !CATHS<0> & BCD<5> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$439_INV$800
+;Imported pterms FB4_18
+	# BCD<1> & !BCD<0> & !$OpTx$$OpTx$FX_DC$430_INV$793 & 
+	$OpTx$FX_DC$467
+	# BCD<4> & BCD<2> & !CATHS<0> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802
+	# !BCD<4> & BCD<2> & $OpTx$FX_DC$462 & 
+	!$OpTx$$OpTx$FX_DC$430_INV$793
+	# !BCD<3> & BCD<5> & !$OpTx$$OpTx$FX_DC$435_INV$797 & 
+	$OpTx$FX_DC$467
+	# SEVEN_SEG<3>_BUFR & !CNTR<0> & !CNTR<1> & !CNTR<2> & 
+	!CNTR<3>
+;Imported pterms FB4_17
+	# BCD<4> & !CATHS<0> & BCD<5> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794
+	# BCD<4> & !CATHS<0> & BCD<5> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794
+	# !BCD<4> & BCD<3> & BCD<2> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801 & !$OpTx$$OpTx$FX_DC$435_INV$797
+	# !BCD<4> & !BCD<3> & !BCD<2> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802 & !$OpTx$$OpTx$FX_DC$435_INV$797;
+   SEVEN_SEG<3>_BUFR.CLK = !CLK;
 
 MACROCELL | 0 | 4 | SEVEN_SEG_4
-ATTRIBUTES | 8651698 | 0
-INPUTS | 4 | SEVEN_SEG_4/SEVEN_SEG_4_SETF  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>
-INPUTMC | 4 | 1 | 12 | 0 | 12 | 0 | 17 | 0 | 16
-EQ | 5 | 
-   SEVEN_SEG<4>.D = Gnd;
-   SEVEN_SEG<4>.CLK = Gnd;
-   SEVEN_SEG<4>.AP = SEVEN_SEG_4/SEVEN_SEG_4_SETF;
-   SEVEN_SEG<4>.AR = !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2> & 
-	!SEVEN_SEG_4/SEVEN_SEG_4_SETF;
+ATTRIBUTES | 8782626 | 0
+OUTPUTMC | 1 | 2 | 5
+INPUTS | 7 | $OpTx$DEC_SEVEN_SEG_4$3  | BCD<3>  | $OpTx$$OpTx$FX_DC$429_INV$792  | CATHS<0>  | CNTR<2>  | $OpTx$$OpTx$FX_DC$432_INV$794  | CLK
+INPUTMC | 5 | 2 | 14 | 1 | 3 | 3 | 5 | 1 | 2 | 1 | 5
+INPUTP | 2 | 68 | 83
+EQ | 4 | 
+   SEVEN_SEG<4>.D = $OpTx$DEC_SEVEN_SEG_4$3
+	# BCD<3> & !CATHS<0> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794 & !$OpTx$$OpTx$FX_DC$429_INV$792;
+   SEVEN_SEG<4>.CLK = !CLK;
 
 MACROCELL | 0 | 1 | SEVEN_SEG_5
-ATTRIBUTES | 8651698 | 0
-INPUTS | 4 | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | SEVEN_SEG_5/SEVEN_SEG_5_RSTF
-INPUTMC | 4 | 0 | 12 | 0 | 17 | 0 | 16 | 2 | 11
-EQ | 5 | 
-   SEVEN_SEG<5>.D = Gnd;
-   SEVEN_SEG<5>.CLK = Gnd;
-   SEVEN_SEG<5>.AP = !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2> & 
-	!SEVEN_SEG_5/SEVEN_SEG_5_RSTF;
-   SEVEN_SEG<5>.AR = SEVEN_SEG_5/SEVEN_SEG_5_RSTF;
+ATTRIBUTES | 8782626 | 0
+OUTPUTMC | 1 | 2 | 12
+INPUTS | 9 | BCD<4>  | BCD<3>  | BCD<5>  | $OpTx$DEC_SEVEN_SEG_5$5  | CNTR<3>  | CATHS<0>  | BCD<1>  | BCD<2>  | CLK
+INPUTMC | 3 | 3 | 6 | 2 | 4 | 3 | 5
+INPUTP | 6 | 72 | 68 | 82 | 63 | 65 | 83
+EQ | 4 | 
+   !SEVEN_SEG<5>.D = $OpTx$DEC_SEVEN_SEG_5$5
+	# !BCD<1> & BCD<4> & BCD<3> & !BCD<2> & CATHS<0> & 
+	!BCD<5> & CNTR<3>;
+   SEVEN_SEG<5>.CLK = !CLK;
 
 MACROCELL | 1 | 16 | SEVEN_SEG_6
-ATTRIBUTES | 8651698 | 0
-INPUTS | 2 | SEVEN_SEG_6/SEVEN_SEG_6_SETF  | SEVEN_SEG_6/SEVEN_SEG_6_RSTF
-INPUTMC | 2 | 2 | 1 | 2 | 5
-EQ | 4 | 
-   SEVEN_SEG<6>.D = Gnd;
-   SEVEN_SEG<6>.CLK = Gnd;
-   SEVEN_SEG<6>.AP = SEVEN_SEG_6/SEVEN_SEG_6_SETF;
-   SEVEN_SEG<6>.AR = SEVEN_SEG_6/SEVEN_SEG_6_RSTF;
-
-MACROCELL | 2 | 14 | LED_OBUF
-ATTRIBUTES | 264962 | 0
-OUTPUTMC | 1 | 2 | 13
-INPUTS | 3 | SW  | BCD<4>  | BCD<2>
-INPUTP | 3 | 49 | 72 | 65
-EXPORTS | 1 | 2 | 13
-EQ | 2 | 
-   LED = !SW;
-    LED_OBUF.EXP  =  BCD<4> & !BCD<2>
-
-MACROCELL | 1 | 1 | SEVEN_SEG_0/SEVEN_SEG_0_RSTF
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 1 | 0 | 10
-INPUTS | 12 | BCD<4>  | BCD<5>  | CLK_DIV<3>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | BCD<1>  | BCD<3>  | BCD<2>  | BCD<0>  | EXP6_.EXP  | EXP7_.EXP
-INPUTMC | 6 | 0 | 15 | 0 | 12 | 0 | 17 | 0 | 16 | 1 | 0 | 1 | 2
-INPUTP | 6 | 72 | 82 | 63 | 68 | 65 | 62
-IMPORTS | 2 | 1 | 0 | 1 | 2
-EQ | 49 | 
-   SEVEN_SEG_0/SEVEN_SEG_0_RSTF = !BCD<4> & !BCD<5> & !CLK_DIV<3> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<3> & !BCD<2> & !BCD<0> & !BCD<5> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<3> & !BCD<2> & !BCD<5> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<3> & !BCD<2> & !BCD<0> & !BCD<5> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & BCD<3> & !BCD<2> & BCD<0> & 
-	!BCD<5> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-;Imported pterms FB2_1
-	# BCD<1> & BCD<4> & BCD<3> & !BCD<0> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<4> & !BCD<3> & BCD<2> & !BCD<0> & 
-	!BCD<5> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<4> & BCD<3> & !BCD<0> & BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<4> & !BCD<3> & !BCD<0> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<3> & !BCD<2> & !BCD<0> & BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-;Imported pterms FB2_18
-	# BCD<1> & BCD<4> & !BCD<3> & !BCD<2> & BCD<0> & 
-	!BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# BCD<1> & BCD<4> & !BCD<3> & !BCD<2> & !BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# BCD<1> & !BCD<4> & BCD<3> & BCD<2> & !BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & !BCD<3> & BCD<2> & !BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-;Imported pterms FB2_3
-	# BCD<1> & BCD<3> & !BCD<2> & !BCD<0> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & BCD<4> & BCD<3> & !BCD<2> & BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# BCD<1> & !BCD<4> & !BCD<3> & BCD<2> & BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# !BCD<1> & BCD<4> & BCD<3> & BCD<2> & BCD<0> & 
-	!BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# !BCD<1> & BCD<4> & !BCD<3> & !BCD<2> & BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>;
-
-MACROCELL | 1 | 5 | SEVEN_SEG_1/SEVEN_SEG_1_SETF
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 1 | 0 | 8
-INPUTS | 12 | BCD<1>  | BCD<2>  | BCD<0>  | BCD<5>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | BCD<4>  | CLK_DIV<3>  | BCD<3>  | EXP9_.EXP  | EXP10_.EXP
-INPUTMC | 6 | 0 | 12 | 0 | 17 | 0 | 16 | 0 | 15 | 1 | 4 | 1 | 6
-INPUTP | 6 | 63 | 65 | 62 | 82 | 72 | 68
-IMPORTS | 2 | 1 | 4 | 1 | 6
-EQ | 41 | 
-   SEVEN_SEG_1/SEVEN_SEG_1_SETF = BCD<1> & BCD<2> & BCD<0> & BCD<5> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<4> & BCD<2> & BCD<0> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & BCD<4> & BCD<3> & !BCD<2> & BCD<5> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<3> & BCD<2> & BCD<5> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<4> & !BCD<3> & !BCD<2> & BCD<5> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-;Imported pterms FB2_5
-	# BCD<3> & BCD<5> & !CLK_DIV<3> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<3> & BCD<0> & !BCD<5> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<4> & !BCD<2> & BCD<0> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<3> & !BCD<2> & !BCD<5> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<3> & BCD<0> & BCD<5> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-;Imported pterms FB2_4
-	# BCD<1> & !BCD<4> & !BCD<3> & BCD<5> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & BCD<4> & !BCD<3> & !BCD<2> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<4> & BCD<3> & BCD<2> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & !BCD<3> & BCD<2> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-;Imported pterms FB2_7
-	# BCD<4> & BCD<5> & !CLK_DIV<3> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & BCD<3> & BCD<0> & BCD<5> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<4> & BCD<3> & !BCD<5> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & BCD<3> & BCD<2> & BCD<5> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<4> & BCD<3> & !BCD<2> & BCD<0> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>;
-
-MACROCELL | 1 | 9 | SEVEN_SEG_2/SEVEN_SEG_2_RSTF
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 5 | 0 | 7 | 3 | 15 | 3 | 13 | 3 | 16 | 3 | 17
-INPUTS | 12 | BCD<1>  | BCD<3>  | BCD<2>  | BCD<5>  | CLK_DIV<3>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | BCD<4>  | BCD<0>  | EXP12_.EXP  | EXP13_.EXP
-INPUTMC | 6 | 0 | 15 | 0 | 12 | 0 | 17 | 0 | 16 | 1 | 8 | 1 | 10
-INPUTP | 6 | 63 | 68 | 65 | 82 | 72 | 62
-IMPORTS | 2 | 1 | 8 | 1 | 10
-EQ | 35 | 
-   SEVEN_SEG_2/SEVEN_SEG_2_RSTF = !BCD<4> & !CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# !BCD<0> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# !BCD<3> & !BCD<2> & !BCD<0> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & BCD<3> & BCD<2> & !BCD<5> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<4> & !BCD<3> & BCD<2> & BCD<5> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-;Imported pterms FB2_9
-	# !BCD<3> & BCD<5> & !CLK_DIV<3> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<2> & !BCD<0> & BCD<5> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<3> & !BCD<2> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<2> & BCD<5> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<4> & BCD<3> & !BCD<2> & BCD<5> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-;Imported pterms FB2_8
-	# BCD<1> & BCD<4> & !BCD<3> & BCD<2> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-;Imported pterms FB2_11
-	# BCD<1> & !BCD<4> & !BCD<3> & !BCD<2> & !BCD<5> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & BCD<3> & BCD<2> & !BCD<5> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & !BCD<3> & !BCD<2> & BCD<5> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<3> & BCD<2> & BCD<0> & !BCD<5> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & BCD<4> & BCD<3> & BCD<2> & BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>;
-
-MACROCELL | 3 | 15 | SEVEN_SEG_3/SEVEN_SEG_3_SETF__$INT
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 1 | 0 | 5
-INPUTS | 11 | BCD<0>  | CLK_DIV<3>  | SEVEN_SEG_2/SEVEN_SEG_2_RSTF  | BCD<4>  | BCD<5>  | $OpTx$FX_SC$30  | SEVEN_SEG_5/SEVEN_SEG_5_RSTF  | $OpTx$FX_SC$31  | BCD<2>  | EXP29_.EXP  | EXP30_.EXP
-INPUTMC | 7 | 0 | 15 | 1 | 9 | 0 | 14 | 2 | 11 | 0 | 13 | 3 | 14 | 3 | 16
-INPUTP | 4 | 62 | 72 | 82 | 65
-IMPORTS | 2 | 3 | 14 | 3 | 16
-EQ | 56 | 
-   SEVEN_SEG_3/SEVEN_SEG_3_SETF__$INT = BCD<0> & CLK_DIV<3> & 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF
-	# !BCD<4> & !BCD<5> & !CLK_DIV<3> & 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF
-	# BCD<4> & !BCD<2> & !$OpTx$FX_SC$30 & 
-	!SEVEN_SEG_5/SEVEN_SEG_5_RSTF & !$OpTx$FX_SC$31
-	# BCD<4> & !BCD<5> & !$OpTx$FX_SC$30 & 
-	!SEVEN_SEG_5/SEVEN_SEG_5_RSTF & !$OpTx$FX_SC$31
-	# BCD<4> & !SEVEN_SEG_2/SEVEN_SEG_2_RSTF & 
-	!$OpTx$FX_SC$30 & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF & !$OpTx$FX_SC$31
-;Imported pterms FB4_15
-	# BCD<4> & !BCD<2> & !BCD<0> & 
-	!SEVEN_SEG_5/SEVEN_SEG_5_RSTF & !$OpTx$FX_SC$31
-	# !BCD<4> & BCD<3> & !CLK_DIV<3> & $OpTx$FX_SC$30 & 
-	!SEVEN_SEG_5/SEVEN_SEG_5_RSTF
-	# !BCD<4> & !BCD<0> & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF & 
-	!$OpTx$FX_SC$31 & !SEVEN_SEG_4/SEVEN_SEG_4_SETF
-	# !BCD<4> & !$OpTx$FX_SC$30 & 
-	!SEVEN_SEG_5/SEVEN_SEG_5_RSTF & !$OpTx$FX_SC$31 & !SEVEN_SEG_4/SEVEN_SEG_4_SETF
-	# BCD<3> & !BCD<2> & !BCD<5> & !$OpTx$FX_SC$30 & 
-	!SEVEN_SEG_5/SEVEN_SEG_5_RSTF & !$OpTx$FX_SC$31
-;Imported pterms FB4_14
-	# !BCD<4> & BCD<2> & !BCD<0> & BCD<5> & 
-	!SEVEN_SEG_5/SEVEN_SEG_5_RSTF & !$OpTx$FX_SC$31
-	# BCD<1> & BCD<2> & BCD<0> & BCD<5> & 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF & $OpTx$FX_SC$30 & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF
-	# !BCD<1> & BCD<3> & BCD<5> & 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF & $OpTx$FX_SC$30 & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF & 
-	!$OpTx$$OpTx$FX_DC$12_INV$820
-	# !BCD<1> & !BCD<3> & !BCD<5> & 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF & $OpTx$FX_SC$30 & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF & 
-	!$OpTx$$OpTx$FX_DC$12_INV$820
-;Imported pterms FB4_17
-	# BCD<4> & BCD<3> & !BCD<0> & !BCD<5> & 
-	!SEVEN_SEG_5/SEVEN_SEG_5_RSTF & !$OpTx$FX_SC$31
-	# BCD<4> & BCD<3> & !BCD<0> & 
-	!SEVEN_SEG_2/SEVEN_SEG_2_RSTF & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF & !$OpTx$FX_SC$31
-	# BCD<4> & !BCD<3> & !CLK_DIV<3> & 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF & $OpTx$FX_SC$30 & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF
-	# !BCD<4> & BCD<2> & BCD<5> & !$OpTx$FX_SC$30 & 
-	!SEVEN_SEG_5/SEVEN_SEG_5_RSTF & !$OpTx$FX_SC$31
-	# BCD<3> & !BCD<2> & !BCD<0> & !BCD<5> & 
-	!SEVEN_SEG_5/SEVEN_SEG_5_RSTF & !$OpTx$FX_SC$31
-;Imported pterms FB4_18
-	# BCD<1> & BCD<4> & !BCD<3> & BCD<5> & 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF & $OpTx$FX_SC$30 & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF
-	# BCD<1> & !BCD<4> & BCD<3> & !BCD<5> & 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF & $OpTx$FX_SC$30 & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF
-	# BCD<1> & BCD<3> & BCD<2> & !BCD<5> & CLK_DIV<3> & 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF & $OpTx$FX_SC$30 & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF
-	# !BCD<1> & BCD<3> & BCD<2> & !BCD<0> & 
-	!SEVEN_SEG_2/SEVEN_SEG_2_RSTF & $OpTx$FX_SC$30 & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF & 
-	!$OpTx$FX_SC$31
-	# !BCD<4> & !BCD<3> & BCD<2> & !BCD<0> & 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF & $OpTx$FX_SC$30 & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF & 
-	!$OpTx$FX_SC$31;
-
-MACROCELL | 0 | 14 | $OpTx$FX_SC$30
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 5 | 3 | 15 | 3 | 13 | 3 | 14 | 3 | 16 | 3 | 17
-INPUTS | 3 | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>
-INPUTMC | 3 | 0 | 12 | 0 | 17 | 0 | 16
-EQ | 1 | 
-   $OpTx$FX_SC$30 = !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>;
-
-MACROCELL | 2 | 11 | SEVEN_SEG_5/SEVEN_SEG_5_RSTF
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 7 | 0 | 1 | 3 | 15 | 3 | 13 | 3 | 14 | 3 | 16 | 3 | 17 | 2 | 10
-INPUTS | 11 | BCD<1>  | BCD<4>  | BCD<5>  | CLK_DIV<3>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | BCD<2>  | BCD<3>  | BCD<0>  | EXP26_.EXP
-INPUTMC | 5 | 0 | 15 | 0 | 12 | 0 | 17 | 0 | 16 | 2 | 12
-INPUTP | 6 | 63 | 72 | 82 | 65 | 68 | 62
-EXPORTS | 1 | 2 | 10
-IMPORTS | 1 | 2 | 12
-EQ | 35 | 
-   SEVEN_SEG_5/SEVEN_SEG_5_RSTF = BCD<1> & BCD<4> & BCD<5> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<4> & BCD<2> & BCD<5> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-;Imported pterms FB3_13
-	# BCD<4> & BCD<3> & BCD<5> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<4> & BCD<0> & BCD<5> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<4> & !BCD<3> & !BCD<5> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & BCD<4> & !BCD<3> & BCD<2> & BCD<5> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & !BCD<3> & BCD<2> & !BCD<5> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-;Imported pterms FB3_14
-	# BCD<1> & !BCD<4> & BCD<3> & BCD<2> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<4> & !BCD<3> & !BCD<2> & BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<4> & BCD<3> & !BCD<2> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & BCD<3> & BCD<2> & BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & !BCD<2> & !BCD<0> & !BCD<5> & 
-	!CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>;
-    SEVEN_SEG_5/SEVEN_SEG_5_RSTF.EXP  =  BCD<1> & BCD<4> & !BCD<3> & BCD<2> & BCD<0> & 
-	!BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# !BCD<1> & BCD<4> & !BCD<3> & BCD<2> & BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & !BCD<3> & !BCD<2> & BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-
-MACROCELL | 0 | 13 | $OpTx$FX_SC$31
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 5 | 3 | 15 | 3 | 13 | 3 | 14 | 3 | 16 | 3 | 17
-INPUTS | 4 | CLK_DIV<3>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>
-INPUTMC | 4 | 0 | 15 | 0 | 12 | 0 | 17 | 0 | 16
-EQ | 2 | 
-   $OpTx$FX_SC$31 = !CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>;
-
-MACROCELL | 2 | 13 | $OpTx$$OpTx$FX_DC$12_INV$820
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 2 | 3 | 13 | 2 | 12
-INPUTS | 11 | BCD<1>  | BCD<4>  | BCD<3>  | BCD<2>  | BCD<5>  | CLK_DIV<3>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | BCD<0>  | LED_OBUF.EXP
-INPUTMC | 5 | 0 | 15 | 0 | 12 | 0 | 17 | 0 | 16 | 2 | 14
-INPUTP | 6 | 63 | 72 | 68 | 65 | 82 | 62
-EXPORTS | 1 | 2 | 12
-IMPORTS | 1 | 2 | 14
-EQ | 12 | 
-   $OpTx$$OpTx$FX_DC$12_INV$820 = ;Imported pterms FB3_15
-	  BCD<4> & !BCD<2>;
-    $OpTx$$OpTx$FX_DC$12_INV$820.EXP  =  BCD<1> & !BCD<4> & BCD<3> & BCD<2> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<4> & !BCD<3> & !BCD<2> & BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<4> & BCD<3> & !BCD<2> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & BCD<3> & BCD<2> & BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & !BCD<2> & !BCD<0> & !BCD<5> & 
-	!CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-
-MACROCELL | 1 | 12 | SEVEN_SEG_4/SEVEN_SEG_4_SETF
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 2 | 0 | 4 | 3 | 14
-INPUTS | 11 | BCD<0>  | CLK_DIV<3>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | BCD<5>  | BCD<4>  | BCD<3>  | BCD<2>  | EXP14_.EXP  | EXP15_.EXP
-INPUTMC | 6 | 0 | 15 | 0 | 12 | 0 | 17 | 0 | 16 | 1 | 11 | 1 | 13
-INPUTP | 5 | 62 | 82 | 72 | 68 | 65
-IMPORTS | 2 | 1 | 11 | 1 | 13
-EQ | 35 | 
-   SEVEN_SEG_4/SEVEN_SEG_4_SETF = !BCD<0> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# BCD<5> & !CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# !BCD<4> & BCD<3> & BCD<2> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<4> & !BCD<3> & BCD<5> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<3> & BCD<2> & BCD<5> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-;Imported pterms FB2_12
-	# BCD<1> & BCD<3> & BCD<5> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<4> & BCD<2> & CLK_DIV<3> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<4> & !BCD<3> & !BCD<2> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<4> & BCD<3> & !BCD<2> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<4> & !BCD<3> & !BCD<2> & !BCD<0> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-;Imported pterms FB2_14
-	# BCD<1> & !BCD<4> & BCD<3> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<3> & !BCD<5> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<3> & !BCD<5> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<4> & BCD<3> & BCD<0> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<3> & BCD<2> & BCD<0> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-;Imported pterms FB2_15
-	# BCD<1> & BCD<3> & BCD<2> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>;
-
-MACROCELL | 2 | 9 | SEVEN_SEG_3/SEVEN_SEG_3_RSTF
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 1 | 0 | 5
-INPUTS | 12 | BCD<4>  | BCD<3>  | BCD<2>  | BCD<0>  | BCD<5>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | CLK_DIV<3>  | BCD<1>  | EXP24_.EXP  | EXP25_.EXP
-INPUTMC | 6 | 0 | 12 | 0 | 17 | 0 | 16 | 0 | 15 | 2 | 8 | 2 | 10
-INPUTP | 6 | 72 | 68 | 65 | 62 | 82 | 63
-IMPORTS | 2 | 2 | 8 | 2 | 10
-EQ | 54 | 
-   SEVEN_SEG_3/SEVEN_SEG_3_RSTF = !BCD<4> & BCD<3> & !CLK_DIV<3> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<4> & !BCD<3> & !BCD<2> & !BCD<0> & !BCD<5> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<4> & !BCD<3> & BCD<2> & !BCD<0> & 
-	!BCD<5> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<4> & !BCD<3> & !BCD<2> & BCD<0> & 
-	!BCD<5> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & BCD<3> & BCD<2> & BCD<0> & 
-	!BCD<5> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-;Imported pterms FB3_9
-	# !BCD<1> & !BCD<4> & BCD<3> & !BCD<2> & !BCD<0> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & BCD<4> & BCD<3> & !BCD<0> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<4> & BCD<3> & !BCD<2> & BCD<0> & 
-	BCD<5> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<4> & BCD<2> & !BCD<0> & BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<4> & BCD<2> & !BCD<0> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-;Imported pterms FB3_8
-	# BCD<1> & !BCD<4> & BCD<2> & BCD<0> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<4> & !BCD<3> & !BCD<2> & !BCD<0> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<3> & !BCD<2> & !BCD<5> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<4> & !BCD<3> & BCD<2> & !BCD<0> & BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & BCD<4> & BCD<3> & BCD<2> & BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-;Imported pterms FB3_11
-	# !BCD<4> & !BCD<5> & !CLK_DIV<3> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & BCD<4> & !BCD<2> & !BCD<0> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & !BCD<2> & !BCD<0> & !BCD<5> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<4> & BCD<3> & !BCD<2> & !BCD<0> & !BCD<5> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<4> & BCD<3> & !BCD<0> & BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-;Imported pterms FB3_12
-	# BCD<1> & BCD<4> & !BCD<3> & BCD<2> & BCD<0> & 
-	!BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# !BCD<1> & BCD<4> & !BCD<3> & BCD<2> & BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & !BCD<3> & !BCD<2> & BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>;
-
-MACROCELL | 2 | 1 | SEVEN_SEG_6/SEVEN_SEG_6_SETF
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 1 | 1 | 16
-INPUTS | 12 | BCD<1>  | BCD<4>  | BCD<5>  | CLK_DIV<3>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | BCD<3>  | BCD<0>  | BCD<2>  | EXP18_.EXP  | EXP19_.EXP
-INPUTMC | 6 | 0 | 15 | 0 | 12 | 0 | 17 | 0 | 16 | 2 | 0 | 2 | 2
-INPUTP | 6 | 63 | 72 | 82 | 68 | 62 | 65
-IMPORTS | 2 | 2 | 0 | 2 | 2
-EQ | 43 | 
-   SEVEN_SEG_6/SEVEN_SEG_6_SETF = BCD<1> & BCD<4> & BCD<5> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<4> & BCD<2> & BCD<5> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & BCD<3> & !BCD<0> & BCD<5> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<3> & BCD<2> & BCD<5> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<3> & !BCD<2> & BCD<0> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-;Imported pterms FB3_1
-	# !BCD<4> & BCD<2> & !BCD<0> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & BCD<3> & BCD<0> & !BCD<5> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<3> & !BCD<2> & BCD<0> & BCD<5> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<3> & !BCD<0> & !BCD<5> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<3> & BCD<0> & BCD<5> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-;Imported pterms FB3_18
-	# BCD<4> & BCD<3> & !BCD<2> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<4> & BCD<2> & !CLK_DIV<3> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & BCD<4> & !BCD<2> & BCD<0> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<4> & BCD<2> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<3> & BCD<2> & !BCD<0> & BCD<5> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-;Imported pterms FB3_3
-	# !BCD<1> & BCD<4> & BCD<3> & BCD<0> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<4> & !BCD<2> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<4> & !BCD<3> & !BCD<0> & BCD<5> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<3> & !BCD<0> & !BCD<5> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<3> & BCD<0> & !BCD<5> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>;
-
-MACROCELL | 2 | 5 | SEVEN_SEG_6/SEVEN_SEG_6_RSTF
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 1 | 1 | 16
-INPUTS | 12 | BCD<4>  | BCD<3>  | CLK_DIV<3>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | BCD<5>  | BCD<1>  | BCD<2>  | BCD<0>  | EXP21_.EXP  | EXP22_.EXP
-INPUTMC | 6 | 0 | 15 | 0 | 12 | 0 | 17 | 0 | 16 | 2 | 4 | 2 | 6
-INPUTP | 6 | 72 | 68 | 82 | 63 | 65 | 62
-IMPORTS | 2 | 2 | 4 | 2 | 6
+ATTRIBUTES | 8782626 | 0
+OUTPUTMC | 1 | 1 | 17
+INPUTS | 10 | $OpTx$$OpTx$FX_DC$459_INV$801  | $OpTx$$OpTx$FX_DC$429_INV$792  | $OpTx$$OpTx$FX_DC$438_INV$799  | BCD<3>  | CNTR<1>  | CNTR<2>  | CNTR<3>  | EXP17_.EXP  | EXP18_.EXP  | CLK
+INPUTMC | 8 | 3 | 12 | 1 | 3 | 1 | 9 | 1 | 1 | 1 | 2 | 2 | 4 | 1 | 15 | 1 | 17
+INPUTP | 2 | 68 | 83
+IMPORTS | 2 | 1 | 15 | 1 | 17
 EQ | 51 | 
-   SEVEN_SEG_6/SEVEN_SEG_6_RSTF = !BCD<4> & BCD<3> & !CLK_DIV<3> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<4> & !BCD<5> & !CLK_DIV<3> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<4> & BCD<2> & BCD<0> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<3> & !BCD<2> & !BCD<5> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<3> & !BCD<2> & !BCD<0> & !BCD<5> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-;Imported pterms FB3_5
-	# BCD<1> & !BCD<4> & BCD<3> & !BCD<2> & BCD<0> & 
-	BCD<5> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<4> & BCD<3> & !BCD<2> & !BCD<0> & 
-	!BCD<5> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<4> & !BCD<3> & !BCD<2> & !BCD<0> & 
-	!CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & BCD<3> & BCD<2> & BCD<0> & 
-	!BCD<5> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & BCD<3> & !BCD<2> & !BCD<0> & 
-	BCD<5> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-;Imported pterms FB3_4
-	# BCD<1> & BCD<4> & BCD<3> & BCD<2> & !BCD<0> & 
-	!BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# BCD<1> & BCD<4> & !BCD<3> & BCD<2> & BCD<0> & 
-	!BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# BCD<1> & BCD<4> & !BCD<3> & !BCD<2> & !BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# !BCD<1> & BCD<4> & !BCD<3> & BCD<2> & !BCD<0> & 
-	!BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & !BCD<3> & !BCD<2> & BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-;Imported pterms FB3_7
-	# BCD<1> & !BCD<4> & !BCD<3> & !BCD<2> & BCD<0> & 
-	!BCD<5> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & !BCD<3> & !BCD<2> & !BCD<0> & 
-	!BCD<5> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & BCD<4> & BCD<3> & BCD<2> & BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# !BCD<1> & BCD<4> & BCD<3> & BCD<2> & !BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# !BCD<1> & BCD<4> & !BCD<3> & BCD<2> & BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>;
-
-MACROCELL | 1 | 0 | EXP6_
-ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 1 | 1
-INPUTS | 11 | BCD<1>  | BCD<4>  | BCD<3>  | BCD<0>  | BCD<5>  | CLK_DIV<3>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | BCD<2>  | EXP17_.EXP
-INPUTMC | 5 | 0 | 15 | 0 | 12 | 0 | 17 | 0 | 16 | 1 | 17
-INPUTP | 6 | 63 | 72 | 68 | 62 | 82 | 65
-EXPORTS | 1 | 1 | 1
-IMPORTS | 1 | 1 | 17
-EQ | 23 | 
-       EXP6_.EXP  =  BCD<1> & BCD<4> & BCD<3> & !BCD<0> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<4> & !BCD<3> & BCD<2> & !BCD<0> & 
-	!BCD<5> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<4> & BCD<3> & !BCD<0> & BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<4> & !BCD<3> & !BCD<0> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<3> & !BCD<2> & !BCD<0> & BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
+   SEVEN_SEG<6>.D = BCD<3> & CNTR<1> & $OpTx$$OpTx$FX_DC$429_INV$792
+	# BCD<3> & CNTR<2> & $OpTx$$OpTx$FX_DC$429_INV$792
+	# BCD<3> & CNTR<3> & $OpTx$$OpTx$FX_DC$429_INV$792
+	# !$OpTx$$OpTx$FX_DC$459_INV$801 & 
+	$OpTx$$OpTx$FX_DC$429_INV$792 & !$OpTx$$OpTx$FX_DC$438_INV$799
+;Imported pterms FB2_16
+	# BCD<1> & !BCD<4> & BCD<2> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801
+	# !BCD<4> & BCD<2> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801
+	# BCD<3> & BCD<5> & !$OpTx$$OpTx$FX_DC$459_INV$801 & 
+	$OpTx$$OpTx$FX_DC$438_INV$799
+	# BCD<3> & !BCD<5> & !$OpTx$$OpTx$FX_DC$482_INV$809 & 
+	!$OpTx$$OpTx$FX_DC$438_INV$799
+	# !BCD<3> & !BCD<5> & !$OpTx$$OpTx$FX_DC$459_INV$801 & 
+	$OpTx$$OpTx$FX_DC$438_INV$799
+;Imported pterms FB2_15
+	# BCD<1> & BCD<4> & !CATHS<0> & BCD<0> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802
+	# !BCD<1> & BCD<3> & BCD<0> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801
+	# !BCD<1> & !BCD<3> & BCD<0> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801
+	# BCD<4> & !CATHS<0> & BCD<5> & CNTR<1> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794
+	# !BCD<3> & !BCD<0> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802 & !$OpTx$$OpTx$FX_DC$429_INV$792
+;Imported pterms FB2_14
+	# BCD<1> & !BCD<3> & CATHS<0> & BCD<5> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$429_INV$792
+	# BCD<1> & !BCD<3> & CATHS<0> & BCD<5> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$429_INV$792
 ;Imported pterms FB2_18
-	# BCD<1> & BCD<4> & !BCD<3> & !BCD<2> & BCD<0> & 
-	!BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# BCD<1> & BCD<4> & !BCD<3> & !BCD<2> & !BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# BCD<1> & !BCD<4> & BCD<3> & BCD<2> & !BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & !BCD<3> & BCD<2> & !BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
+	# BCD<4> & BCD<2> & !CATHS<0> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802
+	# !BCD<4> & BCD<2> & !BCD<0> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801
+	# !BCD<1> & !BCD<4> & !BCD<3> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$463_INV$804
+	# !BCD<4> & !BCD<3> & !BCD<2> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$463_INV$804
+	# SEVEN_SEG<6> & !CNTR<0> & !CNTR<1> & !CNTR<2> & 
+	!CNTR<3>
+;Imported pterms FB2_1
+	# BCD<4> & !CATHS<0> & BCD<5> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794
+	# BCD<4> & !CATHS<0> & BCD<5> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794
+	# BCD<1> & !BCD<3> & CATHS<0> & BCD<5> & CNTR<1> & 
+	!$OpTx$$OpTx$FX_DC$429_INV$792;
+   SEVEN_SEG<6>.CLK = !CLK;
 
-MACROCELL | 1 | 2 | EXP7_
-ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 1 | 1
-INPUTS | 10 | BCD<1>  | BCD<3>  | BCD<2>  | BCD<0>  | BCD<5>  | CLK_DIV<3>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | BCD<4>
-INPUTMC | 4 | 0 | 15 | 0 | 12 | 0 | 17 | 0 | 16
-INPUTP | 6 | 63 | 68 | 65 | 62 | 82 | 72
-EXPORTS | 1 | 1 | 1
-EQ | 14 | 
-       EXP7_.EXP  =  BCD<1> & BCD<3> & !BCD<2> & !BCD<0> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & BCD<4> & BCD<3> & !BCD<2> & BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# BCD<1> & !BCD<4> & !BCD<3> & BCD<2> & BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# !BCD<1> & BCD<4> & BCD<3> & BCD<2> & BCD<0> & 
-	!BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# !BCD<1> & BCD<4> & !BCD<3> & !BCD<2> & BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-
-MACROCELL | 1 | 3 | EXP8_
-ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 1 | 4
-INPUTS | 9 | BCD<1>  | BCD<4>  | BCD<3>  | BCD<5>  | CLK_DIV<3>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | BCD<2>
-INPUTMC | 4 | 0 | 15 | 0 | 12 | 0 | 17 | 0 | 16
-INPUTP | 5 | 63 | 72 | 68 | 82 | 65
-EXPORTS | 1 | 1 | 4
-EQ | 8 | 
-       EXP8_.EXP  =  BCD<1> & !BCD<4> & !BCD<3> & BCD<5> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & BCD<4> & !BCD<3> & !BCD<2> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<4> & BCD<3> & BCD<2> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & !BCD<3> & BCD<2> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-
-MACROCELL | 1 | 4 | EXP9_
-ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 1 | 5
-INPUTS | 11 | BCD<3>  | BCD<5>  | CLK_DIV<3>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | BCD<1>  | BCD<0>  | BCD<4>  | BCD<2>  | EXP8_.EXP
-INPUTMC | 5 | 0 | 15 | 0 | 12 | 0 | 17 | 0 | 16 | 1 | 3
-INPUTP | 6 | 68 | 82 | 63 | 62 | 72 | 65
-EXPORTS | 1 | 1 | 5
-IMPORTS | 1 | 1 | 3
-EQ | 19 | 
-       EXP9_.EXP  =  BCD<3> & BCD<5> & !CLK_DIV<3> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<3> & BCD<0> & !BCD<5> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<4> & !BCD<2> & BCD<0> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<3> & !BCD<2> & !BCD<5> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<3> & BCD<0> & BCD<5> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-;Imported pterms FB2_4
-	# BCD<1> & !BCD<4> & !BCD<3> & BCD<5> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & BCD<4> & !BCD<3> & !BCD<2> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<4> & BCD<3> & BCD<2> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & !BCD<3> & BCD<2> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-
-MACROCELL | 1 | 6 | EXP10_
-ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 1 | 5
-INPUTS | 10 | BCD<4>  | BCD<5>  | CLK_DIV<3>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | BCD<1>  | BCD<3>  | BCD<0>  | BCD<2>
-INPUTMC | 4 | 0 | 15 | 0 | 12 | 0 | 17 | 0 | 16
-INPUTP | 6 | 72 | 82 | 63 | 68 | 62 | 65
-EXPORTS | 1 | 1 | 5
-EQ | 10 | 
-       EXP10_.EXP  =  BCD<4> & BCD<5> & !CLK_DIV<3> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & BCD<3> & BCD<0> & BCD<5> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<4> & BCD<3> & !BCD<5> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & BCD<3> & BCD<2> & BCD<5> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<4> & BCD<3> & !BCD<2> & BCD<0> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-
-MACROCELL | 1 | 7 | EXP11_
-ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 1 | 8
-INPUTS | 9 | BCD<1>  | BCD<4>  | BCD<3>  | BCD<2>  | BCD<5>  | CLK_DIV<3>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>
-INPUTMC | 4 | 0 | 15 | 0 | 12 | 0 | 17 | 0 | 16
-INPUTP | 5 | 63 | 72 | 68 | 65 | 82
-EXPORTS | 1 | 1 | 8
+MACROCELL | 1 | 12 | CNTR<0>
+ATTRIBUTES | 4326176 | 0
+OUTPUTMC | 14 | 3 | 5 | 3 | 4 | 2 | 16 | 2 | 15 | 0 | 8 | 1 | 17 | 0 | 15 | 2 | 2 | 2 | 5 | 2 | 12 | 2 | 4 | 1 | 1 | 1 | 2 | 3 | 17
+INPUTS | 1 | CLK
+INPUTP | 1 | 83
 EQ | 2 | 
-       EXP11_.EXP  =  BCD<1> & BCD<4> & !BCD<3> & BCD<2> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
+   CNTR<0>.T = Vcc;
+   CNTR<0>.CLK = CLK;
 
-MACROCELL | 1 | 8 | EXP12_
-ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 1 | 9
-INPUTS | 11 | BCD<3>  | BCD<5>  | CLK_DIV<3>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | BCD<2>  | BCD<0>  | BCD<1>  | BCD<4>  | EXP11_.EXP
-INPUTMC | 5 | 0 | 15 | 0 | 12 | 0 | 17 | 0 | 16 | 1 | 7
-INPUTP | 6 | 68 | 82 | 65 | 62 | 63 | 72
-EXPORTS | 1 | 1 | 9
-IMPORTS | 1 | 1 | 7
+MACROCELL | 1 | 1 | CNTR<1>
+ATTRIBUTES | 4326176 | 0
+OUTPUTMC | 39 | 3 | 5 | 3 | 4 | 2 | 16 | 2 | 15 | 0 | 8 | 2 | 0 | 0 | 15 | 2 | 17 | 2 | 13 | 2 | 12 | 1 | 16 | 1 | 2 | 2 | 4 | 3 | 11 | 1 | 11 | 3 | 8 | 3 | 12 | 3 | 14 | 3 | 9 | 2 | 10 | 3 | 15 | 3 | 2 | 3 | 13 | 3 | 10 | 2 | 6 | 0 | 12 | 0 | 17 | 1 | 0 | 1 | 14 | 1 | 17 | 2 | 2 | 2 | 3 | 2 | 5 | 2 | 8 | 2 | 9 | 2 | 11 | 2 | 14 | 3 | 1 | 3 | 17
+INPUTS | 2 | CNTR<0>  | CLK
+INPUTMC | 1 | 1 | 12
+INPUTP | 1 | 83
+EQ | 2 | 
+   CNTR<1>.T = CNTR<0>;
+   CNTR<1>.CLK = CLK;
+
+MACROCELL | 1 | 2 | CNTR<2>
+ATTRIBUTES | 4326176 | 0
+OUTPUTMC | 41 | 3 | 5 | 3 | 4 | 2 | 16 | 2 | 15 | 0 | 8 | 2 | 0 | 0 | 15 | 2 | 17 | 0 | 4 | 2 | 12 | 1 | 16 | 2 | 4 | 3 | 11 | 1 | 11 | 3 | 8 | 3 | 12 | 3 | 14 | 3 | 9 | 2 | 10 | 3 | 15 | 3 | 3 | 3 | 13 | 3 | 10 | 2 | 6 | 0 | 12 | 0 | 17 | 1 | 0 | 1 | 13 | 1 | 17 | 2 | 2 | 2 | 3 | 2 | 5 | 2 | 8 | 2 | 9 | 2 | 11 | 2 | 13 | 2 | 14 | 3 | 1 | 3 | 2 | 3 | 16 | 3 | 17
+INPUTS | 3 | CNTR<0>  | CNTR<1>  | CLK
+INPUTMC | 2 | 1 | 12 | 1 | 1
+INPUTP | 1 | 83
+EQ | 2 | 
+   CNTR<2>.T = CNTR<0> & CNTR<1>;
+   CNTR<2>.CLK = CLK;
+
+MACROCELL | 2 | 4 | CNTR<3>
+ATTRIBUTES | 4326176 | 0
+OUTPUTMC | 42 | 3 | 5 | 3 | 4 | 2 | 16 | 2 | 15 | 0 | 8 | 2 | 0 | 0 | 15 | 2 | 17 | 2 | 7 | 0 | 1 | 1 | 16 | 3 | 11 | 1 | 11 | 3 | 8 | 3 | 12 | 3 | 14 | 3 | 9 | 2 | 10 | 3 | 15 | 3 | 3 | 3 | 13 | 3 | 10 | 2 | 12 | 3 | 6 | 0 | 12 | 0 | 13 | 0 | 17 | 1 | 0 | 1 | 13 | 1 | 17 | 2 | 2 | 2 | 3 | 2 | 5 | 2 | 8 | 2 | 9 | 2 | 11 | 2 | 13 | 2 | 14 | 3 | 1 | 3 | 2 | 3 | 16 | 3 | 17
+INPUTS | 10 | CNTR<0>  | CNTR<1>  | CNTR<2>  | CLK  | BCD<1>  | BCD<4>  | BCD<3>  | BCD<2>  | CATHS<0>  | BCD<5>
+INPUTMC | 4 | 1 | 12 | 1 | 1 | 1 | 2 | 3 | 5
+INPUTP | 6 | 83 | 63 | 72 | 68 | 65 | 82
+EXPORTS | 1 | 2 | 3
+EQ | 4 | 
+   CNTR<3>.T = CNTR<0> & CNTR<1> & CNTR<2>;
+   CNTR<3>.CLK = CLK;
+    CNTR<3>.EXP  =  BCD<1> & !BCD<4> & BCD<3> & BCD<2> & CATHS<0> & 
+	!BCD<5> & CNTR<2>
+
+MACROCELL | 3 | 11 | $OpTx$$OpTx$FX_DC$461_INV$803
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 4 | 0 | 10 | 2 | 1 | 0 | 9 | 2 | 2
+INPUTS | 4 | BCD<5>  | CNTR<1>  | CNTR<2>  | CNTR<3>
+INPUTMC | 3 | 1 | 1 | 1 | 2 | 2 | 4
+INPUTP | 1 | 82
+EQ | 2 | 
+   $OpTx$$OpTx$FX_DC$461_INV$803 = !BCD<5>
+	# !CNTR<1> & !CNTR<2> & !CNTR<3>;
+
+MACROCELL | 1 | 11 | $OpTx$$OpTx$FX_DC$460_INV$802
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 16 | 0 | 9 | 1 | 17 | 0 | 7 | 2 | 6 | 2 | 7 | 1 | 14 | 0 | 14 | 3 | 7 | 0 | 8 | 0 | 11 | 0 | 17 | 2 | 2 | 2 | 3 | 3 | 1 | 3 | 16 | 3 | 17
+INPUTS | 3 | CNTR<1>  | CNTR<2>  | CNTR<3>
+INPUTMC | 3 | 1 | 1 | 1 | 2 | 2 | 4
+EQ | 1 | 
+   $OpTx$$OpTx$FX_DC$460_INV$802 = !CNTR<1> & !CNTR<2> & !CNTR<3>;
+
+MACROCELL | 2 | 17 | $OpTx$FX_DC$431
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 3 | 0 | 9 | 0 | 11 | 2 | 0
+INPUTS | 11 | BCD<1>  | BCD<3>  | CATHS<0>  | BCD<5>  | CNTR<1>  | $OpTx$$OpTx$FX_DC$434_INV$796  | CNTR<2>  | CNTR<3>  | $OpTx$$OpTx$FX_DC$432_INV$794  | $OpTx$$OpTx$FX_DC$429_INV$792  | CATHODES_0.EXP
+INPUTMC | 8 | 3 | 5 | 1 | 1 | 1 | 7 | 1 | 2 | 2 | 4 | 1 | 5 | 1 | 3 | 2 | 16
+INPUTP | 3 | 63 | 68 | 82
+EXPORTS | 1 | 2 | 0
+IMPORTS | 1 | 2 | 16
 EQ | 13 | 
-       EXP12_.EXP  =  !BCD<3> & BCD<5> & !CLK_DIV<3> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<2> & !BCD<0> & BCD<5> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<3> & !BCD<2> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<2> & BCD<5> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<4> & BCD<3> & !BCD<2> & BCD<5> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-;Imported pterms FB2_8
-	# BCD<1> & BCD<4> & !BCD<3> & BCD<2> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
+   $OpTx$FX_DC$431 = ;Imported pterms FB3_17
+	  BCD<3> & BCD<5>
+	# !BCD<3> & CATHS<0> & !BCD<5>;
+    $OpTx$FX_DC$431.EXP  =  !BCD<1> & BCD<3> & CATHS<0> & !BCD<5> & CNTR<1> & 
+	!$OpTx$$OpTx$FX_DC$434_INV$796
+	# !BCD<1> & BCD<3> & CATHS<0> & !BCD<5> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$434_INV$796
+	# !BCD<1> & BCD<3> & CATHS<0> & !BCD<5> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$434_INV$796
+	# !BCD<3> & CATHS<0> & BCD<5> & CNTR<1> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794 & !$OpTx$$OpTx$FX_DC$429_INV$792
+	# !BCD<3> & CATHS<0> & BCD<5> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794 & !$OpTx$$OpTx$FX_DC$429_INV$792
 
-MACROCELL | 1 | 10 | EXP13_
-ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 1 | 9
-INPUTS | 10 | BCD<1>  | BCD<4>  | BCD<3>  | BCD<2>  | BCD<5>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | BCD<0>  | CLK_DIV<3>
-INPUTMC | 4 | 0 | 12 | 0 | 17 | 0 | 16 | 0 | 15
-INPUTP | 6 | 63 | 72 | 68 | 65 | 82 | 62
-EXPORTS | 1 | 1 | 9
-EQ | 10 | 
-       EXP13_.EXP  =  BCD<1> & !BCD<4> & !BCD<3> & !BCD<2> & !BCD<5> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & BCD<3> & BCD<2> & !BCD<5> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & !BCD<3> & !BCD<2> & BCD<5> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<3> & BCD<2> & BCD<0> & !BCD<5> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & BCD<4> & BCD<3> & BCD<2> & BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
+MACROCELL | 1 | 6 | $OpTx$$OpTx$FX_DC$433_INV$795
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 4 | 0 | 10 | 0 | 9 | 0 | 11 | 0 | 12
+INPUTS | 2 | BCD<3>  | BCD<5>
+INPUTP | 2 | 68 | 82
+EQ | 1 | 
+   $OpTx$$OpTx$FX_DC$433_INV$795 = !BCD<3> & BCD<5>;
 
-MACROCELL | 1 | 11 | EXP14_
+MACROCELL | 3 | 8 | $OpTx$$OpTx$FX_DC$468_INV$806
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 3 | 0 | 10 | 0 | 9 | 0 | 11
+INPUTS | 4 | BCD<4>  | CNTR<1>  | CNTR<2>  | CNTR<3>
+INPUTMC | 3 | 1 | 1 | 1 | 2 | 2 | 4
+INPUTP | 1 | 72
+EQ | 2 | 
+   $OpTx$$OpTx$FX_DC$468_INV$806 = !BCD<4>
+	# !CNTR<1> & !CNTR<2> & !CNTR<3>;
+
+MACROCELL | 3 | 12 | $OpTx$$OpTx$FX_DC$459_INV$801
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 11 | 0 | 8 | 0 | 15 | 3 | 0 | 2 | 7 | 1 | 16 | 0 | 11 | 1 | 14 | 1 | 15 | 1 | 17 | 3 | 2 | 3 | 16
+INPUTS | 4 | CATHS<0>  | CNTR<1>  | CNTR<2>  | CNTR<3>
+INPUTMC | 4 | 3 | 5 | 1 | 1 | 1 | 2 | 2 | 4
+EQ | 2 | 
+   $OpTx$$OpTx$FX_DC$459_INV$801 = !CATHS<0>
+	# !CNTR<1> & !CNTR<2> & !CNTR<3>;
+
+MACROCELL | 1 | 5 | $OpTx$$OpTx$FX_DC$432_INV$794
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 12 | 0 | 10 | 1 | 0 | 2 | 17 | 0 | 4 | 1 | 14 | 2 | 3 | 2 | 9 | 0 | 9 | 0 | 11 | 2 | 15 | 3 | 1 | 3 | 16
+INPUTS | 2 | BCD<1>  | BCD<0>
+INPUTP | 2 | 63 | 62
+EQ | 1 | 
+   $OpTx$$OpTx$FX_DC$432_INV$794 = !BCD<1> & !BCD<0>;
+
+MACROCELL | 2 | 9 | $OpTx$$OpTx$FX_DC$436_INV$798
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 2 | 0 | 11 | 2 | 8
+INPUTS | 11 | BCD<2>  | BCD<0>  | BCD<1>  | BCD<3>  | CATHS<0>  | BCD<5>  | CNTR<1>  | CNTR<2>  | CNTR<3>  | $OpTx$$OpTx$FX_DC$432_INV$794  | $OpTx$$OpTx$FX_DC$429_INV$792
+INPUTMC | 6 | 3 | 5 | 1 | 1 | 1 | 2 | 2 | 4 | 1 | 5 | 1 | 3
+INPUTP | 5 | 65 | 62 | 63 | 68 | 82
+EXPORTS | 1 | 2 | 8
+EQ | 6 | 
+   $OpTx$$OpTx$FX_DC$436_INV$798 = !BCD<1> & !BCD<2>
+	# !BCD<2> & !BCD<0>;
+    $OpTx$$OpTx$FX_DC$436_INV$798.EXP  =  !BCD<1> & BCD<3> & CATHS<0> & !BCD<5> & CNTR<1>
+	# !BCD<1> & BCD<3> & CATHS<0> & !BCD<5> & CNTR<2>
+	# BCD<3> & !CATHS<0> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794 & !$OpTx$$OpTx$FX_DC$429_INV$792
+
+MACROCELL | 3 | 14 | $OpTx$FX_DC$465
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 0 | 11
+INPUTS | 5 | BCD<1>  | CATHS<0>  | CNTR<1>  | CNTR<2>  | CNTR<3>
+INPUTMC | 4 | 3 | 5 | 1 | 1 | 1 | 2 | 2 | 4
+INPUTP | 1 | 63
+EQ | 3 | 
+   $OpTx$FX_DC$465 = BCD<1> & CATHS<0> & CNTR<1>
+	# BCD<1> & CATHS<0> & CNTR<2>
+	# BCD<1> & CATHS<0> & CNTR<3>;
+
+MACROCELL | 3 | 9 | $OpTx$$OpTx$FX_DC$466_INV$805
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 3 | 0 | 8 | 2 | 0 | 2 | 2
+INPUTS | 4 | BCD<1>  | CNTR<1>  | CNTR<2>  | CNTR<3>
+INPUTMC | 3 | 1 | 1 | 1 | 2 | 2 | 4
+INPUTP | 1 | 63
+EQ | 2 | 
+   $OpTx$$OpTx$FX_DC$466_INV$805 = BCD<1>
+	# !CNTR<1> & !CNTR<2> & !CNTR<3>;
+
+MACROCELL | 2 | 10 | $OpTx$$OpTx$FX_DC$469_INV$807
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 3 | 0 | 10 | 3 | 0 | 2 | 11
+INPUTS | 9 | BCD<3>  | CNTR<1>  | CNTR<2>  | CNTR<3>  | BCD<1>  | BCD<4>  | BCD<2>  | CATHS<0>  | BCD<5>
+INPUTMC | 4 | 1 | 1 | 1 | 2 | 2 | 4 | 3 | 5
+INPUTP | 5 | 68 | 63 | 72 | 65 | 82
+EXPORTS | 1 | 2 | 11
+EQ | 8 | 
+   $OpTx$$OpTx$FX_DC$469_INV$807 = !BCD<3>
+	# !CNTR<1> & !CNTR<2> & !CNTR<3>;
+    $OpTx$$OpTx$FX_DC$469_INV$807.EXP  =  BCD<1> & !BCD<4> & BCD<3> & BCD<2> & CATHS<0> & 
+	!BCD<5> & CNTR<2>
+	# BCD<1> & !BCD<4> & BCD<3> & BCD<2> & CATHS<0> & 
+	!BCD<5> & CNTR<3>
+	# BCD<1> & !BCD<4> & !BCD<3> & !BCD<2> & CATHS<0> & 
+	BCD<5> & CNTR<2>
+
+MACROCELL | 1 | 7 | $OpTx$$OpTx$FX_DC$434_INV$796
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 4 | 2 | 1 | 2 | 0 | 2 | 2 | 2 | 17
+INPUTS | 2 | BCD<4>  | BCD<2>
+INPUTP | 2 | 72 | 65
+EQ | 1 | 
+   $OpTx$$OpTx$FX_DC$434_INV$796 = !BCD<4> & BCD<2>;
+
+MACROCELL | 3 | 15 | $OpTx$FX_DC$462
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 5 | 2 | 1 | 0 | 16 | 3 | 0 | 3 | 17 | 3 | 16
+INPUTS | 7 | CATHS<0>  | BCD<0>  | CNTR<1>  | CNTR<2>  | CNTR<3>  | BCD<4>  | BCD<2>
+INPUTMC | 4 | 3 | 5 | 1 | 1 | 1 | 2 | 2 | 4
+INPUTP | 3 | 62 | 72 | 65
+EXPORTS | 1 | 3 | 16
+EQ | 5 | 
+   $OpTx$FX_DC$462 = CATHS<0> & BCD<0> & CNTR<1>
+	# CATHS<0> & BCD<0> & CNTR<2>
+	# CATHS<0> & BCD<0> & CNTR<3>;
+    $OpTx$FX_DC$462.EXP  =  !BCD<4> & BCD<2>
+	# !CNTR<1> & !CNTR<2> & !CNTR<3>
+
+MACROCELL | 1 | 3 | $OpTx$$OpTx$FX_DC$429_INV$792
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 14 | 2 | 1 | 0 | 4 | 1 | 16 | 2 | 7 | 2 | 9 | 1 | 0 | 1 | 13 | 1 | 14 | 2 | 0 | 2 | 2 | 2 | 3 | 2 | 6 | 2 | 15 | 2 | 17
+INPUTS | 2 | BCD<4>  | BCD<2>
+INPUTP | 2 | 72 | 65
+EQ | 1 | 
+   $OpTx$$OpTx$FX_DC$429_INV$792 = BCD<4> & !BCD<2>;
+
+MACROCELL | 1 | 4 | $OpTx$$OpTx$FX_DC$430_INV$793
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 4 | 3 | 0 | 3 | 1 | 3 | 2 | 3 | 17
+INPUTS | 2 | BCD<3>  | BCD<5>
+INPUTP | 2 | 68 | 82
+EQ | 1 | 
+   $OpTx$$OpTx$FX_DC$430_INV$793 = BCD<3> & !BCD<5>;
+
+MACROCELL | 3 | 16 | $OpTx$$OpTx$FX_DC$482_INV$809
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 3 | 3 | 0 | 1 | 15 | 3 | 17
+INPUTS | 12 | BCD<4>  | CATHS<0>  | BCD<5>  | CNTR<2>  | $OpTx$$OpTx$FX_DC$432_INV$794  | CNTR<3>  | BCD<3>  | BCD<2>  | $OpTx$$OpTx$FX_DC$459_INV$801  | $OpTx$$OpTx$FX_DC$435_INV$797  | $OpTx$$OpTx$FX_DC$460_INV$802  | $OpTx$FX_DC$462.EXP
+INPUTMC | 8 | 3 | 5 | 1 | 2 | 1 | 5 | 2 | 4 | 3 | 12 | 1 | 8 | 1 | 11 | 3 | 15
+INPUTP | 4 | 72 | 82 | 68 | 65
+EXPORTS | 1 | 3 | 17
+IMPORTS | 1 | 3 | 15
+EQ | 12 | 
+   $OpTx$$OpTx$FX_DC$482_INV$809 = !BCD<4> & !CATHS<0>
+;Imported pterms FB4_16
+	# !BCD<4> & BCD<2>
+	# !CNTR<1> & !CNTR<2> & !CNTR<3>;
+    $OpTx$$OpTx$FX_DC$482_INV$809.EXP  =  BCD<4> & !CATHS<0> & BCD<5> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794
+	# BCD<4> & !CATHS<0> & BCD<5> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794
+	# !BCD<4> & BCD<3> & BCD<2> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801 & !$OpTx$$OpTx$FX_DC$435_INV$797
+	# !BCD<4> & !BCD<3> & !BCD<2> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802 & !$OpTx$$OpTx$FX_DC$435_INV$797
+
+MACROCELL | 1 | 8 | $OpTx$$OpTx$FX_DC$435_INV$797
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 3 | 3 | 0 | 3 | 16 | 3 | 17
+INPUTS | 2 | BCD<1>  | BCD<0>
+INPUTP | 2 | 63 | 62
+EQ | 1 | 
+   $OpTx$$OpTx$FX_DC$435_INV$797 = !BCD<1> & BCD<0>;
+
+MACROCELL | 3 | 13 | $OpTx$FX_DC$467
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 3 | 17
+INPUTS | 5 | BCD<4>  | BCD<2>  | CNTR<1>  | CNTR<2>  | CNTR<3>
+INPUTMC | 3 | 1 | 1 | 1 | 2 | 2 | 4
+INPUTP | 2 | 72 | 65
+EQ | 3 | 
+   $OpTx$FX_DC$467 = BCD<4> & BCD<2> & CNTR<1>
+	# BCD<4> & BCD<2> & CNTR<2>
+	# BCD<4> & BCD<2> & CNTR<3>;
+
+MACROCELL | 1 | 0 | $OpTx$$OpTx$FX_DC$428_INV$791
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 3 | 3 | 0 | 3 | 2 | 1 | 17
+INPUTS | 10 | BCD<3>  | BCD<5>  | BCD<4>  | CATHS<0>  | CNTR<2>  | $OpTx$$OpTx$FX_DC$432_INV$794  | CNTR<3>  | BCD<1>  | CNTR<1>  | $OpTx$$OpTx$FX_DC$429_INV$792
+INPUTMC | 6 | 3 | 5 | 1 | 2 | 1 | 5 | 2 | 4 | 1 | 1 | 1 | 3
+INPUTP | 4 | 68 | 82 | 72 | 63
+EXPORTS | 1 | 1 | 17
+EQ | 8 | 
+   $OpTx$$OpTx$FX_DC$428_INV$791 = BCD<3>
+	$ BCD<5>;
+    $OpTx$$OpTx$FX_DC$428_INV$791.EXP  =  BCD<4> & !CATHS<0> & BCD<5> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794
+	# BCD<4> & !CATHS<0> & BCD<5> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794
+	# BCD<1> & !BCD<3> & CATHS<0> & BCD<5> & CNTR<1> & 
+	!$OpTx$$OpTx$FX_DC$429_INV$792
+
+MACROCELL | 1 | 10 | $OpTx$$OpTx$FX_DC$439_INV$800
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 2 | 3 | 2 | 3 | 3
+INPUTS | 2 | BCD<1>  | BCD<0>
+INPUTP | 2 | 63 | 62
+EQ | 1 | 
+   $OpTx$$OpTx$FX_DC$439_INV$800 = BCD<1> & BCD<0>;
+
+MACROCELL | 3 | 10 | $OpTx$$OpTx$FX_DC$463_INV$804
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 3 | 2 | 12 | 1 | 17 | 2 | 13
+INPUTS | 4 | CATHS<0>  | CNTR<1>  | CNTR<2>  | CNTR<3>
+INPUTMC | 4 | 3 | 5 | 1 | 1 | 1 | 2 | 2 | 4
+EQ | 2 | 
+   $OpTx$$OpTx$FX_DC$463_INV$804 = CATHS<0>
+	# !CNTR<1> & !CNTR<2> & !CNTR<3>;
+
+MACROCELL | 3 | 3 | $OpTx$$OpTx$FX_DC$479_INV$808
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 3 | 2 | 12 | 2 | 11 | 3 | 2
+INPUTS | 10 | BCD<1>  | BCD<3>  | BCD<2>  | BCD<0>  | BCD<4>  | CATHS<0>  | BCD<5>  | CNTR<2>  | $OpTx$$OpTx$FX_DC$439_INV$800  | CNTR<3>
+INPUTMC | 4 | 3 | 5 | 1 | 2 | 1 | 10 | 2 | 4
+INPUTP | 6 | 63 | 68 | 65 | 62 | 72 | 82
+EXPORTS | 1 | 3 | 2
+EQ | 5 | 
+   $OpTx$$OpTx$FX_DC$479_INV$808 = !BCD<1> & !BCD<3> & !BCD<2> & !BCD<0>;
+    $OpTx$$OpTx$FX_DC$479_INV$808.EXP  =  !BCD<4> & !BCD<3> & !CATHS<0> & BCD<5> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$439_INV$800
+	# !BCD<4> & !BCD<3> & !CATHS<0> & BCD<5> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$439_INV$800
+
+MACROCELL | 1 | 9 | $OpTx$$OpTx$FX_DC$438_INV$799
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 2 | 1 | 16 | 1 | 15
+INPUTS | 2 | BCD<1>  | BCD<0>
+INPUTP | 2 | 63 | 62
+EQ | 1 | 
+   $OpTx$$OpTx$FX_DC$438_INV$799 = BCD<1> & !BCD<0>;
+
+MACROCELL | 2 | 7 | $OpTx$DEC_SEVEN_SEG_4$0
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 2 | 15
+INPUTS | 11 | BCD<1>  | BCD<3>  | CATHS<0>  | BCD<5>  | $OpTx$$OpTx$FX_DC$460_INV$802  | $OpTx$$OpTx$FX_DC$429_INV$792  | BCD<0>  | $OpTx$$OpTx$FX_DC$459_INV$801  | CNTR<3>  | EXP23_.EXP  | EXP24_.EXP
+INPUTMC | 7 | 3 | 5 | 1 | 11 | 1 | 3 | 3 | 12 | 2 | 4 | 2 | 6 | 2 | 8
+INPUTP | 4 | 63 | 68 | 82 | 62
+IMPORTS | 2 | 2 | 6 | 2 | 8
+EQ | 33 | 
+   $OpTx$DEC_SEVEN_SEG_4$0 = !BCD<0> & !$OpTx$$OpTx$FX_DC$459_INV$801
+	# BCD<3> & !$OpTx$$OpTx$FX_DC$459_INV$801 & 
+	$OpTx$$OpTx$FX_DC$429_INV$792
+	# !CATHS<0> & BCD<5> & CNTR<3>
+	# !BCD<3> & BCD<5> & !$OpTx$$OpTx$FX_DC$460_INV$802 & 
+	!$OpTx$$OpTx$FX_DC$429_INV$792
+	# BCD<1> & !BCD<3> & CATHS<0> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802
+;Imported pterms FB3_7
+	# !CATHS<0> & BCD<5> & CNTR<1>
+	# !CATHS<0> & BCD<5> & CNTR<2>
+	# BCD<1> & BCD<3> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802
+	# !BCD<1> & !BCD<3> & !$OpTx$$OpTx$FX_DC$460_INV$802 & 
+	$OpTx$$OpTx$FX_DC$429_INV$792
+	# !BCD<3> & !BCD<0> & !$OpTx$$OpTx$FX_DC$460_INV$802 & 
+	$OpTx$$OpTx$FX_DC$429_INV$792
+;Imported pterms FB3_6
+	# !BCD<4> & BCD<3> & BCD<2> & CNTR<2>
+	# !BCD<1> & BCD<3> & CATHS<0> & !BCD<5> & CNTR<3>
+	# SEVEN_SEG<4> & !CNTR<0> & !CNTR<1> & !CNTR<2> & 
+	!CNTR<3>
+;Imported pterms FB3_9
+	# !BCD<4> & BCD<3> & BCD<2> & CNTR<1>
+	# !BCD<4> & BCD<3> & BCD<2> & CNTR<3>
+	# !BCD<4> & BCD<2> & CATHS<0> & CNTR<1>
+	# !BCD<4> & BCD<2> & CATHS<0> & CNTR<2>
+	# !BCD<4> & BCD<2> & CATHS<0> & CNTR<3>
+;Imported pterms FB3_10
+	# !BCD<1> & BCD<3> & CATHS<0> & !BCD<5> & CNTR<1>
+	# !BCD<1> & BCD<3> & CATHS<0> & !BCD<5> & CNTR<2>
+	# BCD<3> & !CATHS<0> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794 & !$OpTx$$OpTx$FX_DC$429_INV$792;
+
+MACROCELL | 0 | 16 | $OpTx$DEC_SEVEN_SEG_2$1
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 3 | 7
+INPUTS | 7 | BCD<4>  | BCD<2>  | $OpTx$FX_DC$462  | BCD<3>  | BCD<5>  | EXP13_.EXP  | EXP14_.EXP
+INPUTMC | 3 | 3 | 15 | 0 | 15 | 0 | 17
+INPUTP | 4 | 72 | 65 | 68 | 82
+IMPORTS | 2 | 0 | 15 | 0 | 17
+EQ | 30 | 
+   $OpTx$DEC_SEVEN_SEG_2$1 = BCD<4> & !BCD<2> & $OpTx$FX_DC$462
+	# BCD<4> & BCD<3> & !BCD<5> & $OpTx$FX_DC$462
+	# !BCD<4> & !BCD<3> & BCD<2> & $OpTx$FX_DC$462
+	# !BCD<4> & BCD<2> & BCD<5> & $OpTx$FX_DC$462
+	# BCD<3> & !BCD<2> & !BCD<5> & $OpTx$FX_DC$462
+;Imported pterms FB1_16
+	# BCD<1> & BCD<3> & BCD<0> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801
+	# BCD<1> & !BCD<3> & BCD<0> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801
+	# !BCD<1> & BCD<3> & BCD<0> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801
+	# !BCD<1> & !BCD<3> & BCD<0> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801
+	# SEVEN_SEG<2> & !CNTR<0> & !CNTR<1> & !CNTR<2> & 
+	!CNTR<3>
+;Imported pterms FB1_15
+	# BCD<1> & BCD<4> & BCD<3> & !CATHS<0> & BCD<0> & 
+	BCD<5> & !$OpTx$$OpTx$FX_DC$460_INV$802
+;Imported pterms FB1_18
+	# BCD<4> & BCD<3> & BCD<2> & !CATHS<0> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802
+	# BCD<4> & BCD<3> & !BCD<2> & !CATHS<0> & !BCD<5> & 
+	CNTR<1>
+	# BCD<4> & BCD<3> & !BCD<2> & !CATHS<0> & !BCD<5> & 
+	CNTR<2>
+	# BCD<4> & BCD<3> & !BCD<2> & !CATHS<0> & !BCD<5> & 
+	CNTR<3>
+	# BCD<4> & !BCD<3> & BCD<2> & !CATHS<0> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802;
+
+MACROCELL | 2 | 12 | $OpTx$DEC_SEVEN_SEG_5$2
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 3 | 6
+INPUTS | 13 | BCD<4>  | BCD<3>  | BCD<5>  | $OpTx$$OpTx$FX_DC$463_INV$804  | CNTR<0>  | CNTR<1>  | CNTR<2>  | CNTR<3>  | SEVEN_SEG<5>  | CATHS<0>  | $OpTx$$OpTx$FX_DC$479_INV$808  | EXP25_.EXP  | EXP26_.EXP
+INPUTMC | 10 | 3 | 10 | 1 | 12 | 1 | 1 | 1 | 2 | 2 | 4 | 0 | 1 | 3 | 5 | 3 | 3 | 2 | 11 | 2 | 13
+INPUTP | 3 | 72 | 68 | 82
+IMPORTS | 2 | 2 | 11 | 2 | 13
+EQ | 48 | 
+   $OpTx$DEC_SEVEN_SEG_5$2 = !BCD<4> & !BCD<3> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$463_INV$804
+	# !SEVEN_SEG<5> & !CNTR<1> & !CNTR<2> & !CNTR<3>
+	# CNTR<0> & !CNTR<1> & !CNTR<2> & !CNTR<3>
+	# BCD<4> & !CATHS<0> & BCD<5> & CNTR<1> & 
+	!$OpTx$$OpTx$FX_DC$479_INV$808
+	# BCD<4> & !CATHS<0> & BCD<5> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$479_INV$808
+;Imported pterms FB3_12
+	# BCD<4> & !CATHS<0> & BCD<5> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$479_INV$808
+	# BCD<1> & BCD<4> & !BCD<3> & BCD<2> & BCD<5> & 
+	CNTR<1>
+	# BCD<1> & BCD<4> & !BCD<3> & BCD<2> & BCD<5> & 
+	CNTR<2>
+	# BCD<1> & BCD<4> & !BCD<3> & BCD<2> & BCD<5> & 
+	CNTR<3>
+	# !BCD<1> & !BCD<4> & !BCD<3> & BCD<2> & !BCD<5> & 
+	CNTR<1>
+;Imported pterms FB3_11
+	# BCD<1> & !BCD<4> & BCD<3> & BCD<2> & CATHS<0> & 
+	!BCD<5> & CNTR<2>
+	# BCD<1> & !BCD<4> & BCD<3> & BCD<2> & CATHS<0> & 
+	!BCD<5> & CNTR<3>
+	# BCD<1> & !BCD<4> & !BCD<3> & !BCD<2> & CATHS<0> & 
+	BCD<5> & CNTR<2>
+;Imported pterms FB3_14
+	# !BCD<1> & !BCD<4> & !BCD<3> & BCD<2> & !BCD<5> & 
+	CNTR<2>
+	# !BCD<1> & !BCD<4> & !BCD<3> & BCD<2> & !BCD<5> & 
+	CNTR<3>
+	# !BCD<1> & !BCD<4> & !BCD<2> & !BCD<0> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$463_INV$804
+	# BCD<1> & !BCD<4> & BCD<3> & BCD<2> & CATHS<0> & 
+	!BCD<5> & CNTR<1>
+	# BCD<1> & !BCD<4> & !BCD<3> & !BCD<2> & CATHS<0> & 
+	BCD<5> & CNTR<1>
+;Imported pterms FB3_15
+	# BCD<1> & !BCD<4> & !BCD<3> & !BCD<2> & CATHS<0> & 
+	BCD<5> & CNTR<3>
+	# !BCD<1> & BCD<4> & BCD<3> & !BCD<2> & CATHS<0> & 
+	!BCD<5> & CNTR<1>
+	# !BCD<1> & BCD<4> & BCD<3> & !BCD<2> & CATHS<0> & 
+	!BCD<5> & CNTR<2>
+	# !BCD<1> & !BCD<4> & BCD<3> & BCD<2> & CATHS<0> & 
+	BCD<5> & CNTR<1>
+	# !BCD<1> & !BCD<4> & BCD<3> & BCD<2> & CATHS<0> & 
+	BCD<5> & CNTR<2>;
+
+MACROCELL | 2 | 14 | $OpTx$DEC_SEVEN_SEG_4$3
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 2 | 0 | 4 | 2 | 13
+INPUTS | 10 | BCD<1>  | BCD<4>  | BCD<3>  | BCD<2>  | CATHS<0>  | BCD<5>  | CNTR<3>  | CNTR<1>  | CNTR<2>  | CATHODES_1.EXP
+INPUTMC | 5 | 3 | 5 | 2 | 4 | 1 | 1 | 1 | 2 | 2 | 15
+INPUTP | 5 | 63 | 72 | 68 | 65 | 82
+EXPORTS | 1 | 2 | 13
+IMPORTS | 1 | 2 | 15
+EQ | 14 | 
+   $OpTx$DEC_SEVEN_SEG_4$3 = ;Imported pterms FB3_16
+	  $OpTx$DEC_SEVEN_SEG_4$0
+	# BCD<3> & !CATHS<0> & CNTR<1> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794 & !$OpTx$$OpTx$FX_DC$429_INV$792;
+    $OpTx$DEC_SEVEN_SEG_4$3.EXP  =  BCD<1> & !BCD<4> & !BCD<3> & !BCD<2> & CATHS<0> & 
+	BCD<5> & CNTR<3>
+	# !BCD<1> & BCD<4> & BCD<3> & !BCD<2> & CATHS<0> & 
+	!BCD<5> & CNTR<1>
+	# !BCD<1> & BCD<4> & BCD<3> & !BCD<2> & CATHS<0> & 
+	!BCD<5> & CNTR<2>
+	# !BCD<1> & !BCD<4> & BCD<3> & BCD<2> & CATHS<0> & 
+	BCD<5> & CNTR<1>
+	# !BCD<1> & !BCD<4> & BCD<3> & BCD<2> & CATHS<0> & 
+	BCD<5> & CNTR<2>
+
+MACROCELL | 3 | 7 | $OpTx$DEC_SEVEN_SEG_2$4
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 0 | 7
+INPUTS | 8 | $OpTx$DEC_SEVEN_SEG_2$1  | BCD<1>  | BCD<4>  | BCD<3>  | CATHS<0>  | BCD<0>  | BCD<5>  | $OpTx$$OpTx$FX_DC$460_INV$802
+INPUTMC | 3 | 0 | 16 | 3 | 5 | 1 | 11
+INPUTP | 5 | 63 | 72 | 68 | 62 | 82
+EQ | 3 | 
+   $OpTx$DEC_SEVEN_SEG_2$4 = $OpTx$DEC_SEVEN_SEG_2$1
+	# BCD<1> & BCD<4> & !BCD<3> & !CATHS<0> & BCD<0> & 
+	!BCD<5> & !$OpTx$$OpTx$FX_DC$460_INV$802;
+
+MACROCELL | 3 | 6 | $OpTx$DEC_SEVEN_SEG_5$5
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 0 | 1
+INPUTS | 8 | $OpTx$DEC_SEVEN_SEG_5$2  | BCD<1>  | BCD<4>  | BCD<3>  | BCD<2>  | CATHS<0>  | BCD<5>  | CNTR<3>
+INPUTMC | 3 | 2 | 12 | 3 | 5 | 2 | 4
+INPUTP | 5 | 63 | 72 | 68 | 65 | 82
+EQ | 3 | 
+   $OpTx$DEC_SEVEN_SEG_5$5 = $OpTx$DEC_SEVEN_SEG_5$2
+	# !BCD<1> & !BCD<4> & BCD<3> & BCD<2> & CATHS<0> & 
+	BCD<5> & CNTR<3>;
+
+MACROCELL | 0 | 5 | _6_
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | SEVEN_SEG<3>_BUFR
+INPUTMC | 1 | 3 | 0
+EQ | 1 | 
+   SEVEN_SEG<3> = SEVEN_SEG<3>_BUFR;
+
+MACROCELL | 0 | 8 | _7_
+ATTRIBUTES | 264962 | 0
+OUTPUTMC | 1 | 0 | 9
+INPUTS | 15 | BCD<1>  | BCD<3>  | BCD<0>  | BCD<5>  | $OpTx$$OpTx$FX_DC$459_INV$801  | BCD<4>  | BCD<2>  | $OpTx$$OpTx$FX_DC$466_INV$805  | $OpTx$$OpTx$FX_DC$460_INV$802  | SEVEN_SEG<0>  | CNTR<0>  | CNTR<1>  | CNTR<2>  | CNTR<3>  | SEVEN_SEG_2.EXP
+INPUTMC | 9 | 3 | 12 | 3 | 9 | 1 | 11 | 0 | 10 | 1 | 12 | 1 | 1 | 1 | 2 | 2 | 4 | 0 | 7
+INPUTP | 6 | 63 | 68 | 62 | 82 | 72 | 65
+EXPORTS | 1 | 0 | 9
+IMPORTS | 1 | 0 | 7
+EQ | 12 | 
+   SEVEN_SEG<1> = ;Imported pterms FB1_8
+	  SEVEN_SEG<1>_BUFR;
+    _7_.EXP  =  BCD<1> & BCD<3> & BCD<0> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801
+	# BCD<4> & BCD<3> & !BCD<2> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$466_INV$805
+	# !BCD<4> & BCD<3> & BCD<2> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801
+	# !BCD<4> & !BCD<3> & !BCD<2> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802
+	# SEVEN_SEG<0> & !CNTR<0> & !CNTR<1> & !CNTR<2> & 
+	!CNTR<3>
+
+MACROCELL | 0 | 9 | EXP8_
 ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 1 | 12
-INPUTS | 10 | BCD<1>  | BCD<3>  | BCD<5>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | BCD<4>  | BCD<2>  | CLK_DIV<3>  | BCD<0>
-INPUTMC | 4 | 0 | 12 | 0 | 17 | 0 | 16 | 0 | 15
-INPUTP | 6 | 63 | 68 | 82 | 72 | 65 | 62
-EXPORTS | 1 | 1 | 12
+OUTPUTMC | 1 | 0 | 10
+INPUTS | 12 | BCD<1>  | BCD<0>  | $OpTx$$OpTx$FX_DC$433_INV$795  | $OpTx$$OpTx$FX_DC$468_INV$806  | BCD<4>  | $OpTx$$OpTx$FX_DC$461_INV$803  | $OpTx$$OpTx$FX_DC$460_INV$802  | $OpTx$FX_DC$431  | BCD<2>  | $OpTx$$OpTx$FX_DC$432_INV$794  | BCD<3>  | _7_.EXP
+INPUTMC | 7 | 1 | 6 | 3 | 8 | 3 | 11 | 1 | 11 | 2 | 17 | 1 | 5 | 0 | 8
+INPUTP | 5 | 63 | 62 | 72 | 65 | 68
+EXPORTS | 1 | 0 | 10
+IMPORTS | 1 | 0 | 8
+EQ | 21 | 
+       EXP8_.EXP  =  BCD<1> & BCD<0> & $OpTx$$OpTx$FX_DC$433_INV$795 & 
+	!$OpTx$$OpTx$FX_DC$468_INV$806
+	# !BCD<1> & !BCD<4> & BCD<0> & 
+	!$OpTx$$OpTx$FX_DC$461_INV$803
+	# !BCD<1> & BCD<0> & !$OpTx$$OpTx$FX_DC$460_INV$802 & 
+	$OpTx$FX_DC$431
+	# BCD<4> & BCD<2> & !$OpTx$$OpTx$FX_DC$461_INV$803 & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794
+	# !BCD<4> & BCD<3> & BCD<0> & 
+	!$OpTx$$OpTx$FX_DC$461_INV$803
+;Imported pterms FB1_9
+	# BCD<1> & BCD<3> & BCD<0> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801
+	# BCD<4> & BCD<3> & !BCD<2> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$466_INV$805
+	# !BCD<4> & BCD<3> & BCD<2> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801
+	# !BCD<4> & !BCD<3> & !BCD<2> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802
+	# SEVEN_SEG<0> & !CNTR<0> & !CNTR<1> & !CNTR<2> & 
+	!CNTR<3>
+
+MACROCELL | 0 | 11 | EXP9_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 10
+INPUTS | 16 | BCD<1>  | BCD<0>  | $OpTx$FX_DC$431  | $OpTx$$OpTx$FX_DC$468_INV$806  | BCD<4>  | CATHS<0>  | $OpTx$$OpTx$FX_DC$460_INV$802  | $OpTx$$OpTx$FX_DC$436_INV$798  | BCD<3>  | BCD<2>  | $OpTx$FX_DC$465  | BCD<5>  | $OpTx$$OpTx$FX_DC$459_INV$801  | $OpTx$$OpTx$FX_DC$432_INV$794  | $OpTx$$OpTx$FX_DC$433_INV$795  | EXP10_.EXP
+INPUTMC | 10 | 2 | 17 | 3 | 8 | 3 | 5 | 1 | 11 | 2 | 9 | 3 | 14 | 3 | 12 | 1 | 5 | 1 | 6 | 0 | 12
+INPUTP | 6 | 63 | 62 | 72 | 68 | 65 | 82
+EXPORTS | 1 | 0 | 10
+IMPORTS | 1 | 0 | 12
+EQ | 23 | 
+       EXP9_.EXP  =  BCD<1> & !BCD<0> & $OpTx$FX_DC$431 & 
+	!$OpTx$$OpTx$FX_DC$468_INV$806
+	# BCD<4> & !CATHS<0> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802 & !$OpTx$$OpTx$FX_DC$436_INV$798
+	# !BCD<4> & !BCD<3> & !BCD<2> & $OpTx$FX_DC$465
+	# BCD<3> & !BCD<5> & !$OpTx$$OpTx$FX_DC$459_INV$801 & 
+	$OpTx$$OpTx$FX_DC$432_INV$794
+	# BCD<1> & !BCD<4> & !BCD<0> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802 & $OpTx$$OpTx$FX_DC$433_INV$795
+;Imported pterms FB1_13
+	# !BCD<1> & !BCD<4> & BCD<2> & CATHS<0> & CNTR<1> & 
+	!$OpTx$$OpTx$FX_DC$433_INV$795
+	# !BCD<1> & !BCD<4> & BCD<2> & CATHS<0> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$433_INV$795
+	# !BCD<1> & !BCD<4> & BCD<2> & CATHS<0> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$433_INV$795
+	# !BCD<3> & BCD<2> & CATHS<0> & BCD<0> & !BCD<5> & 
+	CNTR<1>
+	# !BCD<3> & BCD<2> & CATHS<0> & BCD<0> & !BCD<5> & 
+	CNTR<2>
+;Imported pterms FB1_14
+	# !BCD<3> & BCD<2> & CATHS<0> & BCD<0> & !BCD<5> & 
+	CNTR<3>
+
+MACROCELL | 0 | 12 | EXP10_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 11
+INPUTS | 12 | BCD<1>  | BCD<4>  | BCD<2>  | CATHS<0>  | CNTR<1>  | $OpTx$$OpTx$FX_DC$433_INV$795  | CNTR<2>  | CNTR<3>  | BCD<3>  | BCD<0>  | BCD<5>  | EXP11_.EXP
+INPUTMC | 6 | 3 | 5 | 1 | 1 | 1 | 6 | 1 | 2 | 2 | 4 | 0 | 13
+INPUTP | 6 | 63 | 72 | 65 | 68 | 62 | 82
+EXPORTS | 1 | 0 | 11
+IMPORTS | 1 | 0 | 13
+EQ | 13 | 
+       EXP10_.EXP  =  !BCD<1> & !BCD<4> & BCD<2> & CATHS<0> & CNTR<1> & 
+	!$OpTx$$OpTx$FX_DC$433_INV$795
+	# !BCD<1> & !BCD<4> & BCD<2> & CATHS<0> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$433_INV$795
+	# !BCD<1> & !BCD<4> & BCD<2> & CATHS<0> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$433_INV$795
+	# !BCD<3> & BCD<2> & CATHS<0> & BCD<0> & !BCD<5> & 
+	CNTR<1>
+	# !BCD<3> & BCD<2> & CATHS<0> & BCD<0> & !BCD<5> & 
+	CNTR<2>
+;Imported pterms FB1_14
+	# !BCD<3> & BCD<2> & CATHS<0> & BCD<0> & !BCD<5> & 
+	CNTR<3>
+
+MACROCELL | 0 | 13 | EXP11_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 12
+INPUTS | 6 | BCD<3>  | BCD<2>  | CATHS<0>  | BCD<0>  | BCD<5>  | CNTR<3>
+INPUTMC | 2 | 3 | 5 | 2 | 4
+INPUTP | 4 | 68 | 65 | 62 | 82
+EXPORTS | 1 | 0 | 12
+EQ | 2 | 
+       EXP11_.EXP  =  !BCD<3> & BCD<2> & CATHS<0> & BCD<0> & !BCD<5> & 
+	CNTR<3>
+
+MACROCELL | 0 | 14 | EXP12_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 15
+INPUTS | 7 | BCD<1>  | BCD<4>  | BCD<3>  | CATHS<0>  | BCD<0>  | BCD<5>  | $OpTx$$OpTx$FX_DC$460_INV$802
+INPUTMC | 2 | 3 | 5 | 1 | 11
+INPUTP | 5 | 63 | 72 | 68 | 62 | 82
+EXPORTS | 1 | 0 | 15
+EQ | 2 | 
+       EXP12_.EXP  =  BCD<1> & BCD<4> & BCD<3> & !CATHS<0> & BCD<0> & 
+	BCD<5> & !$OpTx$$OpTx$FX_DC$460_INV$802
+
+MACROCELL | 0 | 15 | EXP13_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 16
+INPUTS | 11 | BCD<1>  | BCD<3>  | BCD<0>  | BCD<5>  | $OpTx$$OpTx$FX_DC$459_INV$801  | SEVEN_SEG<2>  | CNTR<0>  | CNTR<1>  | CNTR<2>  | CNTR<3>  | EXP12_.EXP
+INPUTMC | 7 | 3 | 12 | 0 | 7 | 1 | 12 | 1 | 1 | 1 | 2 | 2 | 4 | 0 | 14
+INPUTP | 4 | 63 | 68 | 62 | 82
+EXPORTS | 1 | 0 | 16
+IMPORTS | 1 | 0 | 14
+EQ | 13 | 
+       EXP13_.EXP  =  BCD<1> & BCD<3> & BCD<0> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801
+	# BCD<1> & !BCD<3> & BCD<0> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801
+	# !BCD<1> & BCD<3> & BCD<0> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801
+	# !BCD<1> & !BCD<3> & BCD<0> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801
+	# SEVEN_SEG<2> & !CNTR<0> & !CNTR<1> & !CNTR<2> & 
+	!CNTR<3>
+;Imported pterms FB1_15
+	# BCD<1> & BCD<4> & BCD<3> & !CATHS<0> & BCD<0> & 
+	BCD<5> & !$OpTx$$OpTx$FX_DC$460_INV$802
+
+MACROCELL | 0 | 17 | EXP14_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 16
+INPUTS | 9 | BCD<4>  | BCD<3>  | BCD<2>  | CATHS<0>  | BCD<5>  | $OpTx$$OpTx$FX_DC$460_INV$802  | CNTR<1>  | CNTR<2>  | CNTR<3>
+INPUTMC | 5 | 3 | 5 | 1 | 11 | 1 | 1 | 1 | 2 | 2 | 4
+INPUTP | 4 | 72 | 68 | 65 | 82
+EXPORTS | 1 | 0 | 16
 EQ | 10 | 
-       EXP14_.EXP  =  BCD<1> & BCD<3> & BCD<5> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<4> & BCD<2> & CLK_DIV<3> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<4> & !BCD<3> & !BCD<2> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<4> & BCD<3> & !BCD<2> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<4> & !BCD<3> & !BCD<2> & !BCD<0> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
+       EXP14_.EXP  =  BCD<4> & BCD<3> & BCD<2> & !CATHS<0> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802
+	# BCD<4> & BCD<3> & !BCD<2> & !CATHS<0> & !BCD<5> & 
+	CNTR<1>
+	# BCD<4> & BCD<3> & !BCD<2> & !CATHS<0> & !BCD<5> & 
+	CNTR<2>
+	# BCD<4> & BCD<3> & !BCD<2> & !CATHS<0> & !BCD<5> & 
+	CNTR<3>
+	# BCD<4> & !BCD<3> & BCD<2> & !CATHS<0> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802
 
 MACROCELL | 1 | 13 | EXP15_
 ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 1 | 12
-INPUTS | 11 | BCD<1>  | BCD<4>  | BCD<3>  | CLK_DIV<3>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | BCD<5>  | BCD<0>  | BCD<2>  | EXP16_.EXP
-INPUTMC | 5 | 0 | 15 | 0 | 12 | 0 | 17 | 0 | 16 | 1 | 14
-INPUTP | 6 | 63 | 72 | 68 | 82 | 62 | 65
-EXPORTS | 1 | 1 | 12
-IMPORTS | 1 | 1 | 14
-EQ | 13 | 
-       EXP15_.EXP  =  BCD<1> & !BCD<4> & BCD<3> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<3> & !BCD<5> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<3> & !BCD<5> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<4> & BCD<3> & BCD<0> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<3> & BCD<2> & BCD<0> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-;Imported pterms FB2_15
-	# BCD<1> & BCD<3> & BCD<2> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
+OUTPUTMC | 1 | 1 | 14
+INPUTS | 7 | BCD<1>  | BCD<3>  | CATHS<0>  | BCD<5>  | CNTR<2>  | $OpTx$$OpTx$FX_DC$429_INV$792  | CNTR<3>
+INPUTMC | 4 | 3 | 5 | 1 | 2 | 1 | 3 | 2 | 4
+INPUTP | 3 | 63 | 68 | 82
+EXPORTS | 1 | 1 | 14
+EQ | 4 | 
+       EXP15_.EXP  =  BCD<1> & !BCD<3> & CATHS<0> & BCD<5> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$429_INV$792
+	# BCD<1> & !BCD<3> & CATHS<0> & BCD<5> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$429_INV$792
 
 MACROCELL | 1 | 14 | EXP16_
 ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 1 | 13
-INPUTS | 7 | BCD<1>  | BCD<3>  | BCD<2>  | CLK_DIV<3>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>
-INPUTMC | 4 | 0 | 15 | 0 | 12 | 0 | 17 | 0 | 16
-INPUTP | 3 | 63 | 68 | 65
-EXPORTS | 1 | 1 | 13
-EQ | 2 | 
-       EXP16_.EXP  =  BCD<1> & BCD<3> & BCD<2> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
+OUTPUTMC | 1 | 1 | 15
+INPUTS | 12 | BCD<1>  | BCD<4>  | CATHS<0>  | BCD<0>  | $OpTx$$OpTx$FX_DC$460_INV$802  | BCD<3>  | BCD<5>  | $OpTx$$OpTx$FX_DC$459_INV$801  | CNTR<1>  | $OpTx$$OpTx$FX_DC$432_INV$794  | $OpTx$$OpTx$FX_DC$429_INV$792  | EXP15_.EXP
+INPUTMC | 7 | 3 | 5 | 1 | 11 | 3 | 12 | 1 | 1 | 1 | 5 | 1 | 3 | 1 | 13
+INPUTP | 5 | 63 | 72 | 62 | 68 | 82
+EXPORTS | 1 | 1 | 15
+IMPORTS | 1 | 1 | 13
+EQ | 15 | 
+       EXP16_.EXP  =  BCD<1> & BCD<4> & !CATHS<0> & BCD<0> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802
+	# !BCD<1> & BCD<3> & BCD<0> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801
+	# !BCD<1> & !BCD<3> & BCD<0> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801
+	# BCD<4> & !CATHS<0> & BCD<5> & CNTR<1> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794
+	# !BCD<3> & !BCD<0> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802 & !$OpTx$$OpTx$FX_DC$429_INV$792
+;Imported pterms FB2_14
+	# BCD<1> & !BCD<3> & CATHS<0> & BCD<5> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$429_INV$792
+	# BCD<1> & !BCD<3> & CATHS<0> & BCD<5> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$429_INV$792
 
-MACROCELL | 1 | 17 | EXP17_
+MACROCELL | 1 | 15 | EXP17_
 ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 1 | 0
-INPUTS | 10 | BCD<1>  | BCD<4>  | BCD<3>  | BCD<2>  | BCD<0>  | BCD<5>  | CLK_DIV<3>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>
-INPUTMC | 4 | 0 | 15 | 0 | 12 | 0 | 17 | 0 | 16
-INPUTP | 6 | 63 | 72 | 68 | 65 | 62 | 82
-EXPORTS | 1 | 1 | 0
-EQ | 12 | 
-       EXP17_.EXP  =  BCD<1> & BCD<4> & !BCD<3> & !BCD<2> & BCD<0> & 
-	!BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# BCD<1> & BCD<4> & !BCD<3> & !BCD<2> & !BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# BCD<1> & !BCD<4> & BCD<3> & BCD<2> & !BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & !BCD<3> & BCD<2> & !BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
+OUTPUTMC | 1 | 1 | 16
+INPUTS | 9 | BCD<1>  | BCD<4>  | BCD<2>  | $OpTx$$OpTx$FX_DC$459_INV$801  | BCD<5>  | BCD<3>  | $OpTx$$OpTx$FX_DC$438_INV$799  | $OpTx$$OpTx$FX_DC$482_INV$809  | EXP16_.EXP
+INPUTMC | 4 | 3 | 12 | 1 | 9 | 3 | 16 | 1 | 14
+INPUTP | 5 | 63 | 72 | 65 | 82 | 68
+EXPORTS | 1 | 1 | 16
+IMPORTS | 1 | 1 | 14
+EQ | 26 | 
+       EXP17_.EXP  =  BCD<1> & !BCD<4> & BCD<2> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801
+	# !BCD<4> & BCD<2> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801
+	# BCD<3> & BCD<5> & !$OpTx$$OpTx$FX_DC$459_INV$801 & 
+	$OpTx$$OpTx$FX_DC$438_INV$799
+	# BCD<3> & !BCD<5> & !$OpTx$$OpTx$FX_DC$482_INV$809 & 
+	!$OpTx$$OpTx$FX_DC$438_INV$799
+	# !BCD<3> & !BCD<5> & !$OpTx$$OpTx$FX_DC$459_INV$801 & 
+	$OpTx$$OpTx$FX_DC$438_INV$799
+;Imported pterms FB2_15
+	# BCD<1> & BCD<4> & !CATHS<0> & BCD<0> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802
+	# !BCD<1> & BCD<3> & BCD<0> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801
+	# !BCD<1> & !BCD<3> & BCD<0> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801
+	# BCD<4> & !CATHS<0> & BCD<5> & CNTR<1> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794
+	# !BCD<3> & !BCD<0> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802 & !$OpTx$$OpTx$FX_DC$429_INV$792
+;Imported pterms FB2_14
+	# BCD<1> & !BCD<3> & CATHS<0> & BCD<5> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$429_INV$792
+	# BCD<1> & !BCD<3> & CATHS<0> & BCD<5> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$429_INV$792
 
-MACROCELL | 2 | 0 | EXP18_
+MACROCELL | 1 | 17 | EXP18_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 1 | 16
+INPUTS | 16 | BCD<4>  | BCD<2>  | CATHS<0>  | $OpTx$$OpTx$FX_DC$460_INV$802  | BCD<0>  | $OpTx$$OpTx$FX_DC$459_INV$801  | BCD<1>  | BCD<3>  | BCD<5>  | $OpTx$$OpTx$FX_DC$463_INV$804  | SEVEN_SEG<6>  | CNTR<0>  | CNTR<1>  | CNTR<2>  | CNTR<3>  | $OpTx$$OpTx$FX_DC$428_INV$791.EXP
+INPUTMC | 10 | 3 | 5 | 1 | 11 | 3 | 12 | 3 | 10 | 1 | 16 | 1 | 12 | 1 | 1 | 1 | 2 | 2 | 4 | 1 | 0
+INPUTP | 6 | 72 | 65 | 62 | 63 | 68 | 82
+EXPORTS | 1 | 1 | 16
+IMPORTS | 1 | 1 | 0
+EQ | 17 | 
+       EXP18_.EXP  =  BCD<4> & BCD<2> & !CATHS<0> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802
+	# !BCD<4> & BCD<2> & !BCD<0> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801
+	# !BCD<1> & !BCD<4> & !BCD<3> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$463_INV$804
+	# !BCD<4> & !BCD<3> & !BCD<2> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$463_INV$804
+	# SEVEN_SEG<6> & !CNTR<0> & !CNTR<1> & !CNTR<2> & 
+	!CNTR<3>
+;Imported pterms FB2_1
+	# BCD<4> & !CATHS<0> & BCD<5> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794
+	# BCD<4> & !CATHS<0> & BCD<5> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794
+	# BCD<1> & !BCD<3> & CATHS<0> & BCD<5> & CNTR<1> & 
+	!$OpTx$$OpTx$FX_DC$429_INV$792
+
+MACROCELL | 2 | 0 | EXP19_
 ATTRIBUTES | 2048 | 0
 OUTPUTMC | 1 | 2 | 1
-INPUTS | 11 | BCD<4>  | BCD<2>  | BCD<0>  | CLK_DIV<3>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | BCD<1>  | BCD<3>  | BCD<5>  | EXP27_.EXP
-INPUTMC | 5 | 0 | 15 | 0 | 12 | 0 | 17 | 0 | 16 | 2 | 17
-INPUTP | 6 | 72 | 65 | 62 | 63 | 68 | 82
+INPUTS | 10 | BCD<3>  | CATHS<0>  | BCD<5>  | CNTR<1>  | CNTR<2>  | CNTR<3>  | $OpTx$$OpTx$FX_DC$466_INV$805  | $OpTx$$OpTx$FX_DC$434_INV$796  | $OpTx$$OpTx$FX_DC$429_INV$792  | $OpTx$FX_DC$431.EXP
+INPUTMC | 8 | 3 | 5 | 1 | 1 | 1 | 2 | 2 | 4 | 3 | 9 | 1 | 7 | 1 | 3 | 2 | 17
+INPUTP | 2 | 68 | 82
 EXPORTS | 1 | 2 | 1
 IMPORTS | 1 | 2 | 17
-EQ | 21 | 
-       EXP18_.EXP  =  !BCD<4> & BCD<2> & !BCD<0> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & BCD<3> & BCD<0> & !BCD<5> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<3> & !BCD<2> & BCD<0> & BCD<5> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<3> & !BCD<0> & !BCD<5> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<3> & BCD<0> & BCD<5> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
+EQ | 18 | 
+       EXP19_.EXP  =  BCD<3> & !CATHS<0> & BCD<5> & CNTR<1>
+	# BCD<3> & !CATHS<0> & BCD<5> & CNTR<2>
+	# BCD<3> & !CATHS<0> & BCD<5> & CNTR<3>
+	# BCD<3> & BCD<5> & !$OpTx$$OpTx$FX_DC$466_INV$805 & 
+	$OpTx$$OpTx$FX_DC$434_INV$796
+	# !BCD<3> & BCD<5> & !$OpTx$$OpTx$FX_DC$466_INV$805 & 
+	$OpTx$$OpTx$FX_DC$429_INV$792
 ;Imported pterms FB3_18
-	# BCD<4> & BCD<3> & !BCD<2> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<4> & BCD<2> & !CLK_DIV<3> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & BCD<4> & !BCD<2> & BCD<0> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<4> & BCD<2> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<3> & BCD<2> & !BCD<0> & BCD<5> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
+	# !BCD<1> & BCD<3> & CATHS<0> & !BCD<5> & CNTR<1> & 
+	!$OpTx$$OpTx$FX_DC$434_INV$796
+	# !BCD<1> & BCD<3> & CATHS<0> & !BCD<5> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$434_INV$796
+	# !BCD<1> & BCD<3> & CATHS<0> & !BCD<5> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$434_INV$796
+	# !BCD<3> & CATHS<0> & BCD<5> & CNTR<1> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794 & !$OpTx$$OpTx$FX_DC$429_INV$792
+	# !BCD<3> & CATHS<0> & BCD<5> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794 & !$OpTx$$OpTx$FX_DC$429_INV$792
 
-MACROCELL | 2 | 2 | EXP19_
+MACROCELL | 2 | 2 | EXP20_
 ATTRIBUTES | 2048 | 0
 OUTPUTMC | 1 | 2 | 1
-INPUTS | 10 | BCD<1>  | BCD<4>  | BCD<3>  | BCD<0>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | BCD<2>  | CLK_DIV<3>  | BCD<5>
-INPUTMC | 4 | 0 | 12 | 0 | 17 | 0 | 16 | 0 | 15
-INPUTP | 6 | 63 | 72 | 68 | 62 | 65 | 82
+INPUTS | 17 | BCD<1>  | BCD<2>  | BCD<0>  | $OpTx$$OpTx$FX_DC$461_INV$803  | BCD<3>  | BCD<5>  | $OpTx$$OpTx$FX_DC$460_INV$802  | $OpTx$$OpTx$FX_DC$429_INV$792  | CATHS<0>  | $OpTx$$OpTx$FX_DC$466_INV$805  | $OpTx$$OpTx$FX_DC$434_INV$796  | SEVEN_SEG<1>_BUFR  | CNTR<0>  | CNTR<1>  | CNTR<2>  | CNTR<3>  | EXP21_.EXP
+INPUTMC | 12 | 3 | 11 | 1 | 11 | 1 | 3 | 3 | 5 | 3 | 9 | 1 | 7 | 2 | 1 | 1 | 12 | 1 | 1 | 1 | 2 | 2 | 4 | 2 | 3
+INPUTP | 5 | 63 | 65 | 62 | 68 | 82
 EXPORTS | 1 | 2 | 1
-EQ | 10 | 
-       EXP19_.EXP  =  !BCD<1> & BCD<4> & BCD<3> & BCD<0> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<4> & !BCD<2> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<4> & !BCD<3> & !BCD<0> & BCD<5> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<3> & !BCD<0> & !BCD<5> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<3> & BCD<0> & !BCD<5> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-
-MACROCELL | 2 | 3 | EXP20_
-ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 2 | 4
-INPUTS | 10 | BCD<1>  | BCD<4>  | BCD<3>  | BCD<2>  | BCD<0>  | BCD<5>  | CLK_DIV<3>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>
-INPUTMC | 4 | 0 | 15 | 0 | 12 | 0 | 17 | 0 | 16
-INPUTP | 6 | 63 | 72 | 68 | 65 | 62 | 82
-EXPORTS | 1 | 2 | 4
-EQ | 15 | 
-       EXP20_.EXP  =  BCD<1> & BCD<4> & BCD<3> & BCD<2> & !BCD<0> & 
-	!BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# BCD<1> & BCD<4> & !BCD<3> & BCD<2> & BCD<0> & 
-	!BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# BCD<1> & BCD<4> & !BCD<3> & !BCD<2> & !BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# !BCD<1> & BCD<4> & !BCD<3> & BCD<2> & !BCD<0> & 
-	!BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & !BCD<3> & !BCD<2> & BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-
-MACROCELL | 2 | 4 | EXP21_
-ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 2 | 5
-INPUTS | 11 | BCD<1>  | BCD<4>  | BCD<3>  | BCD<2>  | BCD<0>  | BCD<5>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | CLK_DIV<3>  | EXP20_.EXP
-INPUTMC | 5 | 0 | 12 | 0 | 17 | 0 | 16 | 0 | 15 | 2 | 3
-INPUTP | 6 | 63 | 72 | 68 | 65 | 62 | 82
-EXPORTS | 1 | 2 | 5
 IMPORTS | 1 | 2 | 3
-EQ | 26 | 
-       EXP21_.EXP  =  BCD<1> & !BCD<4> & BCD<3> & !BCD<2> & BCD<0> & 
-	BCD<5> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<4> & BCD<3> & !BCD<2> & !BCD<0> & 
-	!BCD<5> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<4> & !BCD<3> & !BCD<2> & !BCD<0> & 
-	!CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & BCD<3> & BCD<2> & BCD<0> & 
-	!BCD<5> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & BCD<3> & !BCD<2> & !BCD<0> & 
-	BCD<5> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
+EQ | 24 | 
+       EXP20_.EXP  =  BCD<1> & BCD<2> & BCD<0> & 
+	!$OpTx$$OpTx$FX_DC$461_INV$803
+	# BCD<1> & BCD<3> & BCD<0> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802
+	# BCD<1> & BCD<3> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802 & $OpTx$$OpTx$FX_DC$429_INV$792
+	# !BCD<3> & CATHS<0> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$466_INV$805 & $OpTx$$OpTx$FX_DC$434_INV$796
+	# SEVEN_SEG<1>_BUFR & !CNTR<0> & !CNTR<1> & !CNTR<2> & 
+	!CNTR<3>
 ;Imported pterms FB3_4
-	# BCD<1> & BCD<4> & BCD<3> & BCD<2> & !BCD<0> & 
-	!BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# BCD<1> & BCD<4> & !BCD<3> & BCD<2> & BCD<0> & 
-	!BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# BCD<1> & BCD<4> & !BCD<3> & !BCD<2> & !BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# !BCD<1> & BCD<4> & !BCD<3> & BCD<2> & !BCD<0> & 
-	!BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & !BCD<3> & !BCD<2> & BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
+	# BCD<1> & !BCD<3> & CATHS<0> & BCD<0> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802
+	# BCD<1> & !BCD<3> & CATHS<0> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802 & $OpTx$$OpTx$FX_DC$429_INV$792
+	# !BCD<3> & CATHS<0> & BCD<5> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794 & !$OpTx$$OpTx$FX_DC$429_INV$792
+	# BCD<1> & !BCD<4> & BCD<3> & BCD<2> & CATHS<0> & 
+	!BCD<5> & CNTR<1>
+	# BCD<1> & !BCD<4> & BCD<3> & BCD<2> & CATHS<0> & 
+	!BCD<5> & CNTR<3>
+;Imported pterms FB3_5
+	# BCD<1> & !BCD<4> & BCD<3> & BCD<2> & CATHS<0> & 
+	!BCD<5> & CNTR<2>
 
-MACROCELL | 2 | 6 | EXP22_
+MACROCELL | 2 | 3 | EXP21_
 ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 2 | 5
-INPUTS | 10 | BCD<1>  | BCD<4>  | BCD<3>  | BCD<2>  | BCD<0>  | BCD<5>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | CLK_DIV<3>
-INPUTMC | 4 | 0 | 12 | 0 | 17 | 0 | 16 | 0 | 15
-INPUTP | 6 | 63 | 72 | 68 | 65 | 62 | 82
-EXPORTS | 1 | 2 | 5
+OUTPUTMC | 1 | 2 | 2
+INPUTS | 14 | BCD<1>  | BCD<3>  | CATHS<0>  | BCD<0>  | BCD<5>  | $OpTx$$OpTx$FX_DC$460_INV$802  | $OpTx$$OpTx$FX_DC$429_INV$792  | CNTR<2>  | $OpTx$$OpTx$FX_DC$432_INV$794  | BCD<4>  | BCD<2>  | CNTR<1>  | CNTR<3>  | CNTR<3>.EXP
+INPUTMC | 8 | 3 | 5 | 1 | 11 | 1 | 3 | 1 | 2 | 1 | 5 | 1 | 1 | 2 | 4 | 2 | 4
+INPUTP | 6 | 63 | 68 | 62 | 82 | 72 | 65
+EXPORTS | 1 | 2 | 2
+IMPORTS | 1 | 2 | 4
 EQ | 13 | 
-       EXP22_.EXP  =  BCD<1> & !BCD<4> & !BCD<3> & !BCD<2> & BCD<0> & 
-	!BCD<5> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & !BCD<3> & !BCD<2> & !BCD<0> & 
-	!BCD<5> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & BCD<4> & BCD<3> & BCD<2> & BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# !BCD<1> & BCD<4> & BCD<3> & BCD<2> & !BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# !BCD<1> & BCD<4> & !BCD<3> & BCD<2> & BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
+       EXP21_.EXP  =  BCD<1> & !BCD<3> & CATHS<0> & BCD<0> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802
+	# BCD<1> & !BCD<3> & CATHS<0> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802 & $OpTx$$OpTx$FX_DC$429_INV$792
+	# !BCD<3> & CATHS<0> & BCD<5> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794 & !$OpTx$$OpTx$FX_DC$429_INV$792
+	# BCD<1> & !BCD<4> & BCD<3> & BCD<2> & CATHS<0> & 
+	!BCD<5> & CNTR<1>
+	# BCD<1> & !BCD<4> & BCD<3> & BCD<2> & CATHS<0> & 
+	!BCD<5> & CNTR<3>
+;Imported pterms FB3_5
+	# BCD<1> & !BCD<4> & BCD<3> & BCD<2> & CATHS<0> & 
+	!BCD<5> & CNTR<2>
 
-MACROCELL | 2 | 7 | EXP23_
+MACROCELL | 2 | 5 | EXP22_
 ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 2 | 8
-INPUTS | 10 | BCD<1>  | BCD<4>  | BCD<2>  | BCD<0>  | CLK_DIV<3>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | BCD<3>  | BCD<5>
-INPUTMC | 4 | 0 | 15 | 0 | 12 | 0 | 17 | 0 | 16
-INPUTP | 6 | 63 | 72 | 65 | 62 | 68 | 82
-EXPORTS | 1 | 2 | 8
-EQ | 11 | 
-       EXP23_.EXP  =  BCD<1> & !BCD<4> & BCD<2> & BCD<0> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<4> & !BCD<3> & !BCD<2> & !BCD<0> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<3> & !BCD<2> & !BCD<5> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<4> & !BCD<3> & BCD<2> & !BCD<0> & BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & BCD<4> & BCD<3> & BCD<2> & BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
+OUTPUTMC | 1 | 2 | 6
+INPUTS | 11 | BCD<4>  | BCD<3>  | BCD<2>  | CNTR<2>  | BCD<1>  | CATHS<0>  | BCD<5>  | CNTR<3>  | SEVEN_SEG<4>  | CNTR<0>  | CNTR<1>
+INPUTMC | 6 | 1 | 2 | 3 | 5 | 2 | 4 | 0 | 4 | 1 | 12 | 1 | 1
+INPUTP | 5 | 72 | 68 | 65 | 63 | 82
+EXPORTS | 1 | 2 | 6
+EQ | 4 | 
+       EXP22_.EXP  =  !BCD<4> & BCD<3> & BCD<2> & CNTR<2>
+	# !BCD<1> & BCD<3> & CATHS<0> & !BCD<5> & CNTR<3>
+	# SEVEN_SEG<4> & !CNTR<0> & !CNTR<1> & !CNTR<2> & 
+	!CNTR<3>
+
+MACROCELL | 2 | 6 | EXP23_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 7
+INPUTS | 10 | CATHS<0>  | BCD<5>  | CNTR<1>  | CNTR<2>  | BCD<1>  | BCD<3>  | $OpTx$$OpTx$FX_DC$460_INV$802  | $OpTx$$OpTx$FX_DC$429_INV$792  | BCD<0>  | EXP22_.EXP
+INPUTMC | 6 | 3 | 5 | 1 | 1 | 1 | 2 | 1 | 11 | 1 | 3 | 2 | 5
+INPUTP | 4 | 82 | 63 | 68 | 62
+EXPORTS | 1 | 2 | 7
+IMPORTS | 1 | 2 | 5
+EQ | 13 | 
+       EXP23_.EXP  =  !CATHS<0> & BCD<5> & CNTR<1>
+	# !CATHS<0> & BCD<5> & CNTR<2>
+	# BCD<1> & BCD<3> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802
+	# !BCD<1> & !BCD<3> & !$OpTx$$OpTx$FX_DC$460_INV$802 & 
+	$OpTx$$OpTx$FX_DC$429_INV$792
+	# !BCD<3> & !BCD<0> & !$OpTx$$OpTx$FX_DC$460_INV$802 & 
+	$OpTx$$OpTx$FX_DC$429_INV$792
+;Imported pterms FB3_6
+	# !BCD<4> & BCD<3> & BCD<2> & CNTR<2>
+	# !BCD<1> & BCD<3> & CATHS<0> & !BCD<5> & CNTR<3>
+	# SEVEN_SEG<4> & !CNTR<0> & !CNTR<1> & !CNTR<2> & 
+	!CNTR<3>
 
 MACROCELL | 2 | 8 | EXP24_
 ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 2 | 9
-INPUTS | 11 | BCD<1>  | BCD<4>  | BCD<3>  | BCD<2>  | BCD<0>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | BCD<5>  | CLK_DIV<3>  | EXP23_.EXP
-INPUTMC | 5 | 0 | 12 | 0 | 17 | 0 | 16 | 0 | 15 | 2 | 7
-INPUTP | 6 | 63 | 72 | 68 | 65 | 62 | 82
-EXPORTS | 1 | 2 | 9
-IMPORTS | 1 | 2 | 7
-EQ | 22 | 
-       EXP24_.EXP  =  !BCD<1> & !BCD<4> & BCD<3> & !BCD<2> & !BCD<0> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & BCD<4> & BCD<3> & !BCD<0> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<4> & BCD<3> & !BCD<2> & BCD<0> & 
-	BCD<5> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<4> & BCD<2> & !BCD<0> & BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<4> & BCD<2> & !BCD<0> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-;Imported pterms FB3_8
-	# BCD<1> & !BCD<4> & BCD<2> & BCD<0> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<4> & !BCD<3> & !BCD<2> & !BCD<0> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<3> & !BCD<2> & !BCD<5> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<4> & !BCD<3> & BCD<2> & !BCD<0> & BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & BCD<4> & BCD<3> & BCD<2> & BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
+OUTPUTMC | 1 | 2 | 7
+INPUTS | 8 | BCD<4>  | BCD<3>  | BCD<2>  | CNTR<1>  | CNTR<3>  | CATHS<0>  | CNTR<2>  | $OpTx$$OpTx$FX_DC$436_INV$798.EXP
+INPUTMC | 5 | 1 | 1 | 2 | 4 | 3 | 5 | 1 | 2 | 2 | 9
+INPUTP | 3 | 72 | 68 | 65
+EXPORTS | 1 | 2 | 7
+IMPORTS | 1 | 2 | 9
+EQ | 10 | 
+       EXP24_.EXP  =  !BCD<4> & BCD<3> & BCD<2> & CNTR<1>
+	# !BCD<4> & BCD<3> & BCD<2> & CNTR<3>
+	# !BCD<4> & BCD<2> & CATHS<0> & CNTR<1>
+	# !BCD<4> & BCD<2> & CATHS<0> & CNTR<2>
+	# !BCD<4> & BCD<2> & CATHS<0> & CNTR<3>
+;Imported pterms FB3_10
+	# !BCD<1> & BCD<3> & CATHS<0> & !BCD<5> & CNTR<1>
+	# !BCD<1> & BCD<3> & CATHS<0> & !BCD<5> & CNTR<2>
+	# BCD<3> & !CATHS<0> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794 & !$OpTx$$OpTx$FX_DC$429_INV$792
 
-MACROCELL | 2 | 10 | EXP25_
+MACROCELL | 2 | 11 | EXP25_
 ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 2 | 9
-INPUTS | 11 | BCD<4>  | BCD<5>  | CLK_DIV<3>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | BCD<1>  | BCD<2>  | BCD<0>  | BCD<3>  | SEVEN_SEG_5/SEVEN_SEG_5_RSTF.EXP
-INPUTMC | 5 | 0 | 15 | 0 | 12 | 0 | 17 | 0 | 16 | 2 | 11
-INPUTP | 6 | 72 | 82 | 63 | 65 | 62 | 68
-EXPORTS | 1 | 2 | 9
-IMPORTS | 1 | 2 | 11
-EQ | 20 | 
-       EXP25_.EXP  =  !BCD<4> & !BCD<5> & !CLK_DIV<3> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & BCD<4> & !BCD<2> & !BCD<0> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & !BCD<2> & !BCD<0> & !BCD<5> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<4> & BCD<3> & !BCD<2> & !BCD<0> & !BCD<5> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<4> & BCD<3> & !BCD<0> & BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-;Imported pterms FB3_12
-	# BCD<1> & BCD<4> & !BCD<3> & BCD<2> & BCD<0> & 
-	!BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# !BCD<1> & BCD<4> & !BCD<3> & BCD<2> & BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & !BCD<3> & !BCD<2> & BCD<0> & 
-	BCD<5> & CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & 
-	!CLK_DIV<2>
-
-MACROCELL | 2 | 12 | EXP26_
-ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 2 | 11
-INPUTS | 11 | BCD<4>  | BCD<3>  | BCD<5>  | CLK_DIV<3>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | BCD<0>  | BCD<1>  | BCD<2>  | $OpTx$$OpTx$FX_DC$12_INV$820.EXP
-INPUTMC | 5 | 0 | 15 | 0 | 12 | 0 | 17 | 0 | 16 | 2 | 13
-INPUTP | 6 | 72 | 68 | 82 | 62 | 63 | 65
-EXPORTS | 1 | 2 | 11
-IMPORTS | 1 | 2 | 13
-EQ | 21 | 
-       EXP26_.EXP  =  BCD<4> & BCD<3> & BCD<5> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<4> & BCD<0> & BCD<5> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<4> & !BCD<3> & !BCD<5> & !CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
+OUTPUTMC | 1 | 2 | 12
+INPUTS | 11 | BCD<4>  | CATHS<0>  | BCD<5>  | CNTR<3>  | $OpTx$$OpTx$FX_DC$479_INV$808  | BCD<1>  | BCD<3>  | BCD<2>  | CNTR<1>  | CNTR<2>  | $OpTx$$OpTx$FX_DC$469_INV$807.EXP
+INPUTMC | 6 | 3 | 5 | 2 | 4 | 3 | 3 | 1 | 1 | 1 | 2 | 2 | 10
+INPUTP | 5 | 72 | 82 | 63 | 68 | 65
+EXPORTS | 1 | 2 | 12
+IMPORTS | 1 | 2 | 10
+EQ | 17 | 
+       EXP25_.EXP  =  BCD<4> & !CATHS<0> & BCD<5> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$479_INV$808
 	# BCD<1> & BCD<4> & !BCD<3> & BCD<2> & BCD<5> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
+	CNTR<1>
+	# BCD<1> & BCD<4> & !BCD<3> & BCD<2> & BCD<5> & 
+	CNTR<2>
+	# BCD<1> & BCD<4> & !BCD<3> & BCD<2> & BCD<5> & 
+	CNTR<3>
 	# !BCD<1> & !BCD<4> & !BCD<3> & BCD<2> & !BCD<5> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-;Imported pterms FB3_14
-	# BCD<1> & !BCD<4> & BCD<3> & BCD<2> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<4> & !BCD<3> & !BCD<2> & BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & BCD<4> & BCD<3> & !BCD<2> & !BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & BCD<3> & BCD<2> & BCD<5> & 
-	CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<1> & !BCD<4> & !BCD<2> & !BCD<0> & !BCD<5> & 
-	!CLK_DIV<3> & !CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
+	CNTR<1>
+;Imported pterms FB3_11
+	# BCD<1> & !BCD<4> & BCD<3> & BCD<2> & CATHS<0> & 
+	!BCD<5> & CNTR<2>
+	# BCD<1> & !BCD<4> & BCD<3> & BCD<2> & CATHS<0> & 
+	!BCD<5> & CNTR<3>
+	# BCD<1> & !BCD<4> & !BCD<3> & !BCD<2> & CATHS<0> & 
+	BCD<5> & CNTR<2>
 
-MACROCELL | 2 | 17 | EXP27_
+MACROCELL | 2 | 13 | EXP26_
 ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 2 | 0
-INPUTS | 10 | BCD<4>  | BCD<3>  | BCD<2>  | CLK_DIV<0>  | CLK_DIV<1>  | CLK_DIV<2>  | CLK_DIV<3>  | BCD<1>  | BCD<0>  | BCD<5>
-INPUTMC | 4 | 0 | 12 | 0 | 17 | 0 | 16 | 0 | 15
-INPUTP | 6 | 72 | 68 | 65 | 63 | 62 | 82
-EXPORTS | 1 | 2 | 0
-EQ | 10 | 
-       EXP27_.EXP  =  BCD<4> & BCD<3> & !BCD<2> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<4> & BCD<2> & !CLK_DIV<3> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & BCD<4> & !BCD<2> & BCD<0> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-	# BCD<1> & !BCD<4> & BCD<2> & CLK_DIV<3> & 
-	!CLK_DIV<0> & !CLK_DIV<1> & !CLK_DIV<2>
-	# !BCD<3> & BCD<2> & !BCD<0> & BCD<5> & !CLK_DIV<0> & 
-	!CLK_DIV<1> & !CLK_DIV<2>
-
-MACROCELL | 3 | 13 | EXP28_
-ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 3 | 14
-INPUTS | 11 | BCD<4>  | BCD<2>  | BCD<0>  | BCD<5>  | SEVEN_SEG_5/SEVEN_SEG_5_RSTF  | $OpTx$FX_SC$31  | BCD<1>  | SEVEN_SEG_2/SEVEN_SEG_2_RSTF  | $OpTx$FX_SC$30  | BCD<3>  | $OpTx$$OpTx$FX_DC$12_INV$820
-INPUTMC | 5 | 2 | 11 | 0 | 13 | 1 | 9 | 0 | 14 | 2 | 13
-INPUTP | 6 | 72 | 65 | 62 | 82 | 63 | 68
-EXPORTS | 1 | 3 | 14
-EQ | 10 | 
-       EXP28_.EXP  =  !BCD<4> & BCD<2> & !BCD<0> & BCD<5> & 
-	!SEVEN_SEG_5/SEVEN_SEG_5_RSTF & !$OpTx$FX_SC$31
-	# BCD<1> & BCD<2> & BCD<0> & BCD<5> & 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF & $OpTx$FX_SC$30 & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF
-	# !BCD<1> & BCD<3> & BCD<5> & 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF & $OpTx$FX_SC$30 & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF & 
-	!$OpTx$$OpTx$FX_DC$12_INV$820
-	# !BCD<1> & !BCD<3> & !BCD<5> & 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF & $OpTx$FX_SC$30 & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF & 
-	!$OpTx$$OpTx$FX_DC$12_INV$820
-
-MACROCELL | 3 | 14 | EXP29_
-ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 3 | 15
-INPUTS | 11 | BCD<4>  | BCD<2>  | BCD<0>  | SEVEN_SEG_5/SEVEN_SEG_5_RSTF  | $OpTx$FX_SC$31  | BCD<3>  | CLK_DIV<3>  | $OpTx$FX_SC$30  | SEVEN_SEG_4/SEVEN_SEG_4_SETF  | BCD<5>  | EXP28_.EXP
-INPUTMC | 6 | 2 | 11 | 0 | 13 | 0 | 15 | 0 | 14 | 1 | 12 | 3 | 13
-INPUTP | 5 | 72 | 65 | 62 | 68 | 82
-EXPORTS | 1 | 3 | 15
-IMPORTS | 1 | 3 | 13
+OUTPUTMC | 1 | 2 | 12
+INPUTS | 12 | BCD<1>  | BCD<4>  | BCD<3>  | BCD<2>  | BCD<5>  | CNTR<2>  | CNTR<3>  | BCD<0>  | $OpTx$$OpTx$FX_DC$463_INV$804  | CATHS<0>  | CNTR<1>  | $OpTx$DEC_SEVEN_SEG_4$3.EXP
+INPUTMC | 6 | 1 | 2 | 2 | 4 | 3 | 10 | 3 | 5 | 1 | 1 | 2 | 14
+INPUTP | 6 | 63 | 72 | 68 | 65 | 82 | 62
+EXPORTS | 1 | 2 | 12
+IMPORTS | 1 | 2 | 14
 EQ | 21 | 
-       EXP29_.EXP  =  BCD<4> & !BCD<2> & !BCD<0> & 
-	!SEVEN_SEG_5/SEVEN_SEG_5_RSTF & !$OpTx$FX_SC$31
-	# !BCD<4> & BCD<3> & !CLK_DIV<3> & $OpTx$FX_SC$30 & 
-	!SEVEN_SEG_5/SEVEN_SEG_5_RSTF
-	# !BCD<4> & !BCD<0> & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF & 
-	!$OpTx$FX_SC$31 & !SEVEN_SEG_4/SEVEN_SEG_4_SETF
-	# !BCD<4> & !$OpTx$FX_SC$30 & 
-	!SEVEN_SEG_5/SEVEN_SEG_5_RSTF & !$OpTx$FX_SC$31 & !SEVEN_SEG_4/SEVEN_SEG_4_SETF
-	# BCD<3> & !BCD<2> & !BCD<5> & !$OpTx$FX_SC$30 & 
-	!SEVEN_SEG_5/SEVEN_SEG_5_RSTF & !$OpTx$FX_SC$31
-;Imported pterms FB4_14
-	# !BCD<4> & BCD<2> & !BCD<0> & BCD<5> & 
-	!SEVEN_SEG_5/SEVEN_SEG_5_RSTF & !$OpTx$FX_SC$31
-	# BCD<1> & BCD<2> & BCD<0> & BCD<5> & 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF & $OpTx$FX_SC$30 & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF
-	# !BCD<1> & BCD<3> & BCD<5> & 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF & $OpTx$FX_SC$30 & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF & 
-	!$OpTx$$OpTx$FX_DC$12_INV$820
-	# !BCD<1> & !BCD<3> & !BCD<5> & 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF & $OpTx$FX_SC$30 & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF & 
-	!$OpTx$$OpTx$FX_DC$12_INV$820
+       EXP26_.EXP  =  !BCD<1> & !BCD<4> & !BCD<3> & BCD<2> & !BCD<5> & 
+	CNTR<2>
+	# !BCD<1> & !BCD<4> & !BCD<3> & BCD<2> & !BCD<5> & 
+	CNTR<3>
+	# !BCD<1> & !BCD<4> & !BCD<2> & !BCD<0> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$463_INV$804
+	# BCD<1> & !BCD<4> & BCD<3> & BCD<2> & CATHS<0> & 
+	!BCD<5> & CNTR<1>
+	# BCD<1> & !BCD<4> & !BCD<3> & !BCD<2> & CATHS<0> & 
+	BCD<5> & CNTR<1>
+;Imported pterms FB3_15
+	# BCD<1> & !BCD<4> & !BCD<3> & !BCD<2> & CATHS<0> & 
+	BCD<5> & CNTR<3>
+	# !BCD<1> & BCD<4> & BCD<3> & !BCD<2> & CATHS<0> & 
+	!BCD<5> & CNTR<1>
+	# !BCD<1> & BCD<4> & BCD<3> & !BCD<2> & CATHS<0> & 
+	!BCD<5> & CNTR<2>
+	# !BCD<1> & !BCD<4> & BCD<3> & BCD<2> & CATHS<0> & 
+	BCD<5> & CNTR<1>
+	# !BCD<1> & !BCD<4> & BCD<3> & BCD<2> & CATHS<0> & 
+	BCD<5> & CNTR<2>
 
-MACROCELL | 3 | 16 | EXP30_
+MACROCELL | 3 | 1 | EXP27_
 ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 3 | 15
-INPUTS | 11 | BCD<4>  | BCD<3>  | BCD<0>  | BCD<5>  | SEVEN_SEG_5/SEVEN_SEG_5_RSTF  | $OpTx$FX_SC$31  | SEVEN_SEG_2/SEVEN_SEG_2_RSTF  | CLK_DIV<3>  | $OpTx$FX_SC$30  | BCD<2>  | EXP31_.EXP
-INPUTMC | 6 | 2 | 11 | 0 | 13 | 1 | 9 | 0 | 15 | 0 | 14 | 3 | 17
-INPUTP | 5 | 72 | 68 | 62 | 82 | 65
-EXPORTS | 1 | 3 | 15
-IMPORTS | 1 | 3 | 17
-EQ | 23 | 
-       EXP30_.EXP  =  BCD<4> & BCD<3> & !BCD<0> & !BCD<5> & 
-	!SEVEN_SEG_5/SEVEN_SEG_5_RSTF & !$OpTx$FX_SC$31
-	# BCD<4> & BCD<3> & !BCD<0> & 
-	!SEVEN_SEG_2/SEVEN_SEG_2_RSTF & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF & !$OpTx$FX_SC$31
-	# BCD<4> & !BCD<3> & !CLK_DIV<3> & 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF & $OpTx$FX_SC$30 & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF
-	# !BCD<4> & BCD<2> & BCD<5> & !$OpTx$FX_SC$30 & 
-	!SEVEN_SEG_5/SEVEN_SEG_5_RSTF & !$OpTx$FX_SC$31
-	# BCD<3> & !BCD<2> & !BCD<0> & !BCD<5> & 
-	!SEVEN_SEG_5/SEVEN_SEG_5_RSTF & !$OpTx$FX_SC$31
-;Imported pterms FB4_18
-	# BCD<1> & BCD<4> & !BCD<3> & BCD<5> & 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF & $OpTx$FX_SC$30 & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF
-	# BCD<1> & !BCD<4> & BCD<3> & !BCD<5> & 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF & $OpTx$FX_SC$30 & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF
-	# BCD<1> & BCD<3> & BCD<2> & !BCD<5> & CLK_DIV<3> & 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF & $OpTx$FX_SC$30 & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF
-	# !BCD<1> & BCD<3> & BCD<2> & !BCD<0> & 
-	!SEVEN_SEG_2/SEVEN_SEG_2_RSTF & $OpTx$FX_SC$30 & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF & 
-	!$OpTx$FX_SC$31
-	# !BCD<4> & !BCD<3> & BCD<2> & !BCD<0> & 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF & $OpTx$FX_SC$30 & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF & 
-	!$OpTx$FX_SC$31
+OUTPUTMC | 1 | 3 | 0
+INPUTS | 13 | BCD<1>  | BCD<4>  | CATHS<0>  | BCD<0>  | $OpTx$$OpTx$FX_DC$460_INV$802  | BCD<2>  | CNTR<1>  | $OpTx$$OpTx$FX_DC$430_INV$793  | CNTR<2>  | CNTR<3>  | BCD<5>  | $OpTx$$OpTx$FX_DC$432_INV$794  | EXP28_.EXP
+INPUTMC | 8 | 3 | 5 | 1 | 11 | 1 | 1 | 1 | 4 | 1 | 2 | 2 | 4 | 1 | 5 | 3 | 2
+INPUTP | 5 | 63 | 72 | 62 | 65 | 82
+EXPORTS | 1 | 3 | 0
+IMPORTS | 1 | 3 | 2
+EQ | 26 | 
+       EXP27_.EXP  =  BCD<1> & BCD<4> & !CATHS<0> & BCD<0> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802
+	# !BCD<1> & BCD<4> & !BCD<2> & CNTR<1> & 
+	$OpTx$$OpTx$FX_DC$430_INV$793
+	# !BCD<1> & BCD<4> & !BCD<2> & CNTR<2> & 
+	$OpTx$$OpTx$FX_DC$430_INV$793
+	# !BCD<1> & BCD<4> & !BCD<2> & CNTR<3> & 
+	$OpTx$$OpTx$FX_DC$430_INV$793
+	# BCD<4> & !CATHS<0> & BCD<5> & CNTR<1> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794
+;Imported pterms FB4_3
+	# BCD<1> & !BCD<4> & !BCD<2> & !BCD<0> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801 & !$OpTx$$OpTx$FX_DC$430_INV$793
+	# !BCD<1> & !BCD<4> & BCD<2> & CATHS<0> & CNTR<1> & 
+	!$OpTx$$OpTx$FX_DC$428_INV$791
+	# !BCD<1> & !BCD<4> & BCD<2> & CATHS<0> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$428_INV$791
+	# !BCD<1> & !BCD<4> & BCD<2> & CATHS<0> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$428_INV$791
+	# !BCD<4> & !BCD<3> & !CATHS<0> & BCD<5> & CNTR<1> & 
+	!$OpTx$$OpTx$FX_DC$439_INV$800
+;Imported pterms FB4_4
+	# !BCD<4> & !BCD<3> & !CATHS<0> & BCD<5> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$439_INV$800
+	# !BCD<4> & !BCD<3> & !CATHS<0> & BCD<5> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$439_INV$800
 
-MACROCELL | 3 | 17 | EXP31_
+MACROCELL | 3 | 2 | EXP28_
 ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 3 | 16
-INPUTS | 11 | BCD<1>  | BCD<4>  | BCD<3>  | BCD<5>  | SEVEN_SEG_2/SEVEN_SEG_2_RSTF  | $OpTx$FX_SC$30  | SEVEN_SEG_5/SEVEN_SEG_5_RSTF  | BCD<2>  | CLK_DIV<3>  | BCD<0>  | $OpTx$FX_SC$31
-INPUTMC | 5 | 1 | 9 | 0 | 14 | 2 | 11 | 0 | 15 | 0 | 13
-INPUTP | 6 | 63 | 72 | 68 | 82 | 65 | 62
-EXPORTS | 1 | 3 | 16
-EQ | 12 | 
-       EXP31_.EXP  =  BCD<1> & BCD<4> & !BCD<3> & BCD<5> & 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF & $OpTx$FX_SC$30 & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF
-	# BCD<1> & !BCD<4> & BCD<3> & !BCD<5> & 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF & $OpTx$FX_SC$30 & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF
-	# BCD<1> & BCD<3> & BCD<2> & !BCD<5> & CLK_DIV<3> & 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF & $OpTx$FX_SC$30 & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF
-	# !BCD<1> & BCD<3> & BCD<2> & !BCD<0> & 
-	!SEVEN_SEG_2/SEVEN_SEG_2_RSTF & $OpTx$FX_SC$30 & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF & 
-	!$OpTx$FX_SC$31
-	# !BCD<4> & !BCD<3> & BCD<2> & !BCD<0> & 
-	SEVEN_SEG_2/SEVEN_SEG_2_RSTF & $OpTx$FX_SC$30 & !SEVEN_SEG_5/SEVEN_SEG_5_RSTF & 
-	!$OpTx$FX_SC$31
+OUTPUTMC | 1 | 3 | 1
+INPUTS | 15 | BCD<1>  | BCD<4>  | BCD<2>  | BCD<0>  | $OpTx$$OpTx$FX_DC$459_INV$801  | $OpTx$$OpTx$FX_DC$430_INV$793  | CATHS<0>  | CNTR<1>  | $OpTx$$OpTx$FX_DC$428_INV$791  | CNTR<2>  | CNTR<3>  | BCD<3>  | BCD<5>  | $OpTx$$OpTx$FX_DC$439_INV$800  | $OpTx$$OpTx$FX_DC$479_INV$808.EXP
+INPUTMC | 9 | 3 | 12 | 1 | 4 | 3 | 5 | 1 | 1 | 1 | 0 | 1 | 2 | 2 | 4 | 1 | 10 | 3 | 3
+INPUTP | 6 | 63 | 72 | 65 | 62 | 68 | 82
+EXPORTS | 1 | 3 | 1
+IMPORTS | 1 | 3 | 3
+EQ | 15 | 
+       EXP28_.EXP  =  BCD<1> & !BCD<4> & !BCD<2> & !BCD<0> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801 & !$OpTx$$OpTx$FX_DC$430_INV$793
+	# !BCD<1> & !BCD<4> & BCD<2> & CATHS<0> & CNTR<1> & 
+	!$OpTx$$OpTx$FX_DC$428_INV$791
+	# !BCD<1> & !BCD<4> & BCD<2> & CATHS<0> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$428_INV$791
+	# !BCD<1> & !BCD<4> & BCD<2> & CATHS<0> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$428_INV$791
+	# !BCD<4> & !BCD<3> & !CATHS<0> & BCD<5> & CNTR<1> & 
+	!$OpTx$$OpTx$FX_DC$439_INV$800
+;Imported pterms FB4_4
+	# !BCD<4> & !BCD<3> & !CATHS<0> & BCD<5> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$439_INV$800
+	# !BCD<4> & !BCD<3> & !CATHS<0> & BCD<5> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$439_INV$800
 
-PIN | BCD<1> | 64 | 0 | N/A | 63 | 32 | 1 | 1 | 1 | 5 | 1 | 9 | 3 | 13 | 2 | 11 | 1 | 11 | 2 | 9 | 2 | 1 | 2 | 5 | 1 | 0 | 1 | 2 | 1 | 3 | 1 | 4 | 1 | 6 | 1 | 7 | 1 | 8 | 1 | 10 | 1 | 13 | 1 | 14 | 1 | 17 | 2 | 0 | 2 | 2 | 2 | 3 | 2 | 4 | 2 | 6 | 2 | 7 | 2 | 8 | 2 | 10 | 2 | 12 | 2 | 13 | 2 | 17 | 3 | 17
-PIN | BCD<4> | 64 | 0 | N/A | 72 | 36 | 1 | 1 | 1 | 5 | 1 | 9 | 3 | 15 | 2 | 11 | 2 | 12 | 1 | 12 | 2 | 9 | 2 | 1 | 2 | 5 | 1 | 0 | 1 | 2 | 1 | 3 | 1 | 4 | 1 | 6 | 1 | 7 | 1 | 8 | 1 | 10 | 1 | 11 | 1 | 13 | 1 | 17 | 2 | 0 | 2 | 2 | 2 | 3 | 2 | 4 | 2 | 6 | 2 | 7 | 2 | 8 | 2 | 10 | 2 | 13 | 2 | 14 | 2 | 17 | 3 | 13 | 3 | 14 | 3 | 16 | 3 | 17
-PIN | BCD<3> | 64 | 0 | N/A | 68 | 35 | 1 | 1 | 1 | 5 | 1 | 9 | 3 | 14 | 2 | 10 | 1 | 12 | 2 | 9 | 2 | 1 | 2 | 5 | 1 | 0 | 1 | 2 | 1 | 3 | 1 | 4 | 1 | 6 | 1 | 7 | 1 | 8 | 1 | 10 | 1 | 11 | 1 | 13 | 1 | 14 | 1 | 17 | 2 | 0 | 2 | 2 | 2 | 3 | 2 | 4 | 2 | 6 | 2 | 7 | 2 | 8 | 2 | 11 | 2 | 12 | 2 | 13 | 2 | 17 | 3 | 13 | 3 | 16 | 3 | 17
-PIN | BCD<2> | 64 | 0 | N/A | 65 | 37 | 1 | 1 | 1 | 5 | 1 | 9 | 3 | 15 | 2 | 11 | 2 | 12 | 1 | 12 | 2 | 9 | 2 | 1 | 2 | 5 | 1 | 0 | 1 | 2 | 1 | 3 | 1 | 4 | 1 | 6 | 1 | 7 | 1 | 8 | 1 | 10 | 1 | 11 | 1 | 13 | 1 | 14 | 1 | 17 | 2 | 0 | 2 | 2 | 2 | 3 | 2 | 4 | 2 | 6 | 2 | 7 | 2 | 8 | 2 | 10 | 2 | 13 | 2 | 14 | 2 | 17 | 3 | 13 | 3 | 14 | 3 | 16 | 3 | 17
-PIN | BCD<0> | 64 | 0 | N/A | 62 | 33 | 1 | 1 | 1 | 5 | 1 | 9 | 3 | 15 | 2 | 10 | 1 | 12 | 2 | 9 | 2 | 1 | 2 | 5 | 1 | 0 | 1 | 2 | 1 | 4 | 1 | 6 | 1 | 8 | 1 | 10 | 1 | 11 | 1 | 13 | 1 | 17 | 2 | 0 | 2 | 2 | 2 | 3 | 2 | 4 | 2 | 6 | 2 | 7 | 2 | 8 | 2 | 11 | 2 | 12 | 2 | 13 | 2 | 17 | 3 | 13 | 3 | 14 | 3 | 16 | 3 | 17
-PIN | BCD<5> | 64 | 0 | N/A | 82 | 35 | 1 | 1 | 1 | 5 | 1 | 9 | 3 | 15 | 2 | 11 | 1 | 12 | 2 | 9 | 2 | 1 | 2 | 5 | 1 | 0 | 1 | 2 | 1 | 3 | 1 | 4 | 1 | 6 | 1 | 7 | 1 | 8 | 1 | 10 | 1 | 11 | 1 | 13 | 1 | 17 | 2 | 0 | 2 | 2 | 2 | 3 | 2 | 4 | 2 | 6 | 2 | 7 | 2 | 8 | 2 | 10 | 2 | 12 | 2 | 13 | 2 | 17 | 3 | 13 | 3 | 14 | 3 | 16 | 3 | 17
-PIN | SEL | 64 | 0 | N/A | 83 | 4 | 0 | 15 | 0 | 12 | 0 | 17 | 0 | 16
-PIN | SW | 64 | 0 | N/A | 49 | 1 | 2 | 14
+MACROCELL | 3 | 17 | EXP29_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 3 | 0
+INPUTS | 18 | BCD<1>  | BCD<0>  | $OpTx$$OpTx$FX_DC$430_INV$793  | $OpTx$FX_DC$467  | BCD<4>  | BCD<2>  | CATHS<0>  | $OpTx$$OpTx$FX_DC$460_INV$802  | $OpTx$FX_DC$462  | BCD<3>  | BCD<5>  | $OpTx$$OpTx$FX_DC$435_INV$797  | SEVEN_SEG<3>_BUFR  | CNTR<0>  | CNTR<1>  | CNTR<2>  | CNTR<3>  | $OpTx$$OpTx$FX_DC$482_INV$809.EXP
+INPUTMC | 12 | 1 | 4 | 3 | 13 | 3 | 5 | 1 | 11 | 3 | 15 | 1 | 8 | 3 | 0 | 1 | 12 | 1 | 1 | 1 | 2 | 2 | 4 | 3 | 16
+INPUTP | 6 | 63 | 62 | 72 | 65 | 68 | 82
+EXPORTS | 1 | 3 | 0
+IMPORTS | 1 | 3 | 16
+EQ | 19 | 
+       EXP29_.EXP  =  BCD<1> & !BCD<0> & !$OpTx$$OpTx$FX_DC$430_INV$793 & 
+	$OpTx$FX_DC$467
+	# BCD<4> & BCD<2> & !CATHS<0> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802
+	# !BCD<4> & BCD<2> & $OpTx$FX_DC$462 & 
+	!$OpTx$$OpTx$FX_DC$430_INV$793
+	# !BCD<3> & BCD<5> & !$OpTx$$OpTx$FX_DC$435_INV$797 & 
+	$OpTx$FX_DC$467
+	# SEVEN_SEG<3>_BUFR & !CNTR<0> & !CNTR<1> & !CNTR<2> & 
+	!CNTR<3>
+;Imported pterms FB4_17
+	# BCD<4> & !CATHS<0> & BCD<5> & CNTR<2> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794
+	# BCD<4> & !CATHS<0> & BCD<5> & CNTR<3> & 
+	!$OpTx$$OpTx$FX_DC$432_INV$794
+	# !BCD<4> & BCD<3> & BCD<2> & !BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$459_INV$801 & !$OpTx$$OpTx$FX_DC$435_INV$797
+	# !BCD<4> & !BCD<3> & !BCD<2> & BCD<5> & 
+	!$OpTx$$OpTx$FX_DC$460_INV$802 & !$OpTx$$OpTx$FX_DC$435_INV$797
+
+PIN | BCD<1> | 64 | 0 | N/A | 63 | 38 | 0 | 10 | 1 | 17 | 0 | 7 | 2 | 17 | 2 | 7 | 0 | 1 | 1 | 15 | 1 | 5 | 2 | 9 | 3 | 14 | 3 | 9 | 1 | 8 | 1 | 10 | 3 | 3 | 1 | 9 | 0 | 15 | 2 | 11 | 3 | 7 | 3 | 6 | 0 | 8 | 0 | 9 | 0 | 11 | 0 | 12 | 0 | 14 | 1 | 0 | 1 | 13 | 1 | 14 | 2 | 2 | 2 | 3 | 2 | 4 | 2 | 5 | 2 | 6 | 2 | 10 | 2 | 13 | 2 | 14 | 3 | 1 | 3 | 2 | 3 | 17
+PIN | BCD<4> | 64 | 0 | N/A | 72 | 37 | 0 | 10 | 2 | 1 | 0 | 7 | 3 | 0 | 2 | 5 | 0 | 1 | 1 | 15 | 3 | 8 | 1 | 7 | 1 | 3 | 3 | 16 | 3 | 13 | 0 | 16 | 2 | 12 | 3 | 7 | 3 | 6 | 0 | 8 | 0 | 9 | 0 | 11 | 0 | 12 | 0 | 14 | 0 | 17 | 1 | 0 | 1 | 14 | 1 | 17 | 2 | 3 | 2 | 4 | 2 | 8 | 2 | 10 | 2 | 11 | 2 | 13 | 2 | 14 | 3 | 1 | 3 | 2 | 3 | 3 | 3 | 15 | 3 | 17
+PIN | BCD<3> | 64 | 0 | N/A | 68 | 44 | 0 | 9 | 2 | 1 | 0 | 7 | 2 | 17 | 0 | 4 | 0 | 1 | 1 | 16 | 2 | 16 | 1 | 6 | 2 | 10 | 1 | 4 | 1 | 0 | 3 | 3 | 2 | 7 | 0 | 16 | 2 | 12 | 2 | 13 | 3 | 7 | 3 | 6 | 0 | 8 | 0 | 11 | 0 | 12 | 0 | 13 | 0 | 14 | 0 | 15 | 0 | 17 | 1 | 13 | 1 | 14 | 1 | 15 | 1 | 17 | 2 | 0 | 2 | 2 | 2 | 3 | 2 | 4 | 2 | 5 | 2 | 6 | 2 | 8 | 2 | 9 | 2 | 11 | 2 | 14 | 2 | 15 | 3 | 2 | 3 | 16 | 3 | 17
+PIN | BCD<2> | 64 | 0 | N/A | 65 | 32 | 0 | 10 | 1 | 17 | 0 | 16 | 3 | 0 | 2 | 5 | 0 | 1 | 1 | 15 | 2 | 9 | 1 | 7 | 1 | 3 | 3 | 15 | 3 | 13 | 3 | 3 | 2 | 11 | 3 | 6 | 0 | 8 | 0 | 9 | 0 | 11 | 0 | 12 | 0 | 13 | 0 | 17 | 2 | 2 | 2 | 3 | 2 | 4 | 2 | 8 | 2 | 10 | 2 | 13 | 2 | 14 | 3 | 1 | 3 | 2 | 3 | 16 | 3 | 17
+PIN | CLK | 64 | 0 | N/A | 83 | 15 | 3 | 5 | 3 | 4 | 2 | 16 | 2 | 15 | 0 | 10 | 2 | 1 | 0 | 7 | 3 | 0 | 0 | 4 | 0 | 1 | 1 | 16 | 1 | 12 | 1 | 1 | 1 | 2 | 2 | 4
+PIN | BCD<0> | 64 | 0 | N/A | 62 | 27 | 0 | 9 | 1 | 17 | 0 | 7 | 3 | 0 | 2 | 7 | 2 | 6 | 1 | 14 | 1 | 5 | 2 | 9 | 3 | 15 | 1 | 8 | 1 | 10 | 3 | 3 | 1 | 9 | 0 | 15 | 3 | 7 | 0 | 8 | 0 | 11 | 0 | 12 | 0 | 13 | 0 | 14 | 2 | 2 | 2 | 3 | 2 | 13 | 3 | 1 | 3 | 2 | 3 | 17
+PIN | BCD<5> | 64 | 0 | N/A | 82 | 41 | 0 | 8 | 2 | 1 | 0 | 7 | 2 | 17 | 2 | 7 | 0 | 1 | 1 | 15 | 3 | 11 | 2 | 16 | 1 | 6 | 1 | 4 | 1 | 0 | 0 | 16 | 2 | 12 | 3 | 7 | 3 | 6 | 0 | 11 | 0 | 12 | 0 | 13 | 0 | 14 | 0 | 15 | 0 | 17 | 1 | 13 | 1 | 14 | 1 | 17 | 2 | 0 | 2 | 2 | 2 | 3 | 2 | 4 | 2 | 5 | 2 | 6 | 2 | 9 | 2 | 10 | 2 | 11 | 2 | 13 | 2 | 14 | 3 | 1 | 3 | 2 | 3 | 3 | 3 | 16 | 3 | 17
 PIN | CATHODES<0> | 536871040 | 0 | N/A | 52
 PIN | CATHODES<1> | 536871040 | 0 | N/A | 59
 PIN | SEVEN_SEG<0> | 536871040 | 0 | N/A | 21
@@ -1301,4 +1413,3 @@ PIN | SEVEN_SEG<3> | 536871040 | 0 | N/A | 13
 PIN | SEVEN_SEG<4> | 536871040 | 0 | N/A | 12
 PIN | SEVEN_SEG<5> | 536871040 | 0 | N/A | 11
 PIN | SEVEN_SEG<6> | 536871040 | 0 | N/A | 10
-PIN | LED | 536871040 | 0 | N/A | 50
